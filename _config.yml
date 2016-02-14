@@ -3,8 +3,8 @@ title: 我的世界
 header-img: "img/facebook.jpg"
 tagline: "cn"  
 description: "钦鹏|读而立·写而生"  
-baseurl: ""
-url: "http://qinpeng.space"  
+baseurl: "space"
+url: "http://qinpeng"  
 
 # About/contact
 owner: 
@@ -21,7 +21,7 @@ twitter_username: QinRoc
 github_username: QinPengBlog
 facebook_username: 钦鹏
 weibo_username: 乾越Roc
-zhihu_username: 钦鹏
+zhihu_username: qin-peng-96
 
 # Build settings  
 # use Github Flavored Markdown !important  

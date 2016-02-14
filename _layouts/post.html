@@ -88,8 +88,10 @@ layout: default
                 </div>
                 <!-- Duoshuo Share end-->
 
-
                 <!-- 多说评论框 start -->
+				<a href="javascript:void(0);" onclick="toggleDuoshuoComments('#comment-box');">显示评论</a>
+                <div id="comment-box" ></div>
+				
                 <div class="comment">
                     <div class="ds-thread" data-thread-key="{{page.id}}" data-title="{{page.title}}" data-url="{{site.url}}{{page.url}}"></div>
                 </div>
@@ -99,21 +101,33 @@ layout: default
     </div>
 </article>
 
-
-
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+
+<script>var duoshuoQuery = {short_name:"qinpengblog"};</script>
+<script src="http://static.duoshuo.com/embed.js"></script>
+
 <script type="text/javascript">
-var duoshuoQuery = {short_name:"cnfeat"};
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0]
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-</script>
+var duoshuoQuery = {short_name:"qinpengblog"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	
+function toggleDuoshuoComments(container){
+    var el = document.createElement('div');//该div不需要设置class="ds-thread"
+    el.setAttribute('data-thread-key', '{{page.id}}');//必选参数
+    el.setAttribute('data-url', '{{site.url}}{{page.url}}');//必选参数
+    el.setAttribute('data-author-key', 'Peng');//可选参数
+    DUOSHUO.EmbedThread(el);
+    jQuery(container).append(el);
+}
+	</script>
 <!-- 多说公共JS代码 end -->
+
 
 <!-- async load function -->
 <script>
