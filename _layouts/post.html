@@ -55,38 +55,79 @@ layout: default
                     {% endif %}
                 </ul>
 
-                <!-- Duoshuo Share start -->
-                <style>
-                    .ds-share{
-                        text-align: right;
-                    }
-                    
-                    @media only screen and (max-width: 700px) {
-                        .ds-share {
+				<!-- JiaThis Button BEGIN -->
+				<div class="jiathis_style">
+					<a class="jiathis_button_weixin"></a>
+					<a class="jiathis_button_tsina"></a>
+					<a class="jiathis_button_pocket"></a>
+					<a class="jiathis_button_instapaper"></a>
+					<a class="jiathis_button_copy"></a>
+					<a href="http://www.jiathis.com/share?uid=2083931" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+					<a class="jiathis_counter_style"></a>
+				</div>
+				<script type="text/javascript" >
+					var jiathis_config={
+						data_track_clickback:true,
+						summary:"",
+						shortUrl:true,
+						hideMore:false
+					}
+				</script>
+					<!-- JiaThis Picture BEGIN -->
+					<script type="text/javascript">
+						var jiathis_config = {
+							shareImg:{
+								"showType":"ALL",
+								"bgColor":"",
+								"txtColor":"",
+								"text":"",
+								"services":"",
+								"position":"",
+								"imgwidth":"",
+								"imgheight":"",
+								"divname":""
+							}
+						}
+					</script>
+					<!-- JiaThis Picture END -->
+				<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js?uid=2083931" charset="utf-8"></script>
+				<!-- JiaThis Button END -->
+                <!-- JiaThis Button BEGIN -->
+			    <div class="jiathis_streak"></div>
 
-                        }
-                    }
-                </style>
+                <div class="jiathis_streak_share_16x16" id="jiathis_streak_share" style="display:none">
+					<span class="streak_share_jiao"></span>
+					<div class="jiathis_streak_goshare" id="jiathis_streak_goshare">
+						<span class="jiathis_streak_txt">分享到</span>  
+						<span style="" title="隐藏分享框" onclick="JIATHIS_STREAK.hideShare()" class="jiathis_streak_close">X</span>
+					</div>
+					<div class="jiathis_style" >
+						<a class="jiathis_button_tsina"></a>
+						<a class="jiathis_button_weixin"></a>
+						<a class="jiathis_button_twitter"></a>
+						<a class="jiathis_button_translate"></a>
+						<a class="jiathis_button_ydnote"></a>
+						<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+						<script type="text/javascript">
+							var jiathis_config = {data_track_clickback:'true'};
+						</script>
+						
+						<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=2083931" charset="utf-8"></script>	
+						<script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_streak.js" charset="utf-8"></script>
+					</div>
+			  </div>
+                <!-- JiaThis Button END -->
+			  
+                <!-- UJian Button BEGIN -->
+	            <script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide&uid=2083931"></script>
+                <!-- UJian Button END -->
 
-                <div class="ds-share"
-                    data-thread-key="{{page.id}}" data-title="{{page.title}}"
-                    data-images="{{ site.url }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}"
-                    data-content="{{ content | strip_html | truncate:80 }} | Microdust:Azeril's blog"
-                    data-url="{{site.url}}{{page.url}}">
-                    <div class="ds-share-inline">
-                      <ul  class="ds-share-icons-16">
-
-                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
-                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
-                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
-                      </ul>
-                      <div class="ds-share-icons-more">
-                      </div>
-                    </div>
-                <hr>
-                </div>
-                <!-- Duoshuo Share end-->
+				<!-- UJian Button BEGIN -->
+                <div class="ujian-hook"></div>
+                <script type="text/javascript">var ujian_config = {num:6,showType:4,lkrc:4,target:1,bgColor:'#',hoverTextColor:'#116BF2'};</script>
+                <script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?uid=2083931"></script>
+                <a href="http://www.ujian.cc" style="border:0;"><img src="http://img.ujian.cc/pixel.png" alt="友荐云推荐" style="border:0;padding:0;margin:0;" /></a>
+                <!-- UJian Button END -->
 
                 <!-- 多说评论框 start -->
 				<script>var duoshuoQuery = {short_name:"qinpengblog"};</script>
