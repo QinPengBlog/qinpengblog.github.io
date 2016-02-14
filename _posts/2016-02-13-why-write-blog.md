@@ -11,7 +11,7 @@ description: 作为以后忘记的时候提醒自己的初心。
 我写博客的直接目的主要有三个：记录，输出，分享。这三者并不独立，互有交叉。中心的交点就是过去的我了。
 
 <center>
-<img src="http://7xqvz5.com1.z0.glb.clouddn.com/image%2FTricolor.jpg" width=250/>
+<img src="http://7xqvz5.com1.z0.glb.clouddn.com/image%2FTricolor.jpg"/>
 </center>
 <center>Tricolor</center>
 

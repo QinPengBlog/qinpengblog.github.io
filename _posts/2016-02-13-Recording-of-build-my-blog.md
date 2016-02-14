@@ -7,6 +7,13 @@ tags: [个人主页,方法论]
 description: 给自己花在这上面的时间备个份。
 
 ---
+_2016-02-14 09:10 更新_
+
+发现一篇新文章，通过Github Education可以免费获得付费域名。
+
+[《我的 Github 个人博客是怎样炼成的》](http://www.jianshu.com/p/4fd3cb0a11da#)
+
+---
 
 历程有点坎坷。
 
