@@ -1,14 +1,14 @@
 ---
 layout: post
 title: 增加网站的推荐模块
-date: 2016-02-13
+date: 2016-02-14
 categories: blog
 tags: [个人主页]
 description: 记录增加的过程。
 
 ---
 
-多说的分享模块不够好，无意中发现[JiaThis](http://www.jiathis.com/)，感觉不错。在主页下面发现了[友荐](http://www.ujian.cc/)，感觉不错，想给我的网站加上这个功能。
+多说的分享模块不够好，无意中发现[JiaThis](http://www.jiathis.com/)，感觉更好。在JiaThis的主页下面发现了[友荐](http://www.ujian.cc/)，感觉挺好的，想给我的网站加上这个功能。
 
 友荐为PC端提供4中推荐方式：侧栏式，嵌入式，双栏式和边栏式。
 
@@ -29,10 +29,12 @@ description: 记录增加的过程。
 代码如下：
 
 <!-- UJian Button BEGIN -->
-                <div class="ujian-hook"></div>
-                <script type="text/javascript">var ujian_config = {num:6,showType:4,lkrc:4,target:1,bgColor:'#',hoverTextColor:'#116BF2'};</script>
-                <script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?uid=2083931"></script>
-                <a href="http://www.ujian.cc" style="border:0;"><img src="http://img.ujian.cc/pixel.png" alt="友荐云推荐" style="border:0;padding:0;margin:0;" /></a>
+
+     <div class="ujian-hook"></div>
+     <script type="text/javascript">var ujian_config = {num:6,showType:4,lkrc:4,target:1,bgColor:'#',hoverTextColor:'#116BF2'};</script>
+     <script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?uid=2083931"></script>
+     <a href="http://www.ujian.cc" style="border:0;"><img src="http://img.ujian.cc/pixel.png" alt="友荐云推荐" style="border:0;padding:0;margin:0;" /></a>
+
 <!-- UJian Button END -->
 
 关于友荐的更多内容请移步[友荐帮助中心](http://www.ujian.cc/help/index/)

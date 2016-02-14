@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://qinpeng.space/</loc>
+  <lastmod>2016-02-14T05:56:54+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://qinpeng.space/Collections/</loc>
+  <lastmod>2016-02-14T05:56:54+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://qinpeng.space/Photos/</loc>
+  <lastmod>2016-02-14T05:56:54+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://qinpeng.space/about/</loc>
+  <lastmod>2016-02-14T05:56:54+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://qinpeng.space/archive/</loc>
+  <lastmod>2016-02-14T05:56:54+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://qinpeng.space/milestone/</loc>
+  <lastmod>2016-02-14T05:56:54+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://qinpeng.space/tags/</loc>
+  <lastmod>2016-02-14T05:56:54+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://qinpeng.space/blog/2016/02/13/Modify-the-comment-module/</loc>
+  <lastmod>2016-02-14T05:56:54+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://qinpeng.space/blog/2016/02/13/Add-the-recommendation-module/</loc>
+  <lastmod>2016-02-14T05:56:54+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://qinpeng.space/blog/2016/02/13/why-write-blog/</loc>
+  <lastmod>2016-02-14T05:56:54+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://qinpeng.space/blog/2016/02/13/Recording-of-build-my-blog/</loc>
+  <lastmod>2016-02-14T05:56:54+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+</urlset>
