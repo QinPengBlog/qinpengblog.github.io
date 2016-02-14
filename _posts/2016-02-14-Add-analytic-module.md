@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 增加网站的推荐模块
+title: 增加网站的统计分析模块
 date: 2016-02-14 18:23
 categories: blog
 tags: [个人主页]
