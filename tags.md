@@ -16,12 +16,13 @@ header-img: "img/semantic.jpg"
 
 test
 
-
+<html>
 <div id='tag_cloud'>
 {% for tag in site.tags %}
 <a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
 {% endfor %}
 </div>
+</html>
 
 <ul class="listing">
 {% for tag in site.tags %}
@@ -35,7 +36,7 @@ test
 {% endfor %}
 </ul>
 
-
+<html>
 <script src="/js/jquery.tagcloud.js" type="text/javascript" charset="utf-8"></script> 
 
 <script language="javascript">
@@ -48,5 +49,6 @@ $(function () {
       $('#tag_cloud a').tagcloud();
     });
 </script>
+</html>
 
 ---
