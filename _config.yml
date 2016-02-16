@@ -2,7 +2,7 @@
 title: 我的世界
 header-img: "img/facebook.jpg"
 tagline: "cn"  
-description: "钦鹏|读而立·写而生"  
+description: "钦 鹏|读而立·写而生"  
 baseurl: ""
 url: "http://qinpeng.space"  
 
@@ -44,7 +44,7 @@ defaults:
     values:
       layout: "post"
       author: "QIN Peng"
-      header-img: "img/facebook.jpg" # We don't want posts without a header image, that whould mean white on white
+      header-img: "img/green.jpg" # We don't want posts without a header image, that whould mean white on white
 
 # Comments 
 comments :
@@ -55,11 +55,9 @@ comments :
       short_name : Peng
 
 # Analytics and webmaster tools stuff goes here
-analytics:
-    provider: Baidu
 google_analytics: UA-73781127-1
-google_verify: f-xallGRfKu4KN9VgwJYGRZprRAHyGPUIIz6O4A9Yck
+google_verify: 
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify: 731D1E6005EE00E5770F4B5909254F51
+bing_verify: 
 
 # Links to include in footer navigation
