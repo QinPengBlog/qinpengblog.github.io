@@ -14,7 +14,7 @@ header-img: "img/semantic.jpg"
 
 ##遗传列表
 
-test2
+test3
 
 <html>
 <script type="text/javascript" src="/js/jquery.tagcloud.js"></script> 
