@@ -14,6 +14,9 @@ header-img: "img/semantic.jpg"
 
 ##遗传列表
 
+test
+
+
 <div id='tag_cloud'>
 {% for tag in site.tags %}
 <a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
