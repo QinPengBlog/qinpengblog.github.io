@@ -17,12 +17,26 @@ header-img: "img/semantic.jpg"
 test2
 
 <html>
+<script type="text/javascript" src="/js/jquery.tagcloud.js"></script> 
+
 <div id='tag_cloud'>
 {% for tag in site.tags %}
 <a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
 {% endfor %}
 </div>
+
+<script language="javascript">
+$.fn.tagcloud.defaults = {
+      size: {start: 14, end: 18, unit: 'pt'},
+      color: {start: '#cde', end: '#f52'}
+    };
+$(function () {
+      $('#tag_cloud a').tagcloud();
+    });
+</script>
+
 </html>
+
 
 <ul class="listing">
 {% for tag in site.tags %}
@@ -35,20 +49,5 @@ test2
 {% endfor %}
 {% endfor %}
 </ul>
-
-<html>
-<script src="/js/jquery.tagcloud.js" type="text/javascript" charset="utf-8"></script> 
-
-<script language="javascript">
-$.fn.tagcloud.defaults = {
-      size: {start: 14, end: 18, unit: 'pt'},
-      color: {start: '#cde', end: '#f52'}
-    };
-
-$(function () {
-      $('#tag_cloud a').tagcloud();
-    });
-</script>
-</html>
 
 ---
