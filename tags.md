@@ -5,26 +5,23 @@ description: "啊，被你发现了我的精神遗传物质"
 header-img: "img/semantic.jpg"  
 ---
 
-##本页使用方法
+## 本页使用方法
 
 1. 在下面选一个你喜欢的词
 2. 点击它
 3. 相关的文章会「唰」地一声射到页面顶端
 4. 马上试试？
 
-##遗传列表
+## 遗传列表
 
-test3
+test4
 
-<html>
 <script type="text/javascript" src="/js/jquery.tagcloud.js"></script> 
-
 <div id='tag_cloud'>
 {% for tag in site.tags %}
 <a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
 {% endfor %}
 </div>
-
 <script language="javascript">
 $.fn.tagcloud.defaults = {
       size: {start: 14, end: 18, unit: 'pt'},
@@ -34,9 +31,6 @@ $(function () {
       $('#tag_cloud a').tagcloud();
     });
 </script>
-
-</html>
-
 
 <ul class="listing">
 {% for tag in site.tags %}
