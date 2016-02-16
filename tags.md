@@ -14,7 +14,7 @@ header-img: "img/semantic.jpg"
 
 ##遗传列表
 
-test
+test2
 
 <html>
 <div id='tag_cloud'>
