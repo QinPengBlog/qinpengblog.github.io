@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 增加网站的推荐模块
+title: 更换网站的分享模块
 date: 2016-02-14
 categories: blog
 tags: [个人主页]
@@ -16,7 +16,7 @@ description: 记录增加的过程。
 
 [《一般安装到网站哪里?》](http://www.jiathis.com/help/html/where-install-jiathis)
 
-##JiaThis
+## JiaThis
 
 JiaThis分享按钮的几种方式：侧栏式，工具式，图标式，边栏式，喜欢按钮，按钮式，关注按钮，图片分享，划词分享。
 
@@ -32,7 +32,7 @@ JiaThis分享按钮的几种方式：侧栏式，工具式，图标式，边栏�
  
 选择图标式，图片分享和划词分享。
 
-###图标式：
+### 图标式：
 
 <!-- JiaThis Button BEGIN -->
 
@@ -57,7 +57,7 @@ JiaThis分享按钮的几种方式：侧栏式，工具式，图标式，边栏�
 
 <!-- JiaThis Button END -->
 
-###图片分享
+### 图片分享
 
 官方说明：如果您的网页中已经嵌入jia.js或jiathis_r.js，只需将以下绿色部分代码复制到JiaThis分享代码之前即可。
 
@@ -132,7 +132,7 @@ JiaThis分享代码是：
 
 结果没有显示，遂删掉这个模块。
 
-###划词分享：
+### 划词分享：
 
 官方说明：用户为网站页面添加划词分享时，需要为想开放划词分享的页面div框架添加 class="jiathis_streak"。如：< div class="jiathis_streak">< /div>或< div class="site_main jiathis_streak">< /div>。
 
