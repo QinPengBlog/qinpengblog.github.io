@@ -297,7 +297,31 @@ Stand out the tags by adding < h3>< /h3>.
 
 	 <li class="listing-seperator" id="{{ tag[0] }}"><h3>{{ tag[0] }}</h3></li>
 
+Done.
 
+change h3 to h4
+
+
+### Test9
+
+Use [jQCloud](https://github.com/lucaong/jQCloud)。
+
+	<link rel="stylesheet" type="text/css" href="/css/jqcloud.css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
+	<script type="text/javascript" src="/js/jqcloud-1.0.4.js"></script>
+
+	<script type="text/javascript">
+   		var word_list = [
+   		{% for tag in site.tags %}
+   		{text: "{{ tag[0] }}", weight: 2, link:"#{{ tag[0] }}"},
+   		{% endfor %}
+  		];
+	$(function() {
+	   	$("#my_favorite_latin_words").jQCloud(word_list, {shape: "rectangular"});
+	});
+	</script>
+
+	<div id="my_favorite_latin_words" style="width: 550px; height: 350px; border: 1px solid #ccc;"></div>
 
 ---
 

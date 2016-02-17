@@ -14,9 +14,29 @@ header-img: "img/semantic.jpg"
 
 ## 遗传列表
 
-test8
+test9
 
-<script type="text/javascript" src='/js/jquery.tagcloud.js'></script> 
+<link rel="stylesheet" type="text/css" href="/css/jqcloud.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
+<script type="text/javascript" src="/js/jqcloud-1.0.4.js"></script>
+
+<script type="text/javascript">
+   var word_list = [
+   {% for tag in site.tags %}
+   {text: "{{ tag[0] }}", weight: 2, link:"#{{ tag[0] }}"},
+   {% endfor %}
+   {text: "Lorem", weight: 15}
+  ];
+$(function() {
+   $("#my_favorite_latin_words").jQCloud(word_list, {shape: "rectangular"});
+});
+</script>
+
+<div id="my_favorite_latin_words" style="width: 550px; height: 350px; border: 1px solid #ccc;"></div>
+
+---
+
+<script type="text/javascript" src="/js/jquery.tagcloud.js"></script> 
 
 <div id="tagscloud">
 {% for tag in site.tags %}
@@ -40,7 +60,7 @@ $(function () {
 
 <ul class="listing">
 {% for tag in site.tags %}
-  <li class="listing-seperator" id="{{ tag[0] }}"><h3>{{ tag[0] }}</h3></li>
+  <li class="listing-seperator" id="{{ tag[0] }}"><h4>{{ tag[0] }}</h4></li>
 
   {% for post in tag[1] %}
   <li class="listing-item">

@@ -1,10 +1,28 @@
 ---
 layout: post
-title: 增加网站的统计分析模块
+title: 增加网站的统计分析模块并使网站可被搜索引擎索引
 date: 2016-02-14 18:23
 categories: blog
 tags: [个人主页]
 description: 记录增加的过程。
+
+---
+_2016-02-17 11:25 更新_
+
+我的网站已经被Google抓取了。
+
+<Center>
+![Google Console](http://7xqvz5.com1.z0.glb.clouddn.com/image%2FGoogle%20Console.png)
+</center>
+
+<center>Google Concole 通知</center>
+
+在Google上的搜索结果：
+
+<center>![](http://7xqvz5.com1.z0.glb.clouddn.com/image%2FGoogle%20Search.png)
+</center>
+
+<center>Google Search Result</center>
 
 ---
 
