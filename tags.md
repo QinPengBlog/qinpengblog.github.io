@@ -47,6 +47,9 @@ $(function () {
   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
   </li>
 {% endfor %}
+
+---
+
 {% endfor %}
 </ul>
 
