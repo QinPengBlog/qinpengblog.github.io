@@ -465,5 +465,15 @@ Try to add a "/" to fix it.
 	<div class='clear'></div>
 	</div>
 
+Not help.
+
+## Test11++
+
+<div>
+<h2 class='title'>Tag Cloud</h2>
+{% include tag_cloud %}
+<div class='clear'></div>
+</div>
+
 ---
 

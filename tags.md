@@ -14,53 +14,55 @@ header-img: "img/semantic.jpg"
 
 ## 遗传列表
 
-test11+
+test11++
 
 <div>
-	<h2 class='title'>Tag Cloud</h2>
-	{% include /JB/tag_cloud %}
-	<div class='clear'></div>
+<h2 class='title'>Tag Cloud</h2>
+{% include tag_cloud %}
+<div class='clear'></div>
 </div>
 
 ---
 
 <div class="tag-cloud">
    {% for tag in site.tags %}
-      <a href="#posts-tag" id="{{ forloop.index }}" class="__tag" style="margin: 5px">{{ tag[0] }}</a>
-      <ul id="list_{{ forloop.index }}" style="display:none;">
-         {% for post in tag[1] %}
-            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-         {% endfor %}
-      </ul>
+   <a href="#posts-tag" id="{{ forloop.index }}" class="__tag" style="margin: 5px">{{ tag[0] }}</a>
+   <ul id="list_{{ forloop.index }}" style="display:none;">
+   {% for post in tag[1] %}
+   <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+   {% endfor %}
+   </ul>
    {% endfor %}
 </div>
 
 <div id ="posts-tags" class="post-list" style="margin: 50px;"></div>
 
 <script type="text/javascript">
-   $(function() {
-      var minFont = 15.0,
-          maxFont = 40.0,
-          diffFont = maxFont - minFont,
-          size = 0;
+  $(function() {
+   var minFont = 15.0,
+   maxFont = 40.0,
+   diffFont = maxFont - minFont,
+   size = 0;
        
-      {% assign max = 1.0 %}
-      {% for tag in site.tags %}
-         {% if tag[1].size > max %}
-            {% assign max = tag[1].size %}
-         {% endif %}
-      {% endfor %}
+   {% assign max = 1.0 %}
+
+   {% for tag in site.tags %}
+   {% if tag[1].size > max %}
+   {% assign max = tag[1].size %}
+   {% endif %}
+   {% endfor %}
             
-      {% for tag in site.tags %}
-         size = (Math.log({{ tag[1].size }}) / Math.log({{ max }})) * diffFont + minFont;
-         $("#{{ forloop.index }}").css("font-size", size + "px");
-      {% endfor %}
-      $('.tag-cloud a[class^="__tag"]').click(function() {
-         $('.post-list').empty();
-         $('#list_' + $(this).attr('id')).each(function() {
-            $('.post-list').append('<ul>' + $(this).html() + '</ul>');
-         });
-      });
+   {% for tag in site.tags %}
+   size = (Math.log({{ tag[1].size }}) / Math.log({{ max }})) * diffFont + minFont;
+   $("#{{ forloop.index }}").css("font-size", size + "px");
+   {% endfor %}
+
+   $('.tag-cloud a[class^="__tag"]').click(function() {
+   $('.post-list').empty();
+   $('#list_' + $(this).attr('id')).each(function() {
+   $('.post-list').append('<ul>' + $(this).html() + '</ul>');
+   });
+   });
    });
 </script>
 
@@ -96,12 +98,12 @@ $(function() {
 
 <script language="javascript">
 $.fn.tagcloud.defaults = {
-      size: {start: 14, end: 18, unit: 'pt'},
-      color: {start: '#cde', end: '#f52'}
-    };
+   size: {start: 14, end: 18, unit: 'pt'},
+   color: {start: '#cde', end: '#f52'}
+   };
 $(function () {
-      $('#tagscloud a').tagcloud();
-    });
+   $('#tagscloud a').tagcloud();
+   });
 </script>
 
 ---
