@@ -389,5 +389,51 @@ Nothing happened.
    });
 </script>
 
+Only list the tags.
+
+## Test11
+
+[](http://diydeveloper.io/tech/2014/03/09/create-a-tag-cloud-in-jekyll/)
+
+In /_includes/JB folder, create a new file called “tag_cloud”.
+
+Copy and paste this into the file:
+
+	{% comment %}
+	Creates a tag cloud on your page.
+	{% endcomment %}
+	{% for tag in site.tags %}
+  	<span class="tag-cloud-{{ tag | last | size | times: 10 | divided_by: site.tags.size }}">
+  	<a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag | first | slugize] }}-ref">{{ tag | first }}</a>
+  	</span>
+	{% endfor %}
+
+Add the code below to the end of clean-blog.css
+
+	/* tag cloud */
+	.tag-cloud-0 { font-size: 1em; }
+	.tag-cloud-1 { font-size: 1.5em; }
+	.tag-cloud-2 { font-size: 1.5em; font-weight: bold; }
+	.tag-cloud-3 { font-size: 2em; }
+	.tag-cloud-4 { font-size: 2em; font-weight: bold; }
+	.tag-cloud-5 { font-size: 2.5em; }
+	.tag-cloud-6 { font-size: 2.5em; font-weight: bold; }
+	.tag-cloud-7 { font-size: 2.75em; }
+	.tag-cloud-8 { font-size: 2.75em; font-weight: bold; }
+	.tag-cloud-9 { font-size: 2.75em;
+  	font-weight: bold;
+  	font-style: italic;
+	}
+	.tag-cloud-10 { font-size: 3em; }
+	/* end tag cloud */
+
+Add the code below to Tags.md
+
+	<div>
+	<h2 class='title'>Tag Cloud</h2>
+	{% include JB/tag_cloud %}
+	<div class='clear'></div>
+	</div>
+
 ---
 
