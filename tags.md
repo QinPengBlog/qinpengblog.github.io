@@ -14,10 +14,9 @@ header-img: "img/semantic.jpg"
 
 ## 遗传列表
 
-test11++
+test11+++
 
 <div>
-<h2 class='title'>Tag Cloud</h2>
 {% include tag_cloud %}
 <div class='clear'></div>
 </div>
@@ -31,6 +30,7 @@ test11++
    {% for post in tag[1] %}
    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
    {% endfor %}
+
    </ul>
    {% endfor %}
 </div>

@@ -393,7 +393,7 @@ Only list the tags.
 
 ## Test11
 
-[](http://diydeveloper.io/tech/2014/03/09/create-a-tag-cloud-in-jekyll/)
+[Create a tag cloud using Jekyll](http://diydeveloper.io/tech/2014/03/09/create-a-tag-cloud-in-jekyll/)
 
 In /_includes/JB folder, create a new file called “tag_cloud”.
 
@@ -402,6 +402,7 @@ Copy and paste this into the file:
 	{% comment %}
 	Creates a tag cloud on your page.
 	{% endcomment %}
+
 	{% for tag in site.tags %}
   	<span class="tag-cloud-{{ tag | last | size | times: 10 | divided_by: site.tags.size }}">
   	<a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag | first | slugize] }}-ref">{{ tag | first }}</a>
@@ -420,10 +421,7 @@ Add the code below to the end of clean-blog.css
 	.tag-cloud-6 { font-size: 2.5em; font-weight: bold; }
 	.tag-cloud-7 { font-size: 2.75em; }
 	.tag-cloud-8 { font-size: 2.75em; font-weight: bold; }
-	.tag-cloud-9 { font-size: 2.75em;
-  	font-weight: bold;
-  	font-style: italic;
-	}
+	.tag-cloud-9 { font-size: 2.75em; font-weight: bold; font-style: italic; }
 	.tag-cloud-10 { font-size: 3em; }
 	/* end tag cloud */
 
@@ -469,11 +467,28 @@ Not help.
 
 ## Test11++
 
-<div>
-<h2 class='title'>Tag Cloud</h2>
-{% include tag_cloud %}
-<div class='clear'></div>
-</div>
+Move tag_cloud to _includes folder.
+
+	<div>
+	<h2 class='title'>Tag Cloud</h2>
+	{% include tag_cloud %}
+	<div class='clear'></div>
+	</div>
+
+It works! The tag "个人主页" was bigger than other tags.
+
+But when you click on a tag, it doesn't go to the tag list. So I check the code and url appears after clicking on the tag, then I modify the code in tag_cloud by deleting "-ref".
+
+
+	{% comment %}
+	Creates a tag cloud on your page.
+	{% endcomment %}
+
+	{% for tag in site.tags %}
+  	<span class="tag-cloud-{{ tag | last | size | times: 10 | divided_by: site.tags.size }}">
+  	<a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag | first | slugize] }}">{{ tag | first }}</a>
+  	</span>
+	{% endfor %}
 
 ---
 
