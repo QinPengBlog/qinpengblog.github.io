@@ -490,5 +490,17 @@ But when you click on a tag, it doesn't go to the tag list. So I check the code 
   	</span>
 	{% endfor %}
 
+Yeah, it works.
+
+
+{% for tag in site.tags %}
+  <a class="tag-anchor" id="{{ tag[0] }}-ref"></a>
+  <h3 class="tag_box">{{ tag[0] }} <a><span>{{ tag[0].size }}</span></a></h3>
+  <ul>
+    {% assign pages_list = tag[1] %}
+    {% include JB/pages_list %}
+  </ul>
+{% endfor %}
+
 ---
 

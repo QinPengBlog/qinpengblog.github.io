@@ -14,11 +14,11 @@ header-img: "img/semantic.jpg"
 
 ## 遗传列表
 
-test11+++
+test11++++
 
 <div>
-{% include tag_cloud %}
-<div class='clear'></div>
+  {% include tag_cloud %}
+  <div class='clear'></div>
 </div>
 
 ---
@@ -112,7 +112,7 @@ $(function () {
 
 <ul class="listing">
 {% for tag in site.tags %}
-  <li class="listing-seperator" id="{{ tag[0] }}"><h4>{{ tag[0] }}</h4></li>
+  <li class="listing-seperator" id="{{ tag[0] }}"><h4>{{ tag[0] }} <a><span>{{ tag[0].size }}</span></a></h4></li>
 
   {% for post in tag[1] %}
   <li class="listing-item">
