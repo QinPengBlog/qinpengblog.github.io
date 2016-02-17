@@ -323,5 +323,8 @@ Use [jQCloud](https://github.com/lucaong/jQCloud)。
 
 	<div id="my_favorite_latin_words" style="width: 550px; height: 350px; border: 1px solid #ccc;"></div>
 
+出现了一个空白的长方形···里面并没有tags。
+
+change the word_list to word_array according to readme.md。
 ---
 
