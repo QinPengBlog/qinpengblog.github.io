@@ -502,5 +502,25 @@ Yeah, it works.
   </ul>
 {% endfor %}
 
+Just add <a><span>{{ tag[0].size }}</span></a>
+
+	  <li class="listing-seperator" id="{{ tag[0] }}"><h4>{{ tag[0] }} <a><span>{{ tag[0].size }}</span></a></h4></li>
+
+So the tag.size stands for the number of posts containing this tag. But the style of the number is not well as it is same to tag, which may confuse readers.
+
+Need to custom the style of the number.
+
+---
+
+## To-do list
+
+- Need to search "Tag" in jekyll to get to know the related things.
+
+- Learn html, Javascript systematically.
+
+- Custom the style of the number of tag. 
+
+- 
+
 ---
 
