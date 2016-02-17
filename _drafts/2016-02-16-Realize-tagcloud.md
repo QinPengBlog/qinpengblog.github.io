@@ -142,7 +142,7 @@ Nothing happened.
 
 P.S.发现About，Tags等页面均不把markdown标识编译出来，而是直接显示##。
 
-##Test3
+## Test3
 
 Open page.html to study.
 
@@ -179,6 +179,31 @@ $(function () {
 
 Nothing happened.
 
+## Test4
+
+还是怀疑是代码执行的问题，Google“如何在markdown中执行html代码”。在知乎中找到一个[回答](https://www.zhihu.com/question/19963642/answer/16025634)。结论是不需要< html>< /html>。
+
+>著作权归作者所有。
+商业转载请联系作者获得授权，非商业转载请注明出处。
+作者：潘韬
+链接：https://www.zhihu.com/question/19963642/answer/16025634
+来源：知乎
+Markdown 语法进阶在 Markdown 中嵌入原生HTML代码在 Markdown 代码中嵌入 HTML代码，如果你想直接在 Markdown 中嵌入HTML代码，那么你只需要将代码直接写在需要的地方即可：这是一个段落。
+    <table>
+    <tr>
+        <td>这是用原生的HTML代码写的表格。</td>
+    </tr>
+    </table>
+这是另一个段落。
+
+>转换之后得到：
+    <p>这是一个段落。</p>
+    <table>
+    <tr>
+        <td>这是用原生的HTML代码写的表格。</td>
+    </tr>
+    </table>
+    <p>这是另一个段落。</p>
 
 ---
 

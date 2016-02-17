@@ -14,14 +14,17 @@ header-img: "img/semantic.jpg"
 
 ## 遗传列表
 
-test4
+test5
 
+<!--Tagcloud
 <script type="text/javascript" src="/js/jquery.tagcloud.js"></script> 
+
 <div id='tag_cloud'>
 {% for tag in site.tags %}
 <a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
 {% endfor %}
 </div>
+
 <script language="javascript">
 $.fn.tagcloud.defaults = {
       size: {start: 14, end: 18, unit: 'pt'},
@@ -31,6 +34,9 @@ $(function () {
       $('#tag_cloud a').tagcloud();
     });
 </script>
+-->
+
+<!--列出每个tag出现的文章-->
 
 <ul class="listing">
 {% for tag in site.tags %}
@@ -43,5 +49,7 @@ $(function () {
 {% endfor %}
 {% endfor %}
 </ul>
+
+
 
 ---
