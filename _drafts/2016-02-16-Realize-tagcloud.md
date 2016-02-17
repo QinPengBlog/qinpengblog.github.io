@@ -265,10 +265,37 @@ It seems that '/js/jquery.tagcloud.js' following src, rather than "/js/jquery.ta
 
 STILL NOTHING HAPPENED.
 
+### Test8+
+
 Add"---"after the tag cloud. Done.
 
+### Test8++
+
 Add "---" to each tag in the list part. Only show as ---.
-As the "---" is in html part, so Google to find that < hr> represent horizental rule. Change the "---" to < hr>.
+As the "---" is in html part, so Google to find that < hr> represent horizental rule. Change the "---" to < hr>. 
+
+    <ul class="listing">
+	{% for tag in site.tags %}
+  	<li class="listing-seperator" id="{{ tag[0] }}">{{ tag[0] }}</li>
+	{% for post in tag[1] %}
+  	<li class="listing-item">
+  	<time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+  	<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+  	</li>
+	{% endfor %}
+	<hr>
+	{% endfor %}
+	</ul>
+
+Done. 
+
+The problem now is how to cancel the unorder list before each tag.
+
+### Test8+++
+
+Stand out the tags by adding < h3>< /h3>.
+
+	 <li class="listing-seperator" id="{{ tag[0] }}"><h3>{{ tag[0] }}</h3></li>
 
 
 
