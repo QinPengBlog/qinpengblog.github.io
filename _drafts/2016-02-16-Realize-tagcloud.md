@@ -261,6 +261,16 @@ change it to:
 
 It seems that '/js/jquery.tagcloud.js' following src, rather than "/js/jquery.tagcloud.js".
 
+    <script type="text/javascript" src='/js/jquery.tagcloud.js'></script> 
+
+STILL NOTHING HAPPENED.
+
+Add"---"after the tag cloud. Done.
+
+Add "---" to each tag in the list part. Only show as ---.
+As the "---" is in html part, so Google to find that < hr> represent horizental rule. Change the "---" to < hr>.
+
+
 
 ---
 
