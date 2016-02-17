@@ -241,6 +241,26 @@ Test6
 
     <div id="whatever">
 
+Nothing happened.
+
+## Test7
+
+find that:
+
+img="img/**.jpg" 
+
+maybe the src is not right:
+
+    <script type="text/javascript" src="/js/jquery.tagcloud.js"></script> 
+
+change it to:
+
+	<script type="text/javascript" src="js/jquery.tagcloud.js"></script> 
+
+## Test8
+
+It seems that '/js/jquery.tagcloud.js' following src, rather than "/js/jquery.tagcloud.js".
+
 
 ---
 

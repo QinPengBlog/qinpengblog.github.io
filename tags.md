@@ -14,9 +14,9 @@ header-img: "img/semantic.jpg"
 
 ## 遗传列表
 
-test7
+test8
 
-<script type="text/javascript" src="js/jquery.tagcloud.js"></script> 
+<script type="text/javascript" src='/js/jquery.tagcloud.js'></script> 
 
 <div id="tagscloud">
 {% for tag in site.tags %}
@@ -33,6 +33,8 @@ $(function () {
       $('#tagscloud a').tagcloud();
     });
 </script>
+
+---
 
 <!--列出每个tag出现的文章-->
 
