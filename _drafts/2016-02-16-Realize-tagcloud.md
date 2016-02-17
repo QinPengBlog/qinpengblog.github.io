@@ -326,5 +326,68 @@ Use [jQCloud](https://github.com/lucaong/jQCloud)。
 出现了一个空白的长方形···里面并没有tags。
 
 change the word_list to word_array according to readme.md。
+
+	<link rel="stylesheet" type="text/css" href="/css/jqcloud.css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
+	<script type="text/javascript" src="/js/jqcloud-1.0.4.js"></script>
+
+	<script type="text/javascript">
+   	var word_array = [
+   	{% for tag in site.tags %}
+   	{text: "{{ tag[0] }}", weight: 13, link:"#{{ tag[0] }}"},
+   	{% endfor %}
+   	{text: "Lorem", weight: 15}
+  	];
+	$(function() {
+   	$("#tagsss").jQCloud(word_array);
+	});
+	</script>
+
+	<div id="tagsss" style="width: 550px; height: 350px;"></div>
+
+Nothing happened.
+
+## Test10
+
+<div class="tag-cloud">
+   {% for tag in site.tags %}
+      <a href="#posts-tag" id="{{ forloop.index }}" class="__tag" style="margin: 5px">{{ tag[0] }}</a>
+      <ul id="list_{{ forloop.index }}" style="display:none;">
+         {% for post in tag[1] %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+         {% endfor %}
+      </ul>
+   {% endfor %}
+</div>
+
+<div id ="posts-tags" class="post-list" style="margin: 50px;"></div>
+
+<script type="text/javascript">
+   $(function() {
+      var minFont = 15.0,
+          maxFont = 40.0,
+          diffFont = maxFont - minFont,
+          size = 0;
+       
+      {% assign max = 1.0 %}
+      {% for tag in site.tags %}
+         {% if tag[1].size > max %}
+            {% assign max = tag[1].size %}
+         {% endif %}
+      {% endfor %}
+            
+      {% for tag in site.tags %}
+         size = (Math.log({{ tag[1].size }}) / Math.log({{ max }})) * diffFont + minFont;
+         $("#{{ forloop.index }}").css("font-size", size + "px");
+      {% endfor %}
+      $('.tag-cloud a[class^="__tag"]').click(function() {
+         $('.post-list').empty();
+         $('#list_' + $(this).attr('id')).each(function() {
+            $('.post-list').append('<ul>' + $(this).html() + '</ul>');
+         });
+      });
+   });
+</script>
+
 ---
 
