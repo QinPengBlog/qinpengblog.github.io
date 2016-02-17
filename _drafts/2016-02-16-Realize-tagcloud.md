@@ -435,5 +435,35 @@ Add the code below to Tags.md
 	<div class='clear'></div>
 	</div>
 
+Informed by Github that failed to build the page:
+
+> A file was included in `tags.md` that is a symlink or does not exist in your `_includes` directory. For more information, see 
+> 
+> https://help.github.com/articles/page-build-failed-file-is-a-symlink.
+> 
+> GitHub Pages was recently upgraded to Jekyll 3.0. It may help to confirm you're using the correct dependencies:
+> 
+> https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
+
+> Troubleshooting a symlinked file error
+
+> We strongly recommend running Jekyll locally so you can easily debug and fix build errors before pushing to GitHub.
+> 
+> 1. Use your favorite text editor to open the file mentioned in the build failure email.
+
+> 2. Search for the include tag to see where you've referenced other files. For example: {% include cool_header.html %}.
+
+> 3. Copy or move any symlinked files into the _includes directory of your GitHub Pages repository.
+
+> 4. Commit and push to your GitHub Pages repository on GitHub to trigger another build on the server.
+
+Try to add a "/" to fix it.
+
+	<div>
+	<h2 class='title'>Tag Cloud</h2>
+	{% include /JB/tag_cloud %}
+	<div class='clear'></div>
+	</div>
+
 ---
 

@@ -14,11 +14,11 @@ header-img: "img/semantic.jpg"
 
 ## 遗传列表
 
-test11
+test11+
 
 <div>
 	<h2 class='title'>Tag Cloud</h2>
-	{% include JB/tag_cloud %}
+	{% include /JB/tag_cloud %}
 	<div class='clear'></div>
 </div>
 
