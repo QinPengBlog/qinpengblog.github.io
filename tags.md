@@ -14,10 +14,9 @@ header-img: "img/semantic.jpg"
 
 ## 遗传列表
 
-test6
+test7
 
-
-<script type="text/javascript" src="/js/jquery.tagcloud.js"></script> 
+<script type="text/javascript" src="js/jquery.tagcloud.js"></script> 
 
 <div id="tagscloud">
 {% for tag in site.tags %}
@@ -48,7 +47,5 @@ $(function () {
 {% endfor %}
 {% endfor %}
 </ul>
-
-
 
 ---
