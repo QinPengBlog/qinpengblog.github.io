@@ -205,5 +205,42 @@ Markdown 语法进阶在 Markdown 中嵌入原生HTML代码在 Markdown 代码�
     </table>
     <p>这是另一个段落。</p>
 
+## Test5
+
+隐藏标签云相关代码：
+
+发现确实被隐藏了，而后面的每个标签出现的文章列表没有受到影响。
+
+    <!--Tagcloud
+    <script type="text/javascript" src="/js/jquery.tagcloud.js"></script> 
+
+    <div id='tag_cloud'>
+    {% for tag in site.tags %}
+	<a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+	{% endfor %}
+	</div>
+
+	<script language="javascript">
+	$.fn.tagcloud.defaults = {
+      size: {start: 14, end: 18, unit: 'pt'},
+      color: {start: '#cde', end: '#f52'}
+    };
+	$(function () {
+      $('#tag_cloud a').tagcloud();
+    });
+	</script>
+	-->
+
+Test6
+
+发现代码里和说明文档里面不一样的地方：
+
+    <div id='tagscloud'>
+
+应该是双引号：
+
+    <div id="whatever">
+
+
 ---
 

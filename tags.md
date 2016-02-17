@@ -14,12 +14,12 @@ header-img: "img/semantic.jpg"
 
 ## 遗传列表
 
-test5
+test6
 
-<!--Tagcloud
+
 <script type="text/javascript" src="/js/jquery.tagcloud.js"></script> 
 
-<div id='tag_cloud'>
+<div id="tagscloud">
 {% for tag in site.tags %}
 <a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
 {% endfor %}
@@ -31,10 +31,9 @@ $.fn.tagcloud.defaults = {
       color: {start: '#cde', end: '#f52'}
     };
 $(function () {
-      $('#tag_cloud a').tagcloud();
+      $('#tagscloud a').tagcloud();
     });
 </script>
--->
 
 <!--列出每个tag出现的文章-->
 
