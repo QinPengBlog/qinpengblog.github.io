@@ -14,10 +14,9 @@ header-img: "img/semantic.jpg"
 
 ## 遗传列表
 
-Test12
+Test12+++
 
-{% assign tags = site.tags | sort %}
-{% for tag in tags %}
+{% for tag in site.tags %}
  <span class="site-tag">
    <a href="#{{ tag[0] }}"
    style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</a>

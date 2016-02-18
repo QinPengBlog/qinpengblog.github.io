@@ -351,45 +351,45 @@ Nothing happened.
 
 ## Test10
 
-<div class="tag-cloud">
-   {% for tag in site.tags %}
-      <a href="#posts-tag" id="{{ forloop.index }}" class="__tag" style="margin: 5px">{{ tag[0] }}</a>
-      <ul id="list_{{ forloop.index }}" style="display:none;">
-         {% for post in tag[1] %}
-            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-         {% endfor %}
-      </ul>
-   {% endfor %}
-</div>
+	<div class="tag-cloud">
+   		{% for tag in site.tags %}
+      		<a href="#posts-tag" id="{{ forloop.index }}" class="__tag" style="margin: 5px">{{ tag[0] }}</a>
+	     	<ul id="list_{{ forloop.index }}" style="display:none;">
+         		{% for post in tag[1] %}
+            	<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+         		{% endfor %}
+      		</ul>
+   		{% endfor %}
+	</div>
 
-<div id ="posts-tags" class="post-list" style="margin: 50px;"></div>
+	<div id ="posts-tags" class="post-list" style="margin: 50px;"></div>
 
-<script type="text/javascript">
-   $(function() {
-      var minFont = 15.0,
-          maxFont = 40.0,
-          diffFont = maxFont - minFont,
-          size = 0;
-       
-      {% assign max = 1.0 %}
-      {% for tag in site.tags %}
-         {% if tag[1].size > max %}
+	<script type="text/javascript">
+   		$(function() {
+      		var minFont = 15.0,
+          		maxFont = 40.0,
+          		diffFont = maxFont - minFont,
+          		size = 0;
+        {% assign max = 1.0 %}
+      	{% for tag in site.tags %}
+        	{% if tag[1].size > max %}
             {% assign max = tag[1].size %}
-         {% endif %}
-      {% endfor %}
+         	{% endif %}
+      	{% endfor %}
             
-      {% for tag in site.tags %}
-         size = (Math.log({{ tag[1].size }}) / Math.log({{ max }})) * diffFont + minFont;
-         $("#{{ forloop.index }}").css("font-size", size + "px");
-      {% endfor %}
-      $('.tag-cloud a[class^="__tag"]').click(function() {
-         $('.post-list').empty();
-         $('#list_' + $(this).attr('id')).each(function() {
+        {% for tag in site.tags %}
+        	size = (Math.log({{ tag[1].size }}) / Math.log({{ max }})) * diffFont + minFont;
+         	$("#{{ forloop.index }}").css("font-size", size + "px");
+      	{% endfor %}
+      	
+		$('.tag-cloud a[class^="__tag"]').click(function() {
+        $('.post-list').empty();
+        $('#list_' + $(this).attr('id')).each(function() {
             $('.post-list').append('<ul>' + $(this).html() + '</ul>');
-         });
-      });
-   });
-</script>
+        });
+        });
+        });
+	</script>
 
 Only list the tags.
 
@@ -535,7 +535,7 @@ But the style of the number is not well as it is same to tag, which may confuse 
 
 It works. But the tags showing up in a list.
 
-Find Test10 works now.
+Find Test10 works now as Test11, the tag "个人主页" is bigger. _Find in 2016-02-18 11:09 The css added in Test11 helps_
 
 Besides this, I try to modify the number of the posts belong to a tag.
 	
@@ -556,6 +556,21 @@ Add css to clean-blog.css following the blog:
     display: inline-block;
     margin-right: 12px;
 }
+
+### Test12+++
+
+Comparing with other tests, I find that the first line code in Test12 is useless, so I delete:
+
+{% assign tags = site.tags | sort %}
+
+and change the code below as:
+
+{% for tag in site.tags %}
+ <span class="site-tag">
+   <a href="#{{ tag[0] }}"
+   style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</a>
+ </span>
+{% endfor %}
 
 ---
 
