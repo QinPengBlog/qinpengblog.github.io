@@ -3,6 +3,11 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+			
+				<!--Hit counter from Powr-->
+				<script src="//www.powr.io/powr.js" external-type="html"></script> 
+				<div class="powr-hit-counter" id="37b98aaf_1455784058864"></div>
+			
                 <ul class="list-inline text-center">
                     <li>
                         <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
@@ -81,11 +86,7 @@
                     </li>
                     {% endif %}
                 </ul>
-				
-				<!--Hit counter from Powr-->
-				<script src="//www.powr.io/powr.js" external-type="html"></script> 
-				<div class="powr-hit-counter" id="37b98aaf_1455784058864"></div>
-				
+							
                 <p class="copyright text-muted">
                 &copy; {{ site.time | date: '%Y' }} {{ site.owner.name }} ❖ Powered by Jekyll.
                 </p>
