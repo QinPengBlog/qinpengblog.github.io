@@ -465,7 +465,7 @@ Try to add a "/" to fix it.
 
 Not help.
 
-## Test11++
+### Test11++
 
 Move tag_cloud to _includes folder.
 
@@ -476,6 +476,8 @@ Move tag_cloud to _includes folder.
 	</div>
 
 It works! The tag "个人主页" was bigger than other tags.
+
+### Test11+++
 
 But when you click on a tag, it doesn't go to the tag list. So I check the code and url appears after clicking on the tag, then I modify the code in tag_cloud by deleting "-ref".
 
@@ -491,7 +493,9 @@ But when you click on a tag, it doesn't go to the tag list. So I check the code 
 
 Yeah, it works.
 
-Wang to show the number of the posts containing the tags. Learn from:
+### Test11++++
+
+Want to show the number of the posts containing the tags. Learn from:
 
 {% for tag in site.tags %}
   <a class="tag-anchor" id="{{ tag[0] }}-ref"></a>
@@ -524,6 +528,14 @@ But the style of the number is not well as it is same to tag, which may confuse 
    style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</a>
  </span>
 {% endfor %}
+
+It works. But the tags showing up in a list.
+
+Find Test10 works now.
+
+### Test12+
+Change the link of the tags to #{{ tag[0] }} in Test10 and 12. But when I click on the tags in Test10, I find the previous link towards to show up the relating posts below the tags. It is a different showing up way, so I keep it. Only change in Test12. The previous links of the tags in Test12 towards http://qinpeng.space/tag/{{tag[]}}/.
+
 
 
 ---
