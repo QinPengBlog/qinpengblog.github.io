@@ -535,7 +535,10 @@ But the style of the number is not well as it is same to tag, which may confuse 
 
 It works. But the tags showing up in a list.
 
-Find Test10 works now as Test11, the tag "个人主页" is bigger. _Find in 2016-02-18 11:09 The css added in Test11 helps_
+Find Test10 works now as Test11, the tag "个人主页" is bigger. 
+> Find in 2016-02-18 11:09. The css added in Test11 helps
+
+> Find in 2016-02-18 11:29. Not the css helps as the styles of the text in Test10 and Test11 are not the same.
 
 Besides this, I try to modify the number of the posts belong to a tag.
 	
@@ -552,25 +555,30 @@ Find the links of the tags in Test10 not work anymore.
 
 Add css to clean-blog.css following the blog:
 
-.site-tag a {
+	.site-tag a {
     display: inline-block;
     margin-right: 12px;
-}
+	}
+
+Seem to create the site unsuccessfully.
+
+Check in Test12+++ and find that not help.
 
 ### Test12+++
 
 Comparing with other tests, I find that the first line code in Test12 is useless, so I delete:
 
-{% assign tags = site.tags | sort %}
+	{% assign tags = site.tags | sort %}
 
 and change the code below as:
 
-{% for tag in site.tags %}
- <span class="site-tag">
-   <a href="#{{ tag[0] }}"
-   style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</a>
- </span>
-{% endfor %}
+	{% for tag in site.tags %}
+ 		<span class="site-tag">
+   			<a href="#{{ tag[0] }}"style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</a>
+ 		</span>
+	{% endfor %}
+
+Seem to create the site unsuccessfully. After several minutes, it loaded. And I found that Test10 works with the new showing post list way again.
 
 ---
 
