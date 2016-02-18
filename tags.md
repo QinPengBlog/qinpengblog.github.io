@@ -126,7 +126,7 @@ $(function () {
 
 <ul class="listing">
 {% for tag in site.tags %}
-  <li class="listing-seperator" id="{{ tag[0] }}"><h4>{{ tag[0] }}</h4> <h8><a><span>{{ tag[0].size }}</span></a></h8></li>
+  <li class="listing-seperator" id="{{ tag[0] }}"><h4>{{ tag[0] }}   <a><span>{{ tag[0].size }}</span></a></h4></li>
 
   {% for post in tag[1] %}
   <li class="listing-item">

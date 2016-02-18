@@ -540,3 +540,8 @@ body {
 }
 .tag-cloud-10 { font-size: 3em; }
 /* end tag cloud */
+
+.site-tag a {
+    display: inline-block;
+    margin-right: 12px;
+}

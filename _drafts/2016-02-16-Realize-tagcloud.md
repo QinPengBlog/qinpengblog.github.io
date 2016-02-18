@@ -47,96 +47,97 @@ $(function () {
 
 尝试删掉这段：
 
-<script src="/js/jquery.tagcloud.js" type="text/javascript" charset="utf-8"></script> 
-<script language="javascript">
-$.fn.tagcloud.defaults = {
+	<script src="/js/jquery.tagcloud.js" type="text/javascript" charset="utf-8"></script> 
+	<script language="javascript">
+	$.fn.tagcloud.defaults = {
     size: {start: 1, end: 1, unit: 'em'},
       color: {start: '#f8e0e6', end: '#ff3333'}
-};
+	};
 
-$(function () {
+	$(function () {
     $('#tag_cloud a').tagcloud();
-});
-</script>
+	});
+	</script>
 
 果然没有变化。
 
-##Test1
+## Test1
 
 用原来的代码：
 
-
-<div id='tag_cloud'>
-{% for tag in site.tags %}
-<a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
-{% endfor %}
-</div>
+	<div id='tag_cloud'>
+		{% for tag in site.tags %}
+			<a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+		{% endfor %}
+	</div>
 
 替代Demo里的代码的第一部分：
 
-<div id="whatever">
+	<div id="whatever">
       <a href="/path" rel="7">peace</a>
       <a href="/path" rel="3">unity</a>
       <a href="/path" rel="10">love</a>
       <a href="/path" rel="5">having fun</a>
-</div>
+	</div>
 
 用Demo里的代码的第二部分：
 
-$.fn.tagcloud.defaults = {
+	$.fn.tagcloud.defaults = {
       size: {start: 14, end: 18, unit: 'pt'},
       color: {start: '#cde', end: '#f52'}
     };
 
-$(function () {
+	$(function () {
       $('#whatever a').tagcloud();
     });
 
 替代原来代码的最后一部分的相应代码：
 
-<script src="/js/jquery.tagcloud.js" type="text/javascript" charset="utf-8"></script> 
+	<script src="/js/jquery.tagcloud.js" type="text/javascript" charset="utf-8"></script> 
 
-<script language="javascript">
-$.fn.tagcloud.defaults = {
+	<script language="javascript">
+	$.fn.tagcloud.defaults = {
       size: {start: 14, end: 18, unit: 'pt'},
       color: {start: '#cde', end: '#f52'}
     };
 
-$(function () {
+	$(function () {
       $('#tag_cloud a').tagcloud();
     });
-</script>
+	</script>
 
 Nothing happened.
 
 P.S.为了识别出Github已经编译了新上传的文件，在文件中添加了test文字。
 
-##Test2
+## Test2
 
-猜测是不是因为MD文件中编译的时候不那个直接读取html语言。
+猜测是不是因为MD文件中编译的时候不能直接读取html语言。
 
-<html>
-<div id='tag_cloud'>
-{% for tag in site.tags %}
-<a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
-{% endfor %}
-</div>
-</html>
+加入< html>标签：
 
-<html>
-<script src="/js/jquery.tagcloud.js" type="text/javascript" charset="utf-8"></script> 
+	<html>
+		<div id='tag_cloud'>
+			{% for tag in site.tags %}
+				<a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+			{% endfor %}
+		</div>
+	</html>
 
-<script language="javascript">
-$.fn.tagcloud.defaults = {
-      size: {start: 14, end: 18, unit: 'pt'},
-      color: {start: '#cde', end: '#f52'}
-    };
+	<html>
+		<script src="/js/jquery.tagcloud.js" type="text/javascript" charset="utf-8"></script> 
 
-$(function () {
-      $('#tag_cloud a').tagcloud();
-    });
-</script>
-</html>
+		<script language="javascript">
+			$.fn.tagcloud.defaults = {
+    	  		size: {start: 14, end: 18, unit: 'pt'},
+    	  		color: {start: '#cde', end: '#f52'}
+    		};
+	
+			$(function () {
+    		  $('#tag_cloud a').tagcloud();
+    		});
+		</script>
+	</html>
 
 Nothing happened.
 
@@ -147,35 +148,33 @@ P.S.发现About，Tags等页面均不把markdown标识编译出来，而是直�
 Open page.html to study.
 
 Move:
-type="text/javascript"
+	type="text/javascript"
 to the front of src.
 
 Delete:
-charset="utf-8"
+	charset="utf-8"
 
 把第三段代码移动到第一段之中：
 
+	<html>
+		<script type="text/javascript" src="/js/jquery.tagcloud.js"></script> 
 
-<html>
-<script type="text/javascript" src="/js/jquery.tagcloud.js"></script> 
+		<div id='tag_cloud'>
+			{% for tag in site.tags %}
+				<a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+			{% endfor %}
+		</div>
 
-<div id='tag_cloud'>
-{% for tag in site.tags %}
-<a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
-{% endfor %}
-</div>
-
-<script language="javascript">
-$.fn.tagcloud.defaults = {
-      size: {start: 14, end: 18, unit: 'pt'},
-      color: {start: '#cde', end: '#f52'}
-    };
-$(function () {
-      $('#tag_cloud a').tagcloud();
-    });
-</script>
-
-</html>
+		<script language="javascript">
+			$.fn.tagcloud.defaults = {
+      		size: {start: 14, end: 18, unit: 'pt'},
+      		color: {start: '#cde', end: '#f52'}
+    		};
+			$(function () {
+      		$('#tag_cloud a').tagcloud();
+    		});
+		</script>
+	</html>
 
 Nothing happened.
 
@@ -231,7 +230,7 @@ Markdown 语法进阶在 Markdown 中嵌入原生HTML代码在 Markdown 代码�
 	</script>
 	-->
 
-Test6
+## Test6
 
 发现代码里和说明文档里面不一样的地方：
 
@@ -247,7 +246,7 @@ Nothing happened.
 
 find that:
 
-img="img/**.jpg" 
+	img="img/**.jpg" 
 
 maybe the src is not right:
 
@@ -276,12 +275,12 @@ As the "---" is in html part, so Google to find that < hr> represent horizental 
 
     <ul class="listing">
 	{% for tag in site.tags %}
-  	<li class="listing-seperator" id="{{ tag[0] }}">{{ tag[0] }}</li>
+  		<li class="listing-seperator" id="{{ tag[0] }}">{{ tag[0] }}</li>
 	{% for post in tag[1] %}
-  	<li class="listing-item">
-  	<time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-  	<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-  	</li>
+  		<li class="listing-item">
+  		<time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+	  	<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+  		</li>
 	{% endfor %}
 	<hr>
 	{% endfor %}
@@ -301,6 +300,7 @@ Done.
 
 change h3 to h4
 
+---
 
 ### Test9
 
@@ -347,6 +347,8 @@ change the word_list to word_array according to readme.md。
 
 Nothing happened.
 
+---
+
 ## Test10
 
 <div class="tag-cloud">
@@ -390,6 +392,8 @@ Nothing happened.
 </script>
 
 Only list the tags.
+
+---
 
 ## Test11
 
@@ -533,10 +537,25 @@ It works. But the tags showing up in a list.
 
 Find Test10 works now.
 
+Besides this, I try to modify the number of the posts belong to a tag.
+	
+	<li class="listing-seperator" id="{{ tag[0] }}"><h4>{{ tag[0] }}</h4> </h8><a><span>{{ tag[0].size }}</span></a></h8></li>
+
+Find that the tag and the number showing up in two lines.
+
 ### Test12+
 Change the link of the tags to #{{ tag[0] }} in Test10 and 12. But when I click on the tags in Test10, I find the previous link towards to show up the relating posts below the tags. It is a different showing up way, so I keep it. Only change in Test12. The previous links of the tags in Test12 towards http://qinpeng.space/tag/{{tag[]}}/.
 
+Find the links of the tags in Test10 not work anymore.
 
+### Test12++
+
+Add css to clean-blog.css following the blog:
+
+.site-tag a {
+    display: inline-block;
+    margin-right: 12px;
+}
 
 ---
 
