@@ -14,7 +14,18 @@ header-img: "img/semantic.jpg"
 
 ## 遗传列表
 
-test11++++
+Test12
+
+{% assign tags = site.tags | sort %}
+{% for tag in tags %}
+ <span class="site-tag">
+   <a href="/tag/{{ tag | first | slugify }}/"
+   style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</a>
+ </span>
+{% endfor %}
+
+---
+Test11
 
 <div>
   {% include tag_cloud %}
@@ -22,6 +33,7 @@ test11++++
 </div>
 
 ---
+Test10
 
 <div class="tag-cloud">
    {% for tag in site.tags %}
@@ -67,6 +79,7 @@ test11++++
 </script>
 
 ---
+Test9
 
 <link rel="stylesheet" type="text/css" href="/css/jqcloud.css" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
@@ -87,6 +100,7 @@ $(function() {
 <div id="tagsss" style="width: 550px; height: 350px;"></div>
 
 ---
+Test8
 
 <script type="text/javascript" src="/js/jquery.tagcloud.js"></script> 
 
@@ -112,7 +126,7 @@ $(function () {
 
 <ul class="listing">
 {% for tag in site.tags %}
-  <li class="listing-seperator" id="{{ tag[0] }}"><h4>{{ tag[0] }} <a><span>{{ tag[0].size }}</span></a></h4></li>
+  <li class="listing-seperator" id="{{ tag[0] }}"><h4>{{ tag[0] }}</h4> <h8><a><span>{{ tag[0].size }}</span></a></h8></li>
 
   {% for post in tag[1] %}
   <li class="listing-item">

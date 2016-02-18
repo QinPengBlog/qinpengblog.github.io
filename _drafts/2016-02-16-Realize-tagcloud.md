@@ -479,7 +479,6 @@ It works! The tag "个人主页" was bigger than other tags.
 
 But when you click on a tag, it doesn't go to the tag list. So I check the code and url appears after clicking on the tag, then I modify the code in tag_cloud by deleting "-ref".
 
-
 	{% comment %}
 	Creates a tag cloud on your page.
 	{% endcomment %}
@@ -492,6 +491,7 @@ But when you click on a tag, it doesn't go to the tag list. So I check the code 
 
 Yeah, it works.
 
+Wang to show the number of the posts containing the tags. Learn from:
 
 {% for tag in site.tags %}
   <a class="tag-anchor" id="{{ tag[0] }}-ref"></a>
@@ -506,9 +506,25 @@ Just add <a><span>{{ tag[0].size }}</span></a>
 
 	  <li class="listing-seperator" id="{{ tag[0] }}"><h4>{{ tag[0] }} <a><span>{{ tag[0].size }}</span></a></h4></li>
 
-So the tag.size stands for the number of posts containing this tag. But the style of the number is not well as it is same to tag, which may confuse readers.
+Find that the tag.size stands for the number of posts containing this tag. 
 
-Need to custom the style of the number.
+But the style of the number is not well as it is same to tag, which may confuse readers. Need to custom the style of the number.
+
+---
+
+## Test12
+
+[Generating Tag cloud on Jekyll blog without plugin
+](https://superdevresources.com/tag-cloud-jekyll/)
+
+{% assign tags = site.tags | sort %}
+{% for tag in tags %}
+ <span class="site-tag">
+   <a href="/tag/{{ tag | first | slugify }}/"
+   style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</a>
+ </span>
+{% endfor %}
+
 
 ---
 
