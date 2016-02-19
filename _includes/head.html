@@ -8,7 +8,24 @@
 <!--Animate from Eager-->
 <script src="//fast.eager.io/GqlikMOv07.js"></script>
 
-<!--StickyMojo a contained sticky sidebar-->
+<!--jQCloud-->
+<link rel="stylesheet" type="text/css" href="/css/jqcloud.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
+<script type="text/javascript" src="/js/jqcloud-1.0.4.js"></script>
+
+<script type="text/javascript">
+   var word_array = [
+   {% for tag in site.tags %}
+   {text: "{{ tag[0] }}", weight: 13, link:"#{{ tag[0] }}"},
+   {% endfor %}
+   {text: "Lorem", weight: 15}
+  ];
+$(function() {
+   $("#tagsss").jQCloud(word_array);
+});
+</script>
+
+<!--StickyMojo a contained sticky sidebar
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
 <script src="/js/stickyMojo.js"></script>
 
@@ -20,7 +37,8 @@
     <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-
+-->
+	
 <!-- Icons -->
   <link rel="shortcut icon" href="img/favicon.ico">
 

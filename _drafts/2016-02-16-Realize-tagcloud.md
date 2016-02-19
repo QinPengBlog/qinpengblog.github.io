@@ -304,7 +304,7 @@ change h3 to h4
 
 ## Test9
 
-Use [jQCloud](https://github.com/lucaong/jQCloud)。
+Use [jQCloud](https://github.com/lucaong/jQCloud)。[Demo](http://www.lucaongaro.eu/demos/jqcloud/)
 
 	<link rel="stylesheet" type="text/css" href="/css/jqcloud.css" />
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
@@ -354,6 +354,30 @@ Inspired by [Embed javascript in markdown](http://stackoverflow.com/questions/27
 Add a newline before < /script>
 
 Emerge another guess, the problem is the forbidden of relative_permanlink? Next try this.
+
+Nothing happpened.
+
+### Test9++
+
+Reread README.md, find that the first part of the code should be put in the < head>< /head>. Try it.
+
+Put the code below into 'head.html'
+
+	<link rel="stylesheet" type="text/css" href="/css/jqcloud.css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
+	<script type="text/javascript" src="/js/jqcloud-1.0.4.js"></script>
+
+	<script type="text/javascript">
+   		var word_array = [
+   			{% for tag in site.tags %}
+   			{text: "{{ tag[0] }}", weight: 13, link:"#{{ tag[0] }}"},
+   			{% endfor %}
+   			{text: "Lorem", weight: 15}
+  			];
+			$(function() {
+   			$("#tagsss").jQCloud(word_array);
+			});
+	</script>
 
 ---
 

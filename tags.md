@@ -78,27 +78,7 @@ Test10
 </script>
 
 ---
-Test9
-
-<link rel="stylesheet" type="text/css" href="/css/jqcloud.css" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js">
-</script>
-<script type="text/javascript" src="/js/jqcloud-1.0.4.js">
-</script>
-
-<script type="text/javascript">
-
-   var word_array = [
-   {% for tag in site.tags %}
-   {text: "{{ tag[0] }}", weight: 13, link:"#{{ tag[0] }}"},
-   {% endfor %}
-   {text: "Lorem", weight: 15}
-  ];
-$(function() {
-   $("#tagsss").jQCloud(word_array);
-});
-
-</script>
+Test9++
 
 <div id="tagsss" style="width: 550px; height: 350px;"></div>
 
