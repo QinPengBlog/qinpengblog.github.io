@@ -302,7 +302,7 @@ change h3 to h4
 
 ---
 
-### Test9
+## Test9
 
 Use [jQCloud](https://github.com/lucaong/jQCloud)。
 
@@ -347,9 +347,19 @@ change the word_list to word_array according to readme.md。
 
 Nothing happened.
 
+### Test9+ (2016-02-19 14:45)
+
+Inspired by [Embed javascript in markdown](http://stackoverflow.com/questions/2754391/embed-javascript-in-markdown).
+
+Add a newline before < /script>
+
+Emerge another guess, the problem is the forbidden of relative_permanlink? Next try this.
+
 ---
 
 ## Test10
+
+[jekyll-tagcloud](https://github.com/enrmarc/jekyll-tagcloud/blob/master/tags.html)
 
 	<div class="tag-cloud">
    		{% for tag in site.tags %}
@@ -579,6 +589,7 @@ and change the code below as:
 	{% endfor %}
 
 Seem to create the site unsuccessfully. After several minutes, it loaded. And I found that Test10 works with the new showing post list way again.
+
 
 ---
 

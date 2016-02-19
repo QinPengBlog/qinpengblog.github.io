@@ -81,10 +81,13 @@ Test10
 Test9
 
 <link rel="stylesheet" type="text/css" href="/css/jqcloud.css" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
-<script type="text/javascript" src="/js/jqcloud-1.0.4.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js">
+</script>
+<script type="text/javascript" src="/js/jqcloud-1.0.4.js">
+</script>
 
 <script type="text/javascript">
+
    var word_array = [
    {% for tag in site.tags %}
    {text: "{{ tag[0] }}", weight: 13, link:"#{{ tag[0] }}"},
@@ -94,6 +97,7 @@ Test9
 $(function() {
    $("#tagsss").jQCloud(word_array);
 });
+
 </script>
 
 <div id="tagsss" style="width: 550px; height: 350px;"></div>
@@ -101,7 +105,8 @@ $(function() {
 ---
 Test8
 
-<script type="text/javascript" src="/js/jquery.tagcloud.js"></script> 
+<script type="text/javascript" src="/js/jquery.tagcloud.js">
+</script> 
 
 <div id="tagscloud">
 {% for tag in site.tags %}
@@ -110,6 +115,7 @@ Test8
 </div>
 
 <script language="javascript">
+
 $.fn.tagcloud.defaults = {
    size: {start: 14, end: 18, unit: 'pt'},
    color: {start: '#cde', end: '#f52'}
@@ -117,6 +123,7 @@ $.fn.tagcloud.defaults = {
 $(function () {
    $('#tagscloud a').tagcloud();
    });
+
 </script>
 
 ---

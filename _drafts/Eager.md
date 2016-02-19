@@ -20,3 +20,7 @@ Add to the head part of head.html
 
 Add to the header part of post.html 
 	<script src="//fast.eager.io/GqlikMOv07.js"></script>
+
+Powr
+
+jQuery Rain
