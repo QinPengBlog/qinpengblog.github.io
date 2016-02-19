@@ -16,12 +16,11 @@
 <script type="text/javascript">
    var word_array = [
    {% for tag in site.tags %}
-   {text: "{{ tag[0] }}", weight: 13, link:"#{{ tag[0] }}"},
+   {text: "{{ tag[0] }}", weight: {{ tag | last | size | times: 10 | divided_by: site.tags.size }}, link:"#{{ tag[0] }}"},
    {% endfor %}
-   {text: "Lorem", weight: 15}
   ];
 $(function() {
-   $("#tag	sss").jQCloud(word_array);
+   $("#mycloud").jQCloud(word_array);
 });
 </script>
 

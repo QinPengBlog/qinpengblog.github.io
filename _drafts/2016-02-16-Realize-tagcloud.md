@@ -381,6 +381,53 @@ Put the code below into 'head.html'
 
 Nothing happened.
 
+### Test9+++
+
+Use F12 to check in brower and find it showing as:
+	  
+	var word_array = [ 
+    {text: "个人主页", weight: 13, link:"#个人主页"},
+    {text: "方法论", weight: 13, link:"#方法论"},
+    {text: "个人提高", weight: 13, link:"#个人提高"},
+    {text: "初心", weight: 13, link:"#初心"},
+    {text: "Android", weight: 13, link:"#Android"},
+    {text: "Lorem", weight: 15}
+    ];
+	$(function() {
+   		$("#tag	sss").jQCloud(word_array);
+	});
+
+Change the weight with the code from tag_cloud
+
+	var word_array = [
+    {% for tag in site.tags %}
+    {text: "{{ tag[0] }}", weight: {{ tag | last | size | times: 10 | divided_by: site.tags.size }}, link:"#{{ tag[0] }}"},
+    {% endfor %}
+    ];
+	$(function() {
+       $("#tag	sss").jQCloud(word_array);
+	});
+
+find the name showing is different to set
+
+	<div id="tagsss" style="width: 550px; height: 350px;"></div>
+
+When I check the code in head.html, I find that the name in html set as 'tag sss' 
+
+Change the name to mycloud.
+
+Inspired by this, I find the name set in Test8 is wrong.
+
+	$.fn.tagcloud.defaults = {
+	   size: {start: 14, end: 18, unit: 'pt'},
+	   color: {start: '#cde', end: '#f52'}
+	   };
+	$(function () {
+   	$('#tagscloud a').tagcloud();
+   	});
+
+Change '#tagscloud a' to '#tagscloud'
+
 ---
 
 ## Test10

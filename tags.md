@@ -78,9 +78,9 @@ Test10
 </script>
 
 ---
-Test9++
+Test9+++
 
-<div id="tagsss" style="width: 550px; height: 350px;"></div>
+<div id="mycloud" style="width: 550px; height: 350px;"></div>
 
 ---
 Test8
@@ -101,7 +101,7 @@ $.fn.tagcloud.defaults = {
    color: {start: '#cde', end: '#f52'}
    };
 $(function () {
-   $('#tagscloud a').tagcloud();
+   $('#tagscloud').tagcloud();
    });
 
 </script>
