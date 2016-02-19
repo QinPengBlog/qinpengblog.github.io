@@ -101,7 +101,7 @@ $.fn.tagcloud.defaults = {
    color: {start: '#cde', end: '#f52'}
    };
 $(function () {
-   $('#tagscloud').tagcloud();
+   $("#tagscloud").tagcloud();
    });
 
 </script>

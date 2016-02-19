@@ -428,6 +428,16 @@ Inspired by this, I find the name set in Test8 is wrong.
 
 Change '#tagscloud a' to '#tagscloud'
 
+Nothing happened.
+
+### Test9++++
+
+When reread README.md, I find that 
+
+	$("#example").jQCloud(word_array);
+
+So I changed the  $('#tagscloud').tagcloud(); in Test8 to  $("#tagscloud").tagcloud();
+
 ---
 
 ## Test10
