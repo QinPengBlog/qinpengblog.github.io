@@ -381,14 +381,14 @@ Put the code below into 'head.html'
 	<script type="text/javascript" src="/js/jqcloud-1.0.4.js"></script>
 
 	<script type="text/javascript">
-   		var word_array = [
-   			{% for tag in site.tags %}
-   			{text: "{{ tag[0] }}", weight: 13, link:"#{{ tag[0] }}"},
-   			{% endfor %}
-   			{text: "Lorem", weight: 15}
-  			];
+		var word_array = [
+			{% for tag in site.tags %}
+			{text: "{{ tag[0] }}", weight: 13, link:"#{{ tag[0] }}"},	
+			{% endfor %}
+			{text: "Lorem", weight: 15}
+			];
 			$(function() {
-   			$("#tagsss").jQCloud(word_array);
+				$("#tagsss").jQCloud(word_array);
 			});
 	</script>
 
@@ -407,7 +407,7 @@ Use F12 to check in brower and find it showing as:
     {text: "Lorem", weight: 15}
     ];
 	$(function() {
-   		$("#tag	sss").jQCloud(word_array);
+		$("#tag	sss").jQCloud(word_array);
 	});
 
 Change the weight with the code from tag_cloud
@@ -436,8 +436,8 @@ Inspired by this, I find the name set in Test8 is wrong.
 	   color: {start: '#cde', end: '#f52'}
 	   };
 	$(function () {
-   	$('#tagscloud a').tagcloud();
-   	});
+	$('#tagscloud a').tagcloud();
+	});
 
 Change '#tagscloud a' to '#tagscloud'
 
@@ -464,20 +464,20 @@ Guess that Tags.md locate in the root, and the javascript links are not right. B
 [jekyll-tagcloud](https://github.com/enrmarc/jekyll-tagcloud/blob/master/tags.html)
 
 	<div class="tag-cloud">
-   		{% for tag in site.tags %}
+		{% for tag in site.tags %}
       		<a href="#posts-tag" id="{{ forloop.index }}" class="__tag" style="margin: 5px">{{ tag[0] }}</a>
 	     	<ul id="list_{{ forloop.index }}" style="display:none;">
          		{% for post in tag[1] %}
             	<li><a href="{{ post.url }}">{{ post.title }}</a></li>
          		{% endfor %}
       		</ul>
-   		{% endfor %}
+		{% endfor %}
 	</div>
 
 	<div id ="posts-tags" class="post-list" style="margin: 50px;"></div>
 
 	<script type="text/javascript">
-   		$(function() {
+		$(function() {
       		var minFont = 15.0,
           		maxFont = 40.0,
           		diffFont = maxFont - minFont,
@@ -520,9 +520,9 @@ Copy and paste this into the file:
 	{% endcomment %}
 
 	{% for tag in site.tags %}
-  	<span class="tag-cloud-{{ tag | last | size | times: 10 | divided_by: site.tags.size }}">
-  	<a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag | first | slugize] }}-ref">{{ tag | first }}</a>
-  	</span>
+		<span class="tag-cloud-{{ tag | last | size | times: 10 | divided_by: site.tags.size }}">
+		<a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag | first | slugize] }}-ref">{{ tag | first }}</a>	
+		</span>
 	{% endfor %}
 
 Add the code below to the end of clean-blog.css
@@ -602,9 +602,9 @@ But when you click on a tag, it doesn't go to the tag list. So I check the code 
 	{% endcomment %}
 
 	{% for tag in site.tags %}
-  	<span class="tag-cloud-{{ tag | last | size | times: 10 | divided_by: site.tags.size }}">
-  	<a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag | first | slugize] }}">{{ tag | first }}</a>
-  	</span>
+		<span class="tag-cloud-{{ tag | last | size | times: 10 | divided_by: site.tags.size }}">
+		<a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag | first | slugize] }}">{{ tag | first }}</a>
+		</span>
 	{% endfor %}
 
 Yeah, it works.
@@ -613,14 +613,14 @@ Yeah, it works.
 
 Want to show the number of the posts containing the tags. Learn from:
 
-{% for tag in site.tags %}
-  <a class="tag-anchor" id="{{ tag[0] }}-ref"></a>
-  <h3 class="tag_box">{{ tag[0] }} <a><span>{{ tag[0].size }}</span></a></h3>
-  <ul>
-    {% assign pages_list = tag[1] %}
-    {% include JB/pages_list %}
-  </ul>
-{% endfor %}
+	{% for tag in site.tags %}
+		<a class="tag-anchor" id="{{ tag[0] }}-ref"></a>
+		<h3 class="tag_box">{{ tag[0] }} <a><span>{{ tag[0].size }}</span></a></h3>
+		<ul>
+    	{% assign pages_list = tag[1] %}
+    	{% include JB/pages_list %}
+		</ul>
+	{% endfor %}
 
 Just add <a><span>{{ tag[0].size }}</span></a>
 
@@ -637,13 +637,13 @@ But the style of the number is not well as it is same to tag, which may confuse 
 [Generating Tag cloud on Jekyll blog without plugin
 ](https://superdevresources.com/tag-cloud-jekyll/)
 
-{% assign tags = site.tags | sort %}
-{% for tag in tags %}
- <span class="site-tag">
-   <a href="/tag/{{ tag | first | slugify }}/"
-   style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</a>
- </span>
-{% endfor %}
+	{% assign tags = site.tags | sort %}
+	{% for tag in tags %}
+		<span class="site-tag">
+		<a href="/tag/{{ tag | first | slugify }}/"
+		style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</a>
+		</span>
+	{% endfor %}
 
 It works. But the tags showing up in a list.
 
@@ -685,9 +685,9 @@ Comparing with other tests, I find that the first line code in Test12 is useless
 and change the code below as:
 
 	{% for tag in site.tags %}
- 		<span class="site-tag">
-   			<a href="#{{ tag[0] }}"style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</a>
- 		</span>
+		<span class="site-tag">
+			<a href="#{{ tag[0] }}"style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</a>
+		</span>
 	{% endfor %}
 
 Seem to create the site unsuccessfully. After several minutes, it loaded. And I found that Test10 works with the new showing post list way again.
