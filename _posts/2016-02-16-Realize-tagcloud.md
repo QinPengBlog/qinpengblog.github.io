@@ -545,7 +545,7 @@ Add the code below to Tags.md
 
 	<div>
 	<h2 class='title'>Tag Cloud</h2>
-	<!--{% include JB/tag_cloud %}-->
+	{百分号 印库路德 JB/tag_cloud 百分号}
 	<div class='clear'></div>
 	</div>
 
@@ -565,7 +565,7 @@ Informed by Github that failed to build the page:
 > 
 > 1. Use your favorite text editor to open the file mentioned in the build failure email.
 
-> 2. Search for the include tag to see where you've referenced other files. For example: {% include cool_header.html %}.
+> 2. Search for the include tag to see where you've referenced other files. For example: {百分号 印库路德 cool_header.html 百分号}.
 
 > 3. Copy or move any symlinked files into the _includes directory of your GitHub Pages repository.
 
@@ -575,7 +575,7 @@ Try to add a "/" to fix it.
 
 	<div>
 	<h2 class='title'>Tag Cloud</h2>
-	<!--{% include /JB/tag_cloud %}-->
+	{百分号 印库路德 /JB/tag_cloud 百分号}
 	<div class='clear'></div>
 	</div>
 
@@ -618,7 +618,7 @@ Want to show the number of the posts containing the tags. Learn from:
 		<h3 class="tag_box">{{ tag[0] }} <a><span>{{ tag[0].size }}</span></a></h3>
 		<ul>
     	{% assign pages_list = tag[1] %}
-    	<!--{% include JB/pages_list %}-->
+	    {百分号 印库路德 JB/tag_cloud 百分号}
 		</ul>
 	{% endfor %}
 
