@@ -545,7 +545,7 @@ Add the code below to Tags.md
 
 	<div>
 	<h2 class='title'>Tag Cloud</h2>
-	{% include JB/tag_cloud %}
+	<!--{% include JB/tag_cloud %}-->
 	<div class='clear'></div>
 	</div>
 
@@ -575,7 +575,7 @@ Try to add a "/" to fix it.
 
 	<div>
 	<h2 class='title'>Tag Cloud</h2>
-	{% include /JB/tag_cloud %}
+	<!--{% include /JB/tag_cloud %}-->
 	<div class='clear'></div>
 	</div>
 
@@ -618,7 +618,7 @@ Want to show the number of the posts containing the tags. Learn from:
 		<h3 class="tag_box">{{ tag[0] }} <a><span>{{ tag[0].size }}</span></a></h3>
 		<ul>
     	{% assign pages_list = tag[1] %}
-    	{% include JB/pages_list %}
+    	<!--{% include JB/pages_list %}-->
 		</ul>
 	{% endfor %}
 
