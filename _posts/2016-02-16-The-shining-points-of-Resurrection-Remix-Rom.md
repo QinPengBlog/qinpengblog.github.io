@@ -1,12 +1,13 @@
 ---
 layout: post
 title: Resurrection Remix Rom based on Android AOSP 6.0 
-date: 2016-02-
+date: 2016-02-16
 categories: blog
 tags: [Android, Android ROM, Review]
-description: 
+description: Show the characteristics of RR Rom that delight me.
 
 ---
+The review is based on RR 5.6.3
 
 - Use power button to turn on flashlight in the lockscreen section.
 

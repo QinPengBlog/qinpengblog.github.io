@@ -1,47 +1,60 @@
-<div id="whatever">
+---
+layout: post
+title: 添加标签云组件
+date: 2016-02-16
+categories: blog
+tags: [个人主页, Plugin]
+description: 记录尝试各种标签云插件的过程。
+
+---
+
+2016-02-20 搞不定那些引用了jQuery插件的标签云。计划系统学习Html，CSS，Javascript，jQuery后再来处理。
+
+---
+
+	<div id="whatever">
       <a href="/path" rel="7">peace</a>
       <a href="/path" rel="3">unity</a>
       <a href="/path" rel="10">love</a>
       <a href="/path" rel="5">having fun</a>
-</div>
+	</div>
 
-
-$.fn.tagcloud.defaults = {
+	$.fn.tagcloud.defaults = {
       size: {start: 14, end: 18, unit: 'pt'},
       color: {start: '#cde', end: '#f52'}
     };
 
-$(function () {
+	$(function () {
       $('#whatever a').tagcloud();
     });
 
 原来：
 
-<script src="/media/js/jquery.tagcloud.js" type="text/javascript" charset="utf-8"></script> 
-<script language="javascript">
-$.fn.tagcloud.defaults = {
+	<script src="/media/js/jquery.tagcloud.js" type="text/javascript" charset="utf-8"></script> 
+	<script language="javascript">
+	$.fn.tagcloud.defaults = {
     size: {start: 1, end: 1, unit: 'em'},
       color: {start: '#f8e0e6', end: '#ff3333'}
-};
+	};
 
-$(function () {
+	$(function () {
     $('#tag_cloud a').tagcloud();
-});
-</script>
+	});
+	</script>
 
 发现没有/media/js/jquery.tagcloud.js这个文件，我用我拷贝的jquery.tagcloud.js代替，改成：
 
-<script src="/js/jquery.tagcloud.js" type="text/javascript" charset="utf-8"></script> 
-<script language="javascript">
-$.fn.tagcloud.defaults = {
+	<script src="/js/jquery.tagcloud.js" type="text/javascript" charset="utf-8"></script> 
+	<script language="javascript">
+	$.fn.tagcloud.defaults = {
     size: {start: 1, end: 1, unit: 'em'},
       color: {start: '#f8e0e6', end: '#ff3333'}
-};
+	};
 
-$(function () {
+	$(function () {
     $('#tag_cloud a').tagcloud();
-});
-</script>
+	});
+	</script>
 
 没有变化。想到以前本没有文件的时候也没有效果。
 
@@ -437,6 +450,12 @@ When reread README.md, I find that
 	$("#example").jQCloud(word_array);
 
 So I changed the  $('#tagscloud').tagcloud(); in Test8 to  $("#tagscloud").tagcloud();
+
+Nothing happened.
+
+### Test9+++++
+
+Guess that Tags.md locate in the root, and the javascript links are not right. But how to explain Test9? I have put the reference code into head.html.
 
 ---
 
