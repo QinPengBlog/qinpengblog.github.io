@@ -3,7 +3,7 @@ layout: post
 title: WebStorm设置颜色提示的方法
 date: 2016-02-06
 categories: blog
-tags: [WebStorm][Front-end]
+tags: [WebStorm, Front-end]
 description: 截图演示如何设置WebStorm中的颜色提示及效果
 
 ---
@@ -12,7 +12,7 @@ description: 截图演示如何设置WebStorm中的颜色提示及效果
 
 软件版本号：JetBrains WebStorm 8.0.4
 
-###开启步骤
+### 开启步骤
 
 1 File-Settings
 
@@ -26,7 +26,7 @@ description: 截图演示如何设置WebStorm中的颜色提示及效果
 
 ![](http://7xqvz5.com1.z0.glb.clouddn.com/image/20170206_WebStorm_Color_Indicate_3.png)
 
-###实际效果
+### 实际效果
 
 ![](http://7xqvz5.com1.z0.glb.clouddn.com/image/20170206_WebStorm_Color_Indicate_4.png)
 
