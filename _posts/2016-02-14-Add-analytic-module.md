@@ -7,6 +7,18 @@ tags: [个人主页]
 description: 记录增加的过程。
 
 ---
+
+2016-07-10 18:16 Update
+
+增加CNZZ统计功能。
+添加以下代码在"Footer.html"中。
+
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259876212'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1259876212%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+之所以没有添加在以前的“head.html”中，是因为这个统计的方式是在页面上显示出元素，会影响页面效果。
+
+---
 _2016-02-17 11:25 更新_
 
 我的网站已经被Google抓取了。

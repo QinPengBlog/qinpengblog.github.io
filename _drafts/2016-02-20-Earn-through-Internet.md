@@ -33,6 +33,10 @@ description:
 
 - 接触[沙沙网络]()。最低￥2。计价货币：金沙。数额大，但价值低。
 
+- 重新翻开中文调查网。2013-06-12注册的
+- http://www.surveys.com.cn/register.asp?referral=QinRoc
+
+- 重新翻开Toluna。
 
 ---
 
