@@ -1,7 +1,7 @@
 ---
 layout: post
 title: WebStorm设置颜色提示的方法
-date: 2016-02-06
+date: 2017-02-06
 categories: blog
 tags: [WebStorm, Front-end]
 description: 截图演示如何设置WebStorm中的颜色提示及效果
