@@ -4,7 +4,7 @@ title: 手动实现log4j的写入日志文件log.txt
 date: 2017-02-10
 categories: blog
 tags: [Java]
-description: 
+description: 模拟实现log4j的写入日志文件功能。
 
 ---
 
