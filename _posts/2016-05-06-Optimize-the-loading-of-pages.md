@@ -1,38 +1,16 @@
 ---
 layout: post
-title: WebStorm设置颜色提示的方法
-date: 2017-02-06
+title: 优化网页加载
+date: 2016-05-06
 categories: blog
-tags: [WebStorm, Front-end]
-description: 截图演示如何设置WebStorm中的颜色提示及效果
+tags: [Blog]
+description: 去除网页动画效果，以加快访问速度。
 
 ---
 
-使用WebStorm学习前端的时候，在2016-02-01被人问到如何设置WebStorm的颜色提示。据说度娘没有设置方法，我找了一下设置后发现了位置，今天写了这篇设置方法来说明一下。
+eager上添加的网页效果加载太慢，在head.html中注释掉了：
+<script src="//fast.eager.io/*********.js"></script>
 
-软件版本号：JetBrains WebStorm 8.0.4
-
-### 开启步骤
-
-1 File-Settings
-
-![](http://7xqvz5.com1.z0.glb.clouddn.com/image/20170206_WebStorm_Color_Indicate_1.png)
-
-2 IDE Settings-Editor
-
-![](http://7xqvz5.com1.z0.glb.clouddn.com/image/20170206_WebStorm_Color_Indicate_2.png)
-
-3 Appearance-Show CSS color preview icon in gutter & Show CSS color preview as background
-
-![](http://7xqvz5.com1.z0.glb.clouddn.com/image/20170206_WebStorm_Color_Indicate_3.png)
-
-### 实际效果
-
-![](http://7xqvz5.com1.z0.glb.clouddn.com/image/20170206_WebStorm_Color_Indicate_4.png)
-
-放大的部分和黄色矩形圈起来的部分就是Show CSS color preview icon in gutter的效果：在行号旁边用有颜色的小方块标识选择的颜色。
-
-红色矩形圈起来的部分就是Show CSS color preview as background的效果：颜色值的背景色是选择的颜色。
 
 ---
 
