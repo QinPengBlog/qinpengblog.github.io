@@ -1,12 +1,17 @@
 ---
 layout: post
-title: 
-date: 2016-
+title: 网赚
+date: 2016-2-20
 categories: blog
-tags: []
-description: 
+tags: [Internet]
+description: 介绍网赚的一些途径。
 
 ---
+
+更新：不做了。时薪太低。
+
+---
+
 2016-02-21
 接触Epicbux
 

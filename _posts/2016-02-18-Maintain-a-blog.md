@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Maintenance a blog
-date: 2016-
+title: 维护一个博客
+date: 2016-02-18
 categories: blog
-tags: []
-description: 
+tags: [Blog]
+description: 关于为什么要维护一个博客以及如何维护一个博客。
 
 ---
 

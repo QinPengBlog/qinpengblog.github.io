@@ -37,6 +37,12 @@ Add to the header part of post.html
 
 ### Powr
 
+```
+<!--Hit counter from Powr-->
+<script src="//www.powr.io/powr.js" external-type="html"></script> 
+<div class="powr-hit-counter" id="********"></div>
+```
+
 ### jQuery Rain
 
 ---
