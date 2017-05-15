@@ -8,6 +8,69 @@ description: 记录尝试各种标签云插件的过程。
 
 ---
 
+2017-03-15
+优化Tag页面
+1. 去除Test***字样
+2. 删除Test 10，9,8
+3. 保留Test 12,11。优化12的样式
+
+```
+{% for tag in site.tags %}
+   <a href="#{{ tag[0] }}"
+        style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
+   </a>
+{% endfor %}
+```
+
+原来：
+
+
+```
+{% for tag in site.tags %}
+ <span class="site-tag">
+   <a href="#{{ tag[0] }}"
+        style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
+   </a>
+ </span>
+{% endfor %}
+```
+4. 优化Tag内文章列表的样式
+
+` <h4>{{ tag[0] }}<a><span>{{ tag[0].size }}</span></a></h4>`
+
+原来：
+
+```
+<li class="listing-seperator" id="{{ tag[0] }}">
+      <h4>{{ tag[0] }}<a><span>{{ tag[0].size }}</span></a></h4>
+</li>
+```
+
+
+```
+<!--列出每个tag出现的文章-->
+
+<ul class="listing">
+{% for tag in site.tags %}
+  <li class="listing-seperator" id="{{ tag[0] }}">
+      <h4>{{ tag[0] }}<a><span>{{ tag[0].size }}</span></a></h4>
+  </li>
+
+  {% for post in tag[1] %}
+  <li class="listing-item">
+      <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+      <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+  </li>
+  {% endfor %}
+
+  <hr>
+
+{% endfor %}
+</ul>
+```
+
+
+
 2016-02-20 搞不定那些引用了jQuery插件的标签云。计划系统学习Html，CSS，Javascript，jQuery后再来处理。
 
 ---

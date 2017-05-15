@@ -14,17 +14,13 @@ header-img: "img/semantic.jpg"
 
 ## 遗传列表
 
-Test12+++
-
 {% for tag in site.tags %}
- <span class="site-tag">
    <a href="#{{ tag[0] }}"
-   style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</a>
- </span>
+        style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
+   </a>
 {% endfor %}
 
 ---
-Test11
 
 <div>
   {% include tag_cloud %}
@@ -32,96 +28,21 @@ Test11
 </div>
 
 ---
-Test10
-
-<div class="tag-cloud">
-   {% for tag in site.tags %}
-   <a href="#posts-tag" id="{{ forloop.index }}" class="__tag" style="margin: 5px">{{ tag[0] }}</a>
-   <ul id="list_{{ forloop.index }}" style="display:none;">
-   {% for post in tag[1] %}
-   <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-   {% endfor %}
-
-   </ul>
-   {% endfor %}
-</div>
-
-<div id ="posts-tags" class="post-list" style="margin: 50px;"></div>
-
-<script type="text/javascript">
-  $(function() {
-   var minFont = 15.0,
-   maxFont = 40.0,
-   diffFont = maxFont - minFont,
-   size = 0;
-       
-   {% assign max = 1.0 %}
-
-   {% for tag in site.tags %}
-   {% if tag[1].size > max %}
-   {% assign max = tag[1].size %}
-   {% endif %}
-   {% endfor %}
-            
-   {% for tag in site.tags %}
-   size = (Math.log({{ tag[1].size }}) / Math.log({{ max }})) * diffFont + minFont;
-   $("#{{ forloop.index }}").css("font-size", size + "px");
-   {% endfor %}
-
-   $('.tag-cloud a[class^="__tag"]').click(function() {
-   $('.post-list').empty();
-   $('#list_' + $(this).attr('id')).each(function() {
-   $('.post-list').append('<ul>' + $(this).html() + '</ul>');
-   });
-   });
-   });
-</script>
-
----
-Test9++++
-
-<div id="mycloud" style="width: 550px; height: 350px;"></div>
-
----
-Test8
-
-<script type="text/javascript" src="/js/jquery.tagcloud.js">
-</script> 
-
-<div id="tagscloud">
-{% for tag in site.tags %}
-<a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
-{% endfor %}
-</div>
-
-<script language="javascript">
-
-$.fn.tagcloud.defaults = {
-   size: {start: 14, end: 18, unit: 'pt'},
-   color: {start: '#cde', end: '#f52'}
-   };
-$(function () {
-   $("#tagscloud").tagcloud();
-   });
-
-</script>
-
----
 
 <!--列出每个tag出现的文章-->
 
 <ul class="listing">
 {% for tag in site.tags %}
-  <li class="listing-seperator" id="{{ tag[0] }}"><h4>{{ tag[0] }}   <a><span>{{ tag[0].size }}</span></a></h4></li>
+  <h4>{{ tag[0] }}<a><span>{{ tag[0].size }}</span></a></h4>
 
   {% for post in tag[1] %}
   <li class="listing-item">
-  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+      <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+      <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
   </li>
   {% endfor %}
 
-<hr>
+  <hr>
 
 {% endfor %}
 </ul>
