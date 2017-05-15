@@ -18,7 +18,7 @@ header-img: "img/semantic.jpg"
 {% for tag in site.tags %}
    <a href="#{{ tag[0] }}" style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">
         {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
-   </a>&nbsp;
+   </a>
 {% endfor %}
 </div>
 
@@ -35,9 +35,12 @@ header-img: "img/semantic.jpg"
 
 <ul class="listing">
 {% for tag in site.tags %}
-  <h4 id="{{ tag[0] }}">{{ tag[0] }}
+  <h4 id="{{ tag[0] }}">
+        {{ tag[0] }}
         <a>
-            <span>{{ tag[0].size }}</span>
+            <span>
+                （{{ tag[0].size }}）
+            </span>
         </a>
   </h4>
 
@@ -47,7 +50,7 @@ header-img: "img/semantic.jpg"
         {{ post.date | date:"%Y-%m-%d" }}
       </time>
       <a href="{{ post.url }}" title="{{ post.title }}">
-        （{{ post.title }}）
+        {{ post.title }}
       </a>
   </li>
   {% endfor %}
