@@ -8,6 +8,7 @@ description: 记录尝试各种标签云插件的过程。
 
 ---
 
+
 2017-03-15
 优化Tag页面
 1. 去除Test***字样
@@ -22,6 +23,9 @@ description: 记录尝试各种标签云插件的过程。
 {% endfor %}
 ```
 
+查看编译后的网页源代码，发现解析成`<p><a href="#个人主页" style="font-size: 108%">个人主页 (7)</a></p>`
+
+
 原来：
 
 
@@ -34,9 +38,14 @@ description: 记录尝试各种标签云插件的过程。
  </span>
 {% endfor %}
 ```
-4. 优化Tag内文章列表的样式
 
+4. 优化Tag内文章列表的样式
 ` <h4>{{ tag[0] }}<a><span>{{ tag[0].size }}</span></a></h4>`
+
+Tag云标签点击后无法跳转。
+添加id
+` <h4 id="{{ tag[0] }}">{{ tag[0] }}<a><span>{{ tag[0].size }}</span></a></h4>`
+
 
 原来：
 
@@ -69,6 +78,7 @@ description: 记录尝试各种标签云插件的过程。
 </ul>
 ```
 
+---
 
 
 2016-02-20 搞不定那些引用了jQuery插件的标签云。计划系统学习Html，CSS，Javascript，jQuery后再来处理。
