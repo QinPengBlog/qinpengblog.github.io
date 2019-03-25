@@ -1,0 +1,18 @@
+install:
+  - rm -rf public || exit 0
+branches:
+  only:
+       gh-pages-hugo
+# Build the website
+script:
+  - binary/hugo
+# Deploy to GitHub pages
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: public
+  keep-history: true
+  target-branch: master
+  on:
+    branch: gh-pages-hugo
