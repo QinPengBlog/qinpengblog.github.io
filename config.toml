@@ -4,7 +4,7 @@ theme = "dream-plus"
 themesDir = "themes/"
 paginate = 6
 enableRobotsTXT = true
-#disqusShortname = "dream-plus"
+disqusShortname = "QinRoc"
 
 #Skip building these files
 ignoreFiles = ["content/404.md", "content/about.md", "content/cards/\\.*"]
