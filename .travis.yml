@@ -35,4 +35,4 @@ deploy:
   local-dir: public
   target_branch: master  # branch contains blog content
   on:
-    branch: gh=pages-hugo  # branch contains Hugo generator code
+    branch: gh-pages-hugo  # branch contains Hugo generator code
