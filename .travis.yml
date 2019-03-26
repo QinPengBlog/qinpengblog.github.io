@@ -1,3 +1,4 @@
+dist: xenial  # 指定 CI 系统版本为 Ubuntu16.04 LTS
 install:
   - rm -rf public || exit 0
   - chmod 777 binary/hugo
