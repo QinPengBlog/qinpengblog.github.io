@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on 月巢</title>
+    <link>https://qinpengblog.github.com/tags/blog/</link>
+    <description>Recent content in Blog on 月巢</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 25 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://qinpengblog.github.com/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用Hugo迁移Jekyll博客</title>
+      <link>https://qinpengblog.github.com/posts/blog-with-hugo/</link>
+      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/blog-with-hugo/</guid>
+      <description>准备工具  Hugo 下载后配置系统环境变量，以便方便实用Hugo。 Git  初始化Hugo 初始化Site Hugo new site [targetDir]
+初始化Theme 通过Theme仓库找到自己喜欢的主题。 Clone到本地站点themes目录。 按照Theme说明完成配置。
+迁移Jekyll博客 迁移工具失败，将Formatter全部删除了。
+Theme支持原有Jekyll的Formatter，直接复制过去。
+图床 新浪图床Chrome扩展工具。
+Bug 具体时间识别失败，改为日期。</description>
+    </item>
+    
+    <item>
+      <title>重启博客</title>
+      <link>https://qinpengblog.github.com/posts/reactive-blog/</link>
+      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/reactive-blog/</guid>
+      <description>初春时节，万物生发~
+博客重启~</description>
+    </item>
+    
+    <item>
+      <title>在线拼图工具</title>
+      <link>https://qinpengblog.github.com/posts/2017-09-23-collage-online-tool/</link>
+      <pubDate>Sat, 23 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2017-09-23-collage-online-tool/</guid>
+      <description>由于要发送几张电脑上的截图给友人，而发送的图片聚合在一起看效果更好，所以找了一番拼图工具。
+网络上的推荐都是要安装程序的，比如美图秀秀等，这时发现了Fotor的在线拼接工具：
+https://www.fotor.com/app.html#/collage/new/classic
+这个工具支持中文，有很多拼接样式，免费账户的足够够用。
+可以添加文字，贴图和背景。
+下载图片的时候如果是普通品质的则无限制，高清品质的需要登录。</description>
+    </item>
+    
+    <item>
+      <title>优化Archive页面</title>
+      <link>https://qinpengblog.github.com/posts/2017-03-05-optimize-archive-page/</link>
+      <pubDate>Fri, 03 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2017-03-05-optimize-archive-page/</guid>
+      <description>年份分割设为标题样式&amp;lt;h3&amp;gt;{{ y }}&amp;lt;/h3&amp;gt;
+年份分隔去掉无序排列标记 &amp;lt;li class=&amp;quot;listing-seperator&amp;quot;&amp;gt;{{ y }}&amp;lt;/li&amp;gt; 改为 {{ y }}
+原来：
+--- layout: page title: &amp;quot;Archive&amp;quot; description: &amp;quot;你看到的，是我之为我的原因&amp;quot; header-img: &amp;quot;img/orange.jpg&amp;quot; --- &amp;lt;ul class=&amp;quot;listing&amp;quot;&amp;gt; {% for post in site.posts %} {% capture y %}{{post.date | date:&amp;quot;%Y&amp;quot;}}{% endcapture %} {% if year != y %} {% assign year = y %} &amp;lt;li class=&amp;quot;listing-seperator&amp;quot;&amp;gt;{{ y }}&amp;lt;/li&amp;gt; {% endif %} &amp;lt;li class=&amp;quot;listing-item&amp;quot;&amp;gt; &amp;lt;time datetime=&amp;quot;{{ post.date | date:&amp;quot;%Y-%m-%d&amp;quot; }}&amp;quot;&amp;gt;{{ post.date | date:&amp;quot;%Y-%m-%d&amp;quot; }}&amp;lt;/time&amp;gt; &amp;lt;a href=&amp;quot;{{ post.</description>
+    </item>
+    
+    <item>
+      <title>优化网页加载</title>
+      <link>https://qinpengblog.github.com/posts/2016-05-06-optimize-the-loading-of-pages/</link>
+      <pubDate>Fri, 06 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-05-06-optimize-the-loading-of-pages/</guid>
+      <description>eager上添加的网页效果加载太慢，在head.html中注释掉了：
+···  ···</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Methodology on 月巢</title>
+    <link>https://qinpengblog.github.com/tags/methodology/</link>
+    <description>Recent content in Methodology on 月巢</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 17 Feb 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://qinpengblog.github.com/tags/methodology/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>我的Android使用术</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-17-my-way-to-use-anrdoid/</link>
+      <pubDate>Wed, 17 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-17-my-way-to-use-anrdoid/</guid>
+      <description>Pre System setting APP System  Xposed Greenify (破解版) No Wakelock （Google Play +捐赠版） Wakelock Detector （未捐赠版足矣） BetterBatteryStats 查看耗电 Amplify 限制唤醒 冰箱 阻止运行  Shopping &amp;amp; Finance Reading Social 微信Wechat - 找回微信云端备份:WechatCloudBackup
+新浪微博
+百度地图
+浏览器 Via浏览器 网易云音乐
+京东金融
+BusyBox Pro:Linux工具箱 内核调校:Kernel Adiutor My Android Tools 应用变量
+Google相机:Google Camera 分期乐 表情豆豆 Google拼音输入法 脚本精灵 爱字体 广告快走 SD Maid 随手记 大众点评 WizNote
+PerfectColorBar Luckymoney QQUnrecalled WechatOriginalPhoto 幸运破解器:LuckyPatcher 去你大爷的内置浏览器 BootManager开机启动管理 流氓终结者:Malware Buster LightningWall WechatUnrecalled 无线网络密码:WiFi Password 自定义快捷设置背景:XQS Background</description>
+    </item>
+    
+    <item>
+      <title>我的听音乐的情况</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-16-my-way-for-music/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-16-my-way-for-music/</guid>
+      <description>听音乐的风格  电子音乐   听音乐的渠道 目前全面使用在线音乐。
+为了听到所有想听的歌，结合使用“网易云音乐”和“虾米音乐”。由于之前一直使用网易云音乐，个人数据都集中在这上面，所以主要使用网易云音乐。
+2016-02-02 一直使用网易云音乐，这天想听五月天的倔强，但是发现在网易云音乐里因为版权问题下架了。百度了一番后，决定结合使用网易云音乐和虾米音乐。
+想了解国内在线音乐阵营的划分（阿里系和腾讯系）和对各音乐公司的版权拥有情况可看如下文章：
+《听音乐 到底选QQ音乐还是虾米？-听歌,QQ音乐,阿里,虾米-驱动之家》 &amp;gt; P.S. 有详细的表格对比说明这两个阵营的音乐版权的所有情况。
+《谁才是国内最强音乐分享平台：虾米音乐 vs 网易云音乐 - 少数派》</description>
+    </item>
+    
+    <item>
+      <title>我的电影相关</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-16-my-way-for-movies/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-16-my-way-for-movies/</guid>
+      <description>影视资讯 时光网
+观影清单 时光网
+观影渠道 影院  嘉华（学清路） 橙天嘉禾（万柳） 橙天嘉禾（上地） 科技馆 美嘉 海淀剧院  下载 PC，智能手机。 -IPV6
+在线 PC，iPad，智能电视。
+影评 时光网</description>
+    </item>
+    
+    <item>
+      <title>我阅读的途径</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-16-my-way-for-reading/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-16-my-way-for-reading/</guid>
+      <description> 阅读载体 Kindle Paperwhite Kindle正式入华的暑假买的。
+摘录  Kindle Mate 国人开发的离线Kindle笔记和生词本备份、管理工具。 Clipping.so 外国人开发的在线Kindle笔记备份、管理工具。  ####　阅读源 - Amazon Kindle ebooks - Send to Kindle - 狗耳朵
+Smart Phone Oneplus one (Android)
+APP  起点读书 追书神器 Kindle  PC  PDF&amp;ndash;福昕阅读器 &amp;gt; P.S. 打&amp;rdquo;盺&amp;rdquo;字的时候拼&amp;rdquo;xi&amp;rdquo;一直打不出来，使用搜狗手写，发现它念&amp;rdquo;xin&amp;rdquo;。囧
+ Kindle Clipping.so有Chrome付费插件，可以导入PC端Kindle。
+  iPad  Kindle  </description>
+    </item>
+    
+  </channel>
+</rss>

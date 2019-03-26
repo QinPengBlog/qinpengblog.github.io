@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>个人主页 on 月巢</title>
+    <link>https://qinpengblog.github.com/tags/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/</link>
+    <description>Recent content in 个人主页 on 月巢</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 16 Feb 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://qinpengblog.github.com/tags/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>添加标签云组件</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-16-realize-tagcloud/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-16-realize-tagcloud/</guid>
+      <description>2017-03-15 优化Tag页面 1. 去除Test***字样 2. 删除Test 10，9,8 3. 保留Test 12,11。优化12的样式
+{% for tag in site.tags %} &amp;lt;a href=&amp;quot;#{{ tag[0] }}&amp;quot; style=&amp;quot;font-size: {{ tag | last | size | times: 4 | plus: 80 }}%&amp;quot;&amp;gt;{{ tag[0] | replace:&#39;-&#39;, &#39; &#39; }} ({{ tag | last | size }}) &amp;lt;/a&amp;gt; {% endfor %}  查看编译后的网页源代码，发现解析成&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;#个人主页&amp;quot; style=&amp;quot;font-size: 108%&amp;quot;&amp;gt;个人主页 (7)&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt; 前后增加&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt; 解析后不再增加&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt; 没必要添加&amp;amp;nbsp;，会自动添加一个的，再添加一个反而会弄乱格式。
+原来：
+{% for tag in site.tags %} &amp;lt;span class=&amp;quot;site-tag&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;#{{ tag[0] }}&amp;quot; style=&amp;quot;font-size: {{ tag | last | size | times: 4 | plus: 80 }}%&amp;quot;&amp;gt;{{ tag[0] | replace:&#39;-&#39;, &#39; &#39; }} ({{ tag | last | size }}) &amp;lt;/a&amp;gt; &amp;lt;/span&amp;gt; {% endfor %}   优化Tag内文章列表的样式 &amp;lt;h4&amp;gt;{{ tag[0] }}&amp;lt;a&amp;gt;&amp;lt;span&amp;gt;{{ tag[0].</description>
+    </item>
+    
+    <item>
+      <title>修改网站的评论模块</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-14-modify-the-comment-module/</link>
+      <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-14-modify-the-comment-module/</guid>
+      <description>看了《使用Github Pages建独立博客》文章，它里面使用的是Disqus的评论模块，并且设置了点击“显示评论”才显示评论的功能。
+我想把我的网站的评论也设置成平时隐藏，点击才显示的模式。于是在多说网站找到了《动态加载多说评论框的方法》的方法。
+原来的&amp;rdquo;post.html&amp;rdquo;中的评论模块：
+ &amp;lt;div class=&amp;quot;comment&amp;quot;&amp;gt; &amp;lt;div class=&amp;quot;ds-thread&amp;quot; data-thread-key=&amp;quot;{{page.id}}&amp;quot; data-title=&amp;quot;{{page.title}}&amp;quot; data-url=&amp;quot;{{site.url}}{{page.url}}&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt;  &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt; var duoshuoQuery = {short_name:&amp;quot;cnfeat&amp;quot;}; (function() { var ds = document.createElement(&#39;script&#39;); ds.type = &#39;text/javascript&#39;;ds.async = true; ds.src = (document.location.protocol == &#39;https:&#39; ? &#39;https:&#39; : &#39;http:&#39;) + &#39;//static.duoshuo.com/embed.js&#39;; ds.charset = &#39;UTF-8&#39;; (document.getElementsByTagName(&#39;head&#39;)[0] || document.getElementsByTagName(&#39;body&#39;)[0]).appendChild(ds); })(); &amp;lt;/script&amp;gt;  现在的评论模块：
+&amp;lt;script&amp;gt;var duoshuoQuery = {short_name:&amp;quot;qinpengblog&amp;quot;};&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;quot;http://static.duoshuo.com/embed.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt; function toggleDuoshuoComments(container){ var el = document.createElement(&#39;div&#39;);//该div不需要设置class=&amp;quot;ds-thread&amp;quot; el.setAttribute(&#39;data-thread-key&#39;, &#39;{{page.id}}&#39;);//必选参数 el.setAttribute(&#39;data-url&#39;, &#39;{{site.</description>
+    </item>
+    
+    <item>
+      <title>增加网站的推荐模块</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-14-add-the-recommendation-module/</link>
+      <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-14-add-the-recommendation-module/</guid>
+      <description>多说的分享模块不够好，无意中发现JiaThis，感觉更好。在JiaThis的主页下面发现了友荐，感觉挺好的，想给我的网站加上这个功能。
+友荐为PC端提供4中推荐方式：侧栏式，嵌入式，双栏式和边栏式。
+ 侧栏式：侧栏式滑动切入在页面右（左）下角，不影响页面布局。 &amp;gt; 可以设置个数（1-10），位置（左侧，右侧），附赠返回顶部按钮。P.S. 感觉像小广告似的，不取。
+ 嵌入式：嵌入式使用范围最广，多出现在网页正文下方，直观凸显推荐内容，增加用户浏览粘性。 &amp;gt; 可以设置个数（1-18），显示方式（上图下文，左图右文，文字，智能），行数（1-5）等等。P.S. 太占地，广告色彩较多。
+ 双栏式：双栏式配合多文字类型页面使用，形式简介明了，符合用户的浏览行为。 &amp;gt; 可以设置个数（2,4,6,8,10），显示方式（双列图文or双列文字）。
+ 边栏式：边栏式多应用于专题活动或新闻资讯正文侧边栏板块，增强的曝光与推广。 &amp;gt; 可以设置个数（2,4,6,8,10,12,14）。P.S. 赤裸裸的小广告呀。
+  最后选择了双栏文字式，显示6条文字推荐，设置了鼠标滑过的模块和文本颜色，打开内容链接的方式为新窗口。
+代码如下：
+ &amp;lt;div class=&amp;quot;ujian-hook&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;var ujian_config = {num:6,showType:4,lkrc:4,target:1,bgColor:&#39;#&#39;,hoverTextColor:&#39;#116BF2&#39;};&amp;lt;/script&amp;gt; &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://v1.ujian.cc/code/ujian.js?uid=2083931&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;a href=&amp;quot;http://www.ujian.cc&amp;quot; style=&amp;quot;border:0;&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;http://img.ujian.cc/pixel.png&amp;quot; alt=&amp;quot;友荐云推荐&amp;quot; style=&amp;quot;border:0;padding:0;margin:0;&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt;  关于友荐的更多内容请移步友荐帮助中心</description>
+    </item>
+    
+    <item>
+      <title>更换网站的分享模块</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-14-change-the-sharing-module/</link>
+      <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-14-change-the-sharing-module/</guid>
+      <description>多说的分享模块不够好。
+无意中发现JiaThis，感觉不错。吸引我的几点是：自定义功能强大，具有智能排序功能，数据统计功能强大。
+《选择JiaThis的八大理由》
+《一般安装到网站哪里?》
+JiaThis JiaThis分享按钮的几种方式：侧栏式，工具式，图标式，边栏式，喜欢按钮，按钮式，关注按钮，图片分享，划词分享。
+ 侧栏式：隐藏在侧栏。 工具式：同多说的分享模块。 图标式：与工具式相比，少了图标的文字说明。 边栏式：悬浮在文章边。 按钮式：只有一个按钮。 图片分享：用户将鼠标移动到指定的图片上时，分享按钮就会出现。 划词分享：任意划取部分文字信息（＞5个字），即可显示JiaThis划词分享图标。 喜欢按钮：喜欢的同时进行分享。 关注按钮：转到对应社交账号主页。  选择图标式，图片分享和划词分享。
+图标式：  &amp;lt;div class=&amp;quot;jiathis_style&amp;quot;&amp;gt; &amp;lt;a class=&amp;quot;jiathis_button_weixin&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;a class=&amp;quot;jiathis_button_tsina&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;a class=&amp;quot;jiathis_button_pocket&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;a class=&amp;quot;jiathis_button_instapaper&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;a class=&amp;quot;jiathis_button_copy&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;a href=&amp;quot;http://www.jiathis.com/share?uid=2083931&amp;quot; class=&amp;quot;jiathis jiathis_txt jiathis_separator jtico jtico_jiathis&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;a class=&amp;quot;jiathis_counter_style&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;script type=&amp;quot;text/javascript&amp;quot; &amp;gt; var jiathis_config={ data_track_clickback:true, summary:&amp;quot;&amp;quot;, shortUrl:true, hideMore:false } &amp;lt;/script&amp;gt; &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://v3.jiathis.com/code_mini/jia.js?uid=2083931&amp;quot; charset=&amp;quot;utf-8&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;  图片分享 官方说明：如果您的网页中已经嵌入jia.js或jiathis_r.js，只需将以下绿色部分代码复制到JiaThis分享代码之前即可。
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt; var jiathis_config = { shareImg:{ &amp;quot;showType&amp;quot;:&amp;quot;ALL&amp;quot;, &amp;quot;bgColor&amp;quot;:&amp;quot;&amp;quot;, &amp;quot;txtColor&amp;quot;:&amp;quot;&amp;quot;, &amp;quot;text&amp;quot;:&amp;quot;&amp;quot;, &amp;quot;services&amp;quot;:&amp;quot;&amp;quot;, &amp;quot;position&amp;quot;:&amp;quot;&amp;quot;, &amp;quot;imgwidth&amp;quot;:&amp;quot;&amp;quot;, &amp;quot;imgheight&amp;quot;:&amp;quot;&amp;quot;, &amp;quot;divname&amp;quot;:&amp;quot;&amp;quot; } } &amp;lt;/script&amp;gt;  JiaThis分享代码是：</description>
+    </item>
+    
+    <item>
+      <title>我建立个人主页的过程</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-13-recording-of-build-my-blog/</link>
+      <pubDate>Sat, 13 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-13-recording-of-build-my-blog/</guid>
+      <description>2016-02-14 09:10 更新
+发现一篇新文章，通过Github Education可以免费获得付费域名。
+《我的 Github 个人博客是怎样炼成的》
+历程有点坎坷。
+从2016-02-12下午开始有这个想法，知乎上搜索“个人主页”、“个人网站”，看了几个答案，感觉要花很多时间在建设上。犹豫于是选择简书之类的网站，还是要自己建一个。最后选择了不将就，不想被那些网站限制。
+晚上开始折腾，一直折腾到2016-02-13下午。
+主要参考三篇文章：
+ 《如何搭建一个独立博客——简明 Github Pages与 jekyll 教程》
+ 《Projet Compromis》
+ 《使用Github Pages建独立博客》
+  看中的域名 在Freenom，Goddy,万网和新网搜索了“qinpeng”。
+比较下这四个网站的搜索结果：
+ Freenom的搜索结果不直观，需要点击Select才能查看每个域名是否被买了； Goddy的搜索结果； 万网和新网的搜索结果类似，可以很直观的看到每个域名是否被买了，并且可以查询域名持有人的信息。  &amp;ldquo;qinpeng&amp;rdquo;的&amp;rdquo;.com&amp;rdquo;,&amp;ldquo;.net&amp;rdquo;,&amp;ldquo;.org&amp;rdquo;,&amp;ldquo;.me&amp;rdquo;等都被买了。&amp;rdquo;.life&amp;rdquo;，&amp;rdquo;.world&amp;rdquo;等又太贵。最后选中了&amp;rdquo;.space&amp;rdquo;和&amp;rdquo;.site&amp;rdquo;。
+之后又想到了可以搜搜&amp;rdquo;qinroc&amp;rdquo;，于是又搜索了&amp;rdquo;qinroc&amp;rdquo;（价格来源于新网，仅供参考）：
+ life ￥178 name ￥85 org ￥69 net ￥55 site ￥15 win ￥6 space ￥7 online ￥11 me ￥32 com ￥48  想到&amp;rdquo;.&amp;ldquo;可以音似成“的”，最终决定选择&amp;rdquo;.space&amp;rdquo;。</description>
+    </item>
+    
+    <item>
+      <title>增加网站的统计分析模块并使网站可被搜索引擎索引</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-14-add-analytic-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-14-add-analytic-module/</guid>
+      <description>2016-07-10 18:16 Update
+增加CNZZ统计功能。 添加以下代码在&amp;rdquo;Footer.html&amp;rdquo;中。
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;var cnzz_protocol = ((&amp;quot;https:&amp;quot; == document.location.protocol) ? &amp;quot; https://&amp;quot; : &amp;quot; http://&amp;quot;);document.write(unescape(&amp;quot;%3Cspan id=&#39;cnzz_stat_icon_1259876212&#39;%3E%3C/span%3E%3Cscript src=&#39;&amp;quot; + cnzz_protocol + &amp;quot;s11.cnzz.com/z_stat.php%3Fid%3D1259876212%26show%3Dpic1&#39; type=&#39;text/javascript&#39;%3E%3C/script%3E&amp;quot;)); &amp;lt;/script&amp;gt;  之所以没有添加在以前的“head.html”中，是因为这个统计的方式是在页面上显示出元素，会影响页面效果。
+2016-02-17 11:25 更新
+我的网站已经被Google抓取了。
+ 
+Google Concole 通知
+在Google上的搜索结果：
+
+Google Search Result
+想要记录多少人访问了我的网站，所以一番搜索，找到了几个流量统计的站点。最后选择了Google和Baidu结合的方式。因为Google的统计分析内容丰富，但是据说会有延迟，而Baidu不会有延迟。
+参考:
+ 《Setting up this blog site: github, jekyll, and the hpstr theme》
+ 《利用github-pages建立个人博客》
+ Verify site ownership on Google Search Console
+ Verify your site ownership</description>
+    </item>
+    
+  </channel>
+</rss>

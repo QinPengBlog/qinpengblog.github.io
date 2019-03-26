@@ -1,75 +1,335 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-<url>
-  <loc>http://qinpeng.space/</loc>
-  <lastmod>2016-02-14T05:56:54+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>http://qinpeng.space/Collections/</loc>
-  <lastmod>2016-02-14T05:56:54+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://qinpeng.space/Photos/</loc>
-  <lastmod>2016-02-14T05:56:54+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://qinpeng.space/about/</loc>
-  <lastmod>2016-02-14T05:56:54+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://qinpeng.space/archive/</loc>
-  <lastmod>2016-02-14T05:56:54+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://qinpeng.space/milestone/</loc>
-  <lastmod>2016-02-14T05:56:54+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://qinpeng.space/tags/</loc>
-  <lastmod>2016-02-14T05:56:54+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://qinpeng.space/blog/2016/02/13/Modify-the-comment-module/</loc>
-  <lastmod>2016-02-14T05:56:54+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://qinpeng.space/blog/2016/02/13/Add-the-recommendation-module/</loc>
-  <lastmod>2016-02-14T05:56:54+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://qinpeng.space/blog/2016/02/13/why-write-blog/</loc>
-  <lastmod>2016-02-14T05:56:54+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://qinpeng.space/blog/2016/02/13/Recording-of-build-my-blog/</loc>
-  <lastmod>2016-02-14T05:56:54+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.80</priority>
-</url>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/blog/</loc>
+    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/categories/</loc>
+    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/hugo/</loc>
+    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/</loc>
+    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/</loc>
+    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/categories/blog/</loc>
+    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/blog-with-hugo/</loc>
+    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/</loc>
+    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/reactive-blog/</loc>
+    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/2017-09-23-collage-online-tool/</loc>
+    <lastmod>2017-09-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/2017-03-05-optimize-archive-page/</loc>
+    <lastmod>2017-03-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/2016-05-06-optimize-the-loading-of-pages/</loc>
+    <lastmod>2016-05-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/2016-04-04-qingming-vocation/</loc>
+    <lastmod>2016-04-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/photography/</loc>
+    <lastmod>2016-04-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/travel/</loc>
+    <lastmod>2016-04-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/%E6%B8%85%E6%98%8E%E5%81%87%E6%9C%9F/</loc>
+    <lastmod>2016-04-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/2016-04-24-driver-lisence/</loc>
+    <lastmod>2016-04-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/application/</loc>
+    <lastmod>2016-02-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/superstition/</loc>
+    <lastmod>2016-02-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/2016-02-24-the-superstition-during-application/</loc>
+    <lastmod>2016-02-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/plugin/</loc>
+    <lastmod>2016-02-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</loc>
+    <lastmod>2016-02-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/2016-02-19-simple-ways-to-add-plugins-to-your-website/</loc>
+    <lastmod>2016-02-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/life/</loc>
+    <lastmod>2016-02-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/%E4%B8%AA%E4%BA%BA%E6%8F%90%E5%8D%87/</loc>
+    <lastmod>2016-02-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/%E4%BA%BA%E9%99%85%E4%BA%A4%E5%BE%80/</loc>
+    <lastmod>2016-02-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/2016-02-18-life-can-be-a-game/</loc>
+    <lastmod>2016-02-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/2016-02-18-bad-social-skill/</loc>
+    <lastmod>2016-02-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/android/</loc>
+    <lastmod>2016-02-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/methodology/</loc>
+    <lastmod>2016-02-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/2016-02-17-my-way-to-use-anrdoid/</loc>
+    <lastmod>2016-02-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/android-rom/</loc>
+    <lastmod>2016-02-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/markdown/</loc>
+    <lastmod>2016-02-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/movie/</loc>
+    <lastmod>2016-02-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/music/</loc>
+    <lastmod>2016-02-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/read/</loc>
+    <lastmod>2016-02-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/2016-02-16-the-shining-points-of-resurrection-remix-rom/</loc>
+    <lastmod>2016-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/review/</loc>
+    <lastmod>2016-02-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/</loc>
+    <lastmod>2016-02-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/2016-02-16-my-way-for-music/</loc>
+    <lastmod>2016-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/2016-02-16-my-way-for-movies/</loc>
+    <lastmod>2016-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/2016-02-16-my-way-for-reading/</loc>
+    <lastmod>2016-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/2016-02-16-realize-tagcloud/</loc>
+    <lastmod>2016-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/2016-02-16-debug-the-problem-of-markdown-display/</loc>
+    <lastmod>2016-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/2016-02-15-flash-my-oneplusone/</loc>
+    <lastmod>2016-02-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/2016-02-14-modify-the-comment-module/</loc>
+    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/2016-02-14-add-the-recommendation-module/</loc>
+    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/2016-02-14-change-the-sharing-module/</loc>
+    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/colletion/</loc>
+    <lastmod>2016-02-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/online-novel/</loc>
+    <lastmod>2016-02-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/share/</loc>
+    <lastmod>2016-02-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/%E4%B8%AA%E4%BA%BA%E6%8F%90%E9%AB%98/</loc>
+    <lastmod>2016-02-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/%E5%88%9D%E5%BF%83/</loc>
+    <lastmod>2016-02-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/2016-02-13-why-write-blog/</loc>
+    <lastmod>2016-02-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/2016-02-13-recording-of-build-my-blog/</loc>
+    <lastmod>2016-02-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/</loc>
+    <lastmod>2016-02-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/2016-02-15-my-collection-of-online-novels/</loc>
+    <lastmod>2016-02-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/tags/internet/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/2016-02-14-add-analytic-module/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qinpengblog.github.com/posts/2016-02-20-earn-through-internet/</loc>
+  </url>
+  
 </urlset>

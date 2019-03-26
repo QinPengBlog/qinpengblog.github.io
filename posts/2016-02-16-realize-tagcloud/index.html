@@ -1,0 +1,1941 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<title>
+	添加标签云组件
+</title>
+		<style>
+	body {
+		display: block;
+		--colorBG: "#40e0d0, #ff8c00, #ff0080";
+		
+			background: linear-gradient(to right, var(--colorBG)) !important;
+		
+	}
+
+	body, body.pushable {
+		background-repeat: no-repeat;
+	  	background-attachment: fixed;
+	  	background-size: cover !important;
+	}
+</style>
+
+		<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+	
+	
+	
+	<meta name="author" content="Qin Peng" />
+	<meta name="description" content="记录尝试各种标签云插件的过程。" />
+
+
+
+<meta name="generator" content="Hugo 0.55.0-DEV" />
+
+
+<link rel="shortcut icon" href="/static/img/favicon.png">
+
+
+
+
+		
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+<script
+	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+
+ <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Inconsolata" rel="stylesheet"> 
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/site.css">
+
+
+
+
+
+
+	
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/UtkarshVerma/hugo-dream-plus/ae11561d/exampleSite/static/css/highlight.css">
+	
+
+
+
+<style>
+	body.pushable {
+		display: block;
+		
+			background: linear-gradient(to right, var(--colorBG)) !important;
+		 ;
+	}
+</style>
+
+
+
+<script>
+	var colorBG =  true 
+	
+	var isMobile = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
+	console.log("The client device is a "+(isMobile?"mobile":"PC")+".")
+</script>
+
+	</head>
+
+	<body>
+		<script>
+var prevBgIndex = 0;
+var bodyBgSwitchIndex = 0;
+
+
+
+
+
+
+	var gradients = [
+	  [],
+	  ['#40e0d0', '#ff8c00', '#ff0080'], 
+	  ['#3e5151', '#decba4'], 
+	  ['#11998e', '#38ef7d'], 
+	  ['#108dc7', '#ef8e38'], 
+	  ['#fc5c7d', '#6a82fb'], 
+	  ['#fc466b', '#3f5efb'], 
+	  ['#c94b4b', '#4b134f'], 
+	  ['#23074d', '#cc5333'] 
+	];
+	document.body.style.setProperty('--colorBG', connect(gradients[getRandomInt(0, gradients.length)]));
+
+
+	function getRandomInt(min, max) {
+	  min = Math.ceil(min);
+	  max = Math.floor(max);
+	  var random;
+	  while (1) {
+	    random = Math.floor(Math.random() * (max - min)) + min;
+	    if (random !== prevBgIndex) {
+	      prevBgIndex = random;
+	      break;
+	    }
+	  }
+	  return random;
+	}
+
+	function connect(arr) {
+	  var str = '';
+	  for (var i = 0; i < arr.length; i++) {
+	    if (i !== arr.length - 1) {
+	      str += arr[i] + ', ';
+	    } else {
+	      str += arr[i];
+	    }
+	  }
+	  return str;
+	}
+</script>
+
+
+
+
+		<div id="sidebar" class="ui sidebar inverted vertical menu">
+	
+	<section id="author" class="ui top attached center aligned inverted segment">
+		
+<div class="ui small circular image">
+	
+		<img src="https://ws1.sinaimg.cn/large/8c14476fly1g1ffir8espj20va0vadh1.jpg">
+	
+</div>
+
+
+<h3 class="ui header">
+	Qin Peng
+	<div class="sub header">Self-discipline gives me freedom.</div>
+</h3>
+
+	</section>
+
+	
+	
+		<section class="ui attached center aligned inverted segment sidebar-dream-tags">
+			
+			
+			
+			
+
+
+
+
+	
+	
+		
+			
+			<a class="ui label red " href="/tags/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5" title="个人主页">个人主页</a>
+		
+			
+			<a class="ui label teal " href="/tags/blog" title="blog">blog</a>
+		
+			
+			<a class="ui label brown " href="/tags/methodology" title="methodology">methodology</a>
+		
+			
+			<a class="ui label teal " href="/tags/android" title="android">android</a>
+		
+			
+			<a class="ui label olive " href="/tags/plugin" title="plugin">plugin</a>
+		
+			
+			<a class="ui label pink " href="/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99" title="个人网站">个人网站</a>
+		
+			
+			<a class="ui label green " href="/tags/android-rom" title="android-rom">android-rom</a>
+		
+			
+			<a class="ui label purple " href="/tags/application" title="application">application</a>
+		
+	
+
+
+		</section>
+	
+
+	
+	
+		<section class="ui attached inverted segment sidebar-dream-categories both flexbox">
+			<div class="ui inverted accordion">
+				
+	
+	<div class="title">
+		<i class="dropdown icon"></i>
+		<a class="link" href="/categories/blog">blog</a>
+	</div>
+
+	
+	<div class="content">
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/blog-with-hugo/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>使用Hugo迁移Jekyll博客</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/reactive-blog/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>重启博客</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2017-09-23-collage-online-tool/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>在线拼图工具</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2017-03-05-optimize-archive-page/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>优化Archive页面</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-05-06-optimize-the-loading-of-pages/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>优化网页加载</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-04-04-qingming-vocation/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>2016清明游记</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-04-24-driver-lisence/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>驾照</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-24-the-superstition-during-application/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>出国申请中的玄学</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-19-simple-ways-to-add-plugins-to-your-website/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>简单添加插件的方法</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-18-life-can-be-a-game/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>生命可以是一场游戏</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-18-bad-social-skill/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>跪掉的交际能力</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-17-my-way-to-use-anrdoid/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>我的Android使用术</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-16-the-shining-points-of-resurrection-remix-rom/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>Resurrection Remix Rom based on Android AOSP 6.0</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-16-my-way-for-music/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>我的听音乐的情况</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-16-my-way-for-movies/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>我的电影相关</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-16-my-way-for-reading/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>我阅读的途径</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-16-realize-tagcloud/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>添加标签云组件</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-16-debug-the-problem-of-markdown-display/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>解决Markdown标题的显示问题</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-15-flash-my-oneplusone/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>一加1刷机</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-14-modify-the-comment-module/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>修改网站的评论模块</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-14-add-the-recommendation-module/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>增加网站的推荐模块</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-14-change-the-sharing-module/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>更换网站的分享模块</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-13-why-write-blog/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>我为什么写博客？</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-13-recording-of-build-my-blog/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>我建立个人主页的过程</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-15-my-collection-of-online-novels/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>网络小说推荐</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-14-add-analytic-module/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>增加网站的统计分析模块并使网站可被搜索引擎索引</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-20-earn-through-internet/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>网赚</p>
+				</div>
+			</a>
+		
+	</div>
+
+
+			</div>
+		</section>
+	
+
+	
+	<section id="footer" class="ui bottom attached center aligned inverted segment">
+		
+
+	<p>© 2016 - 2019 月巢</p>
+
+
+<p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with <a href="https://github.com/UtkarshVerma/hugo-dream-plus" target="_blank">Dream Plus</a> theme.</p>
+
+	</section>
+</div>
+
+
+		<div class="pusher">
+			<div class="flipper">
+				<div class="front">
+					
+	<nav class="ui top secondary menu bar">
+	
+	<div class="item">
+		<i class="inverted big link bullseye icon dream-flip-toggle" title="About Me"></i>
+	</div>
+
+	
+	
+		<div class="item">
+			<a href="/">
+				<i class="inverted big link home icon" title="Home"></i>
+			</a>
+		</div>
+	
+
+	
+	
+
+	
+	
+		<div class="item">
+			<a href="/tags">
+				<i class="inverted big link tags icon" title="All Tags"></i>
+			</a>
+		</div>
+	
+
+	
+	
+		<div class="item">
+			<a href="/categories">
+				<i class="inverted big link cubes icon" title="All Categories"></i>
+			</a>
+    	</div>
+	
+
+	
+	
+
+	
+	
+		<div class="ui container tablet computer only grid">
+			<div class="item" onClick="$('.ui.sidebar').sidebar('setting', 'transition', 'overlay').sidebar('toggle');">
+				<i class="inverted big link sidebar icon" title="Show Sidebar"></i>
+			</div>
+		</div>
+	
+
+	
+	
+		<div class="item right">
+			<a href="/posts/index.xml">
+				<i class="inverted big link rss icon" title="RSS Feed"></i>
+			</a>
+		</div>
+	
+</nav>
+
+
+	<div class="ui centered grid">
+		
+		<div class="sixteen wide mobile only column">
+				<div class="ui inverted accordion">
+	<div id="header" class="ui inverted segment column box">		
+		
+		<header id="author" class="ui top attached center aligned inverted segment">
+			
+<div class="ui small circular image">
+	
+		<img src="https://ws1.sinaimg.cn/large/8c14476fly1g1ffir8espj20va0vadh1.jpg">
+	
+</div>
+
+
+<h3 class="ui header">
+	Qin Peng
+	<div class="sub header">Self-discipline gives me freedom.</div>
+</h3>
+
+		</header>
+
+		
+		<div class=" title header-title">
+			
+				<div id="tag-category-pop" class="ui red right corner label">
+					<i class="hand point icon down" title="Show/hide tags and categories"></i>
+				</div>
+			
+		</div>
+		
+		
+		<div id="tag-category" class=" content">
+			
+				<section class="ui attached center aligned inverted segment dream-tags none flexbox">
+					
+					
+					
+
+
+
+
+	
+	
+		
+			
+			<a class="ui label purple " href="/tags/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5" title="个人主页">个人主页</a>
+		
+			
+			<a class="ui label purple " href="/tags/blog" title="blog">blog</a>
+		
+			
+			<a class="ui label green " href="/tags/methodology" title="methodology">methodology</a>
+		
+			
+			<a class="ui label blue " href="/tags/android" title="android">android</a>
+		
+			
+			<a class="ui label green " href="/tags/plugin" title="plugin">plugin</a>
+		
+			
+			<a class="ui label yellow " href="/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99" title="个人网站">个人网站</a>
+		
+			
+			<a class="ui label green " href="/tags/android-rom" title="android-rom">android-rom</a>
+		
+			
+			<a class="ui label pink " href="/tags/application" title="application">application</a>
+		
+	
+
+
+				</section>
+			
+
+			
+				<section class="ui attached inverted segment dream-categories both flexbox">
+					<div class="inverted accordion">
+						
+	
+	<div class="title">
+		<i class="dropdown icon"></i>
+		<a class="link" href="/categories/blog">blog</a>
+	</div>
+
+	
+	<div class="content">
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/blog-with-hugo/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>使用Hugo迁移Jekyll博客</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/reactive-blog/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>重启博客</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2017-09-23-collage-online-tool/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>在线拼图工具</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2017-03-05-optimize-archive-page/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>优化Archive页面</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-05-06-optimize-the-loading-of-pages/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>优化网页加载</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-04-04-qingming-vocation/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>2016清明游记</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-04-24-driver-lisence/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>驾照</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-24-the-superstition-during-application/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>出国申请中的玄学</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-19-simple-ways-to-add-plugins-to-your-website/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>简单添加插件的方法</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-18-life-can-be-a-game/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>生命可以是一场游戏</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-18-bad-social-skill/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>跪掉的交际能力</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-17-my-way-to-use-anrdoid/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>我的Android使用术</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-16-the-shining-points-of-resurrection-remix-rom/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>Resurrection Remix Rom based on Android AOSP 6.0</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-16-my-way-for-music/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>我的听音乐的情况</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-16-my-way-for-movies/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>我的电影相关</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-16-my-way-for-reading/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>我阅读的途径</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-16-realize-tagcloud/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>添加标签云组件</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-16-debug-the-problem-of-markdown-display/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>解决Markdown标题的显示问题</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-15-flash-my-oneplusone/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>一加1刷机</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-14-modify-the-comment-module/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>修改网站的评论模块</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-14-add-the-recommendation-module/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>增加网站的推荐模块</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-14-change-the-sharing-module/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>更换网站的分享模块</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-13-why-write-blog/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>我为什么写博客？</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-13-recording-of-build-my-blog/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>我建立个人主页的过程</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-15-my-collection-of-online-novels/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>网络小说推荐</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-14-add-analytic-module/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>增加网站的统计分析模块并使网站可被搜索引擎索引</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://qinpengblog.github.com/posts/2016-02-20-earn-through-internet/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>网赚</p>
+				</div>
+			</a>
+		
+	</div>
+
+
+					</div>
+				</section>
+			
+		</div>
+
+		
+		<footer class="ui bottom attached center aligned inverted segment">
+			
+
+	<p>© 2016 - 2019 月巢</p>
+
+
+<p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with <a href="https://github.com/UtkarshVerma/hugo-dream-plus" target="_blank">Dream Plus</a> theme.</p>
+
+		</footer>
+	</div>
+</div>
+
+		</div>
+
+		<div class="sixteen wide mobile fifteen wide tablet twelve wide computer column post-list">
+			
+			<section class="ui secondary top attached black segment post-head">
+				<h1 class="post-title">
+					添加标签云组件
+				</h1>
+
+				<div class="sub header">
+					<div><span><i class="calendar outline icon"></i>Feb 16, 2016</span></div>
+					
+					<div><span class="disqusComment"><i class="comment outline icon"></i><a href="https://qinpengblog.github.com/posts/2016-02-16-realize-tagcloud/#disqus_thread" class="disqus-comment-count" data-disqus-identifier="9f9f1d399ec655832af3301e2f14750c"></a></span></div>
+					<div><span><i class="clock outline icon"></i>12 min read</span></div>
+					<div><span><i class="angle double up icon"></i>Last updated on Feb 16, 2016</span></div>
+				</div>
+				<hr>
+
+				
+					<div class="toc">
+						<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#test1">Test1</a></li>
+<li><a href="#test2">Test2</a></li>
+<li><a href="#test3">Test3</a></li>
+<li><a href="#test4">Test4</a></li>
+<li><a href="#test5">Test5</a></li>
+<li><a href="#test6">Test6</a></li>
+<li><a href="#test7">Test7</a></li>
+<li><a href="#test8">Test8</a>
+<ul>
+<li><a href="#test8-1">Test8+</a></li>
+<li><a href="#test8-2">Test8++</a></li>
+<li><a href="#test8-3">Test8+++</a></li>
+</ul></li>
+<li><a href="#test9">Test9</a>
+<ul>
+<li><a href="#test9-2016-02-19-14-45">Test9+ (2016-02-19 14:45)</a></li>
+<li><a href="#test9-1">Test9++</a></li>
+<li><a href="#test9-2">Test9+++</a></li>
+<li><a href="#test9-3">Test9++++</a></li>
+<li><a href="#test9-4">Test9+++++</a></li>
+</ul></li>
+<li><a href="#test10">Test10</a></li>
+<li><a href="#test11">Test11</a>
+<ul>
+<li><a href="#test11-1">Test11++</a></li>
+<li><a href="#test11-2">Test11+++</a></li>
+<li><a href="#test11-3">Test11++++</a></li>
+</ul></li>
+<li><a href="#test12">Test12</a>
+<ul>
+<li><a href="#test12-1">Test12+</a></li>
+<li><a href="#test12-2">Test12++</a></li>
+<li><a href="#test12-3">Test12+++</a></li>
+</ul></li>
+<li><a href="#to-do-list">To-do list</a></li>
+</ul></li>
+</ul>
+</nav>
+					</div>
+				
+
+				<article class="post-content twemoji">
+					
+
+<p>2017-03-15
+优化Tag页面
+1. 去除Test***字样
+2. 删除Test 10，9,8
+3. 保留Test 12,11。优化12的样式</p>
+
+<pre><code>{% for tag in site.tags %}
+   &lt;a href=&quot;#{{ tag[0] }}&quot;
+        style=&quot;font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%&quot;&gt;{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
+   &lt;/a&gt;
+{% endfor %}
+</code></pre>
+
+<p>查看编译后的网页源代码，发现解析成<code>&lt;p&gt;&lt;a href=&quot;#个人主页&quot; style=&quot;font-size: 108%&quot;&gt;个人主页 (7)&lt;/a&gt;&lt;/p&gt;</code>
+前后增加<code>&lt;div&gt;&lt;/div&gt;</code>
+解析后不再增加<code>&lt;p&gt;&lt;/p&gt;</code>
+没必要添加<code>&amp;nbsp;</code>，会自动添加一个的，再添加一个反而会弄乱格式。</p>
+
+<p>原来：</p>
+
+<pre><code>{% for tag in site.tags %}
+ &lt;span class=&quot;site-tag&quot;&gt;
+   &lt;a href=&quot;#{{ tag[0] }}&quot;
+        style=&quot;font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%&quot;&gt;{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
+   &lt;/a&gt;
+ &lt;/span&gt;
+{% endfor %}
+</code></pre>
+
+<ol>
+<li>优化Tag内文章列表的样式
+<code>&lt;h4&gt;{{ tag[0] }}&lt;a&gt;&lt;span&gt;{{ tag[0].size }}&lt;/span&gt;&lt;/a&gt;&lt;/h4&gt;</code></li>
+</ol>
+
+<p>Tag云标签点击后无法跳转。
+添加id
+<code>&lt;h4 id=&quot;{{ tag[0] }}&quot;&gt;{{ tag[0] }}&lt;a&gt;&lt;span&gt;{{ tag[0].size }}&lt;/span&gt;&lt;/a&gt;&lt;/h4&gt;</code></p>
+
+<p>原来：</p>
+
+<pre><code>&lt;li class=&quot;listing-seperator&quot; id=&quot;{{ tag[0] }}&quot;&gt;
+      &lt;h4&gt;{{ tag[0] }}&lt;a&gt;&lt;span&gt;{{ tag[0].size }}&lt;/span&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+</code></pre>
+
+<pre><code>&lt;!--列出每个tag出现的文章--&gt;
+
+&lt;ul class=&quot;listing&quot;&gt;
+{% for tag in site.tags %}
+  &lt;li class=&quot;listing-seperator&quot; id=&quot;{{ tag[0] }}&quot;&gt;
+      &lt;h4&gt;{{ tag[0] }}&lt;a&gt;&lt;span&gt;{{ tag[0].size }}&lt;/span&gt;&lt;/a&gt;&lt;/h4&gt;
+  &lt;/li&gt;
+
+  {% for post in tag[1] %}
+  &lt;li class=&quot;listing-item&quot;&gt;
+      &lt;time datetime=&quot;{{ post.date | date:&quot;%Y-%m-%d&quot; }}&quot;&gt;{{ post.date | date:&quot;%Y-%m-%d&quot; }}&lt;/time&gt;
+      &lt;a href=&quot;{{ post.url }}&quot; title=&quot;{{ post.title }}&quot;&gt;{{ post.title }}&lt;/a&gt;
+  &lt;/li&gt;
+  {% endfor %}
+
+  &lt;hr&gt;
+
+{% endfor %}
+&lt;/ul&gt;
+</code></pre>
+
+<hr />
+
+<p>2016-02-20 搞不定那些引用了jQuery插件的标签云。计划系统学习Html，CSS，Javascript，jQuery后再来处理。</p>
+
+<hr />
+
+<pre><code>&lt;div id=&quot;whatever&quot;&gt;
+  &lt;a href=&quot;/path&quot; rel=&quot;7&quot;&gt;peace&lt;/a&gt;
+  &lt;a href=&quot;/path&quot; rel=&quot;3&quot;&gt;unity&lt;/a&gt;
+  &lt;a href=&quot;/path&quot; rel=&quot;10&quot;&gt;love&lt;/a&gt;
+  &lt;a href=&quot;/path&quot; rel=&quot;5&quot;&gt;having fun&lt;/a&gt;
+&lt;/div&gt;
+
+$.fn.tagcloud.defaults = {
+  size: {start: 14, end: 18, unit: 'pt'},
+  color: {start: '#cde', end: '#f52'}
+};
+
+$(function () {
+  $('#whatever a').tagcloud();
+});
+</code></pre>
+
+<p>原来：</p>
+
+<pre><code>&lt;script src=&quot;/media/js/jquery.tagcloud.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt; 
+&lt;script language=&quot;javascript&quot;&gt;
+$.fn.tagcloud.defaults = {
+size: {start: 1, end: 1, unit: 'em'},
+  color: {start: '#f8e0e6', end: '#ff3333'}
+};
+
+$(function () {
+$('#tag_cloud a').tagcloud();
+});
+&lt;/script&gt;
+</code></pre>
+
+<p>发现没有/media/js/jquery.tagcloud.js这个文件，我用我拷贝的jquery.tagcloud.js代替，改成：</p>
+
+<pre><code>&lt;script src=&quot;/js/jquery.tagcloud.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt; 
+&lt;script language=&quot;javascript&quot;&gt;
+$.fn.tagcloud.defaults = {
+size: {start: 1, end: 1, unit: 'em'},
+  color: {start: '#f8e0e6', end: '#ff3333'}
+};
+
+$(function () {
+$('#tag_cloud a').tagcloud();
+});
+&lt;/script&gt;
+</code></pre>
+
+<p>没有变化。想到以前本没有文件的时候也没有效果。</p>
+
+<p>尝试删掉这段：</p>
+
+<pre><code>&lt;script src=&quot;/js/jquery.tagcloud.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt; 
+&lt;script language=&quot;javascript&quot;&gt;
+$.fn.tagcloud.defaults = {
+size: {start: 1, end: 1, unit: 'em'},
+  color: {start: '#f8e0e6', end: '#ff3333'}
+};
+
+$(function () {
+$('#tag_cloud a').tagcloud();
+});
+&lt;/script&gt;
+</code></pre>
+
+<p>果然没有变化。</p>
+
+<h2 id="test1">Test1&nbsp;<a class="anchor" href="#test1"><i class="small linkify icon"></i></a> </h2>
+
+<p>用原来的代码：</p>
+
+<pre><code>&lt;div id='tag_cloud'&gt;
+    {% for tag in site.tags %}
+        &lt;a href=&quot;#{{ tag[0] }}&quot; title=&quot;{{ tag[0] }}&quot; rel=&quot;{{ tag[1].size }}&quot;&gt;{{ tag[0] }}&lt;/a&gt;
+    {% endfor %}
+&lt;/div&gt;
+</code></pre>
+
+<p>替代Demo里的代码的第一部分：</p>
+
+<pre><code>&lt;div id=&quot;whatever&quot;&gt;
+  &lt;a href=&quot;/path&quot; rel=&quot;7&quot;&gt;peace&lt;/a&gt;
+  &lt;a href=&quot;/path&quot; rel=&quot;3&quot;&gt;unity&lt;/a&gt;
+  &lt;a href=&quot;/path&quot; rel=&quot;10&quot;&gt;love&lt;/a&gt;
+  &lt;a href=&quot;/path&quot; rel=&quot;5&quot;&gt;having fun&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>用Demo里的代码的第二部分：</p>
+
+<pre><code>$.fn.tagcloud.defaults = {
+  size: {start: 14, end: 18, unit: 'pt'},
+  color: {start: '#cde', end: '#f52'}
+};
+
+$(function () {
+  $('#whatever a').tagcloud();
+});
+</code></pre>
+
+<p>替代原来代码的最后一部分的相应代码：</p>
+
+<pre><code>&lt;script src=&quot;/js/jquery.tagcloud.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt; 
+
+&lt;script language=&quot;javascript&quot;&gt;
+$.fn.tagcloud.defaults = {
+  size: {start: 14, end: 18, unit: 'pt'},
+  color: {start: '#cde', end: '#f52'}
+};
+
+$(function () {
+  $('#tag_cloud a').tagcloud();
+});
+&lt;/script&gt;
+</code></pre>
+
+<p>Nothing happened.</p>
+
+<p>P.S.为了识别出Github已经编译了新上传的文件，在文件中添加了test文字。</p>
+
+<h2 id="test2">Test2&nbsp;<a class="anchor" href="#test2"><i class="small linkify icon"></i></a> </h2>
+
+<p>猜测是不是因为MD文件中编译的时候不能直接读取html语言。</p>
+
+<p>加入&lt; html&gt;标签：</p>
+
+<pre><code>&lt;html&gt;
+    &lt;div id='tag_cloud'&gt;
+        {% for tag in site.tags %}
+            &lt;a href=&quot;#{{ tag[0] }}&quot; title=&quot;{{ tag[0] }}&quot; rel=&quot;{{ tag[1].size }}&quot;&gt;{{ tag[0] }}&lt;/a&gt;
+        {% endfor %}
+    &lt;/div&gt;
+&lt;/html&gt;
+
+&lt;html&gt;
+    &lt;script src=&quot;/js/jquery.tagcloud.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt; 
+
+    &lt;script language=&quot;javascript&quot;&gt;
+        $.fn.tagcloud.defaults = {
+            size: {start: 14, end: 18, unit: 'pt'},
+            color: {start: '#cde', end: '#f52'}
+        };
+
+        $(function () {
+          $('#tag_cloud a').tagcloud();
+        });
+    &lt;/script&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Nothing happened.</p>
+
+<p>P.S.发现About，Tags等页面均不把markdown标识编译出来，而是直接显示##。</p>
+
+<h2 id="test3">Test3&nbsp;<a class="anchor" href="#test3"><i class="small linkify icon"></i></a> </h2>
+
+<p>Open page.html to study.</p>
+
+<p>Move:
+    type=&ldquo;text/javascript&rdquo;
+to the front of src.</p>
+
+<p>Delete:
+    charset=&ldquo;utf-8&rdquo;</p>
+
+<p>把第三段代码移动到第一段之中：</p>
+
+<pre><code>&lt;html&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;/js/jquery.tagcloud.js&quot;&gt;&lt;/script&gt; 
+
+    &lt;div id='tag_cloud'&gt;
+        {% for tag in site.tags %}
+            &lt;a href=&quot;#{{ tag[0] }}&quot; title=&quot;{{ tag[0] }}&quot; rel=&quot;{{ tag[1].size }}&quot;&gt;{{ tag[0] }}&lt;/a&gt;
+        {% endfor %}
+    &lt;/div&gt;
+
+    &lt;script language=&quot;javascript&quot;&gt;
+        $.fn.tagcloud.defaults = {
+        size: {start: 14, end: 18, unit: 'pt'},
+        color: {start: '#cde', end: '#f52'}
+        };
+        $(function () {
+        $('#tag_cloud a').tagcloud();
+        });
+    &lt;/script&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Nothing happened.</p>
+
+<h2 id="test4">Test4&nbsp;<a class="anchor" href="#test4"><i class="small linkify icon"></i></a> </h2>
+
+<p>还是怀疑是代码执行的问题，Google“如何在markdown中执行html代码”。在知乎中找到一个<a href="https://www.zhihu.com/question/19963642/answer/16025634">回答</a>。结论是不需要&lt; html&gt;&lt; /html&gt;。</p>
+
+<blockquote>
+<p>著作权归作者所有。
+商业转载请联系作者获得授权，非商业转载请注明出处。
+作者：潘韬
+链接：<a href="https://www.zhihu.com/question/19963642/answer/16025634">https://www.zhihu.com/question/19963642/answer/16025634</a>
+来源：知乎
+Markdown 语法进阶在 Markdown 中嵌入原生HTML代码在 Markdown 代码中嵌入 HTML代码，如果你想直接在 Markdown 中嵌入HTML代码，那么你只需要将代码直接写在需要的地方即可：这是一个段落。
+    <table>
+    <tr>
+        <td>这是用原生的HTML代码写的表格。</td>
+    </tr>
+    </table>
+这是另一个段落。</p>
+
+<p>转换之后得到：
+    <p>这是一个段落。</p>
+    <table>
+    <tr>
+        <td>这是用原生的HTML代码写的表格。</td>
+    </tr>
+    </table>
+    <p>这是另一个段落。</p></p>
+</blockquote>
+
+<h2 id="test5">Test5&nbsp;<a class="anchor" href="#test5"><i class="small linkify icon"></i></a> </h2>
+
+<p>隐藏标签云相关代码：</p>
+
+<p>发现确实被隐藏了，而后面的每个标签出现的文章列表没有受到影响。</p>
+
+<pre><code>&lt;!--Tagcloud
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/jquery.tagcloud.js&quot;&gt;&lt;/script&gt; 
+
+&lt;div id='tag_cloud'&gt;
+{% for tag in site.tags %}
+&lt;a href=&quot;#{{ tag[0] }}&quot; title=&quot;{{ tag[0] }}&quot; rel=&quot;{{ tag[1].size }}&quot;&gt;{{ tag[0] }}&lt;/a&gt;
+{% endfor %}
+&lt;/div&gt;
+
+&lt;script language=&quot;javascript&quot;&gt;
+$.fn.tagcloud.defaults = {
+  size: {start: 14, end: 18, unit: 'pt'},
+  color: {start: '#cde', end: '#f52'}
+};
+$(function () {
+  $('#tag_cloud a').tagcloud();
+});
+&lt;/script&gt;
+--&gt;
+</code></pre>
+
+<h2 id="test6">Test6&nbsp;<a class="anchor" href="#test6"><i class="small linkify icon"></i></a> </h2>
+
+<p>发现代码里和说明文档里面不一样的地方：</p>
+
+<pre><code>&lt;div id='tagscloud'&gt;
+</code></pre>
+
+<p>应该是双引号：</p>
+
+<pre><code>&lt;div id=&quot;whatever&quot;&gt;
+</code></pre>
+
+<p>Nothing happened.</p>
+
+<h2 id="test7">Test7&nbsp;<a class="anchor" href="#test7"><i class="small linkify icon"></i></a> </h2>
+
+<p>find that:</p>
+
+<pre><code>img=&quot;img/**.jpg&quot; 
+</code></pre>
+
+<p>maybe the src is not right:</p>
+
+<pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;/js/jquery.tagcloud.js&quot;&gt;&lt;/script&gt; 
+</code></pre>
+
+<p>change it to:</p>
+
+<pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.tagcloud.js&quot;&gt;&lt;/script&gt; 
+</code></pre>
+
+<h2 id="test8">Test8&nbsp;<a class="anchor" href="#test8"><i class="small linkify icon"></i></a> </h2>
+
+<p>It seems that &lsquo;/js/jquery.tagcloud.js&rsquo; following src, rather than &ldquo;/js/jquery.tagcloud.js&rdquo;.</p>
+
+<pre><code>&lt;script type=&quot;text/javascript&quot; src='/js/jquery.tagcloud.js'&gt;&lt;/script&gt; 
+</code></pre>
+
+<p>STILL NOTHING HAPPENED.</p>
+
+<h3 id="test8-1">Test8+&nbsp;<a class="anchor" href="#test8-1"><i class="small linkify icon"></i></a> </h3>
+
+<p>Add&rdquo;&mdash;&ldquo;after the tag cloud. Done.</p>
+
+<h3 id="test8-2">Test8++&nbsp;<a class="anchor" href="#test8-2"><i class="small linkify icon"></i></a> </h3>
+
+<p>Add &ldquo;&mdash;&rdquo; to each tag in the list part. Only show as &mdash;.
+As the &ldquo;&mdash;&rdquo; is in html part, so Google to find that &lt; hr&gt; represent horizental rule. Change the &ldquo;&mdash;&rdquo; to &lt; hr&gt;.</p>
+
+<pre><code>&lt;ul class=&quot;listing&quot;&gt;
+{% for tag in site.tags %}
+    &lt;li class=&quot;listing-seperator&quot; id=&quot;{{ tag[0] }}&quot;&gt;{{ tag[0] }}&lt;/li&gt;
+{% for post in tag[1] %}
+    &lt;li class=&quot;listing-item&quot;&gt;
+    &lt;time datetime=&quot;{{ post.date | date:&quot;%Y-%m-%d&quot; }}&quot;&gt;{{ post.date | date:&quot;%Y-%m-%d&quot; }}&lt;/time&gt;
+    &lt;a href=&quot;{{ post.url }}&quot; title=&quot;{{ post.title }}&quot;&gt;{{ post.title }}&lt;/a&gt;
+    &lt;/li&gt;
+{% endfor %}
+&lt;hr&gt;
+{% endfor %}
+&lt;/ul&gt;
+</code></pre>
+
+<p>Done.</p>
+
+<p>The problem now is how to cancel the unorder list before each tag.</p>
+
+<h3 id="test8-3">Test8+++&nbsp;<a class="anchor" href="#test8-3"><i class="small linkify icon"></i></a> </h3>
+
+<p>Stand out the tags by adding &lt; h3&gt;&lt; /h3&gt;.</p>
+
+<pre><code> &lt;li class=&quot;listing-seperator&quot; id=&quot;{{ tag[0] }}&quot;&gt;&lt;h3&gt;{{ tag[0] }}&lt;/h3&gt;&lt;/li&gt;
+</code></pre>
+
+<p>Done.</p>
+
+<p>change h3 to h4</p>
+
+<hr />
+
+<h2 id="test9">Test9&nbsp;<a class="anchor" href="#test9"><i class="small linkify icon"></i></a> </h2>
+
+<p>Use <a href="https://github.com/lucaong/jQCloud">jQCloud</a>。<a href="http://www.lucaongaro.eu/demos/jqcloud/">Demo</a></p>
+
+<pre><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/css/jqcloud.css&quot; /&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/jqcloud-1.0.4.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+    var word_list = [
+    {% for tag in site.tags %}
+    {text: &quot;{{ tag[0] }}&quot;, weight: 2, link:&quot;#{{ tag[0] }}&quot;},
+    {% endfor %}
+    ];
+$(function() {
+    $(&quot;#my_favorite_latin_words&quot;).jQCloud(word_list, {shape: &quot;rectangular&quot;});
+});
+&lt;/script&gt;
+
+&lt;div id=&quot;my_favorite_latin_words&quot; style=&quot;width: 550px; height: 350px; border: 1px solid #ccc;&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<p>出现了一个空白的长方形···里面并没有tags。</p>
+
+<p>change the word_list to word_array according to readme.md。</p>
+
+<pre><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/css/jqcloud.css&quot; /&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/jqcloud-1.0.4.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+var word_array = [
+{% for tag in site.tags %}
+{text: &quot;{{ tag[0] }}&quot;, weight: 13, link:&quot;#{{ tag[0] }}&quot;},
+{% endfor %}
+{text: &quot;Lorem&quot;, weight: 15}
+];
+$(function() {
+$(&quot;#tagsss&quot;).jQCloud(word_array);
+});
+&lt;/script&gt;
+
+&lt;div id=&quot;tagsss&quot; style=&quot;width: 550px; height: 350px;&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<p>Nothing happened.</p>
+
+<h3 id="test9-2016-02-19-14-45">Test9+ (2016-02-19 14:45)&nbsp;<a class="anchor" href="#test9-2016-02-19-14-45"><i class="small linkify icon"></i></a> </h3>
+
+<p>Inspired by <a href="http://stackoverflow.com/questions/2754391/embed-javascript-in-markdown">Embed javascript in markdown</a>.</p>
+
+<p>Add a newline before &lt; /script&gt;</p>
+
+<p>Emerge another guess, the problem is the forbidden of relative_permanlink? Next try this.</p>
+
+<p>Nothing happpened.</p>
+
+<h3 id="test9-1">Test9++&nbsp;<a class="anchor" href="#test9-1"><i class="small linkify icon"></i></a> </h3>
+
+<p>Reread README.md, find that the first part of the code should be put in the &lt; head&gt;&lt; /head&gt;. Try it.</p>
+
+<p>Put the code below into &lsquo;head.html&rsquo;</p>
+
+<pre><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/css/jqcloud.css&quot; /&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/jqcloud-1.0.4.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+    var word_array = [
+        {% for tag in site.tags %}
+        {text: &quot;{{ tag[0] }}&quot;, weight: 13, link:&quot;#{{ tag[0] }}&quot;},   
+        {% endfor %}
+        {text: &quot;Lorem&quot;, weight: 15}
+        ];
+        $(function() {
+            $(&quot;#tagsss&quot;).jQCloud(word_array);
+        });
+&lt;/script&gt;
+</code></pre>
+
+<p>Nothing happened.</p>
+
+<h3 id="test9-2">Test9+++&nbsp;<a class="anchor" href="#test9-2"><i class="small linkify icon"></i></a> </h3>
+
+<p>Use F12 to check in brower and find it showing as:</p>
+
+<pre><code>var word_array = [ 
+{text: &quot;个人主页&quot;, weight: 13, link:&quot;#个人主页&quot;},
+{text: &quot;方法论&quot;, weight: 13, link:&quot;#方法论&quot;},
+{text: &quot;个人提高&quot;, weight: 13, link:&quot;#个人提高&quot;},
+{text: &quot;初心&quot;, weight: 13, link:&quot;#初心&quot;},
+{text: &quot;Android&quot;, weight: 13, link:&quot;#Android&quot;},
+{text: &quot;Lorem&quot;, weight: 15}
+];
+$(function() {
+    $(&quot;#tag sss&quot;).jQCloud(word_array);
+});
+</code></pre>
+
+<p>Change the weight with the code from tag_cloud</p>
+
+<pre><code>var word_array = [
+{% for tag in site.tags %}
+{text: &quot;{{ tag[0] }}&quot;, weight: {{ tag | last | size | times: 10 | divided_by: site.tags.size }}, link:&quot;#{{ tag[0] }}&quot;},
+{% endfor %}
+];
+$(function() {
+   $(&quot;#tag  sss&quot;).jQCloud(word_array);
+});
+</code></pre>
+
+<p>find the name showing is different to set</p>
+
+<pre><code>&lt;div id=&quot;tagsss&quot; style=&quot;width: 550px; height: 350px;&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<p>When I check the code in head.html, I find that the name in html set as &lsquo;tag sss&rsquo;</p>
+
+<p>Change the name to mycloud.</p>
+
+<p>Inspired by this, I find the name set in Test8 is wrong.</p>
+
+<pre><code>$.fn.tagcloud.defaults = {
+   size: {start: 14, end: 18, unit: 'pt'},
+   color: {start: '#cde', end: '#f52'}
+   };
+$(function () {
+$('#tagscloud a').tagcloud();
+});
+</code></pre>
+
+<p>Change &lsquo;#tagscloud a&rsquo; to &lsquo;#tagscloud&rsquo;</p>
+
+<p>Nothing happened.</p>
+
+<h3 id="test9-3">Test9++++&nbsp;<a class="anchor" href="#test9-3"><i class="small linkify icon"></i></a> </h3>
+
+<p>When reread README.md, I find that</p>
+
+<pre><code>$(&quot;#example&quot;).jQCloud(word_array);
+</code></pre>
+
+<p>So I changed the  $(&lsquo;#tagscloud&rsquo;).tagcloud(); in Test8 to  $(&ldquo;#tagscloud&rdquo;).tagcloud();</p>
+
+<p>Nothing happened.</p>
+
+<h3 id="test9-4">Test9+++++&nbsp;<a class="anchor" href="#test9-4"><i class="small linkify icon"></i></a> </h3>
+
+<p>Guess that Tags.md locate in the root, and the javascript links are not right. But how to explain Test9? I have put the reference code into head.html.</p>
+
+<hr />
+
+<h2 id="test10">Test10&nbsp;<a class="anchor" href="#test10"><i class="small linkify icon"></i></a> </h2>
+
+<p><a href="https://github.com/enrmarc/jekyll-tagcloud/blob/master/tags.html">jekyll-tagcloud</a></p>
+
+<pre><code>&lt;div class=&quot;tag-cloud&quot;&gt;
+    {% for tag in site.tags %}
+        &lt;a href=&quot;#posts-tag&quot; id=&quot;{{ forloop.index }}&quot; class=&quot;__tag&quot; style=&quot;margin: 5px&quot;&gt;{{ tag[0] }}&lt;/a&gt;
+        &lt;ul id=&quot;list_{{ forloop.index }}&quot; style=&quot;display:none;&quot;&gt;
+            {% for post in tag[1] %}
+            &lt;li&gt;&lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;&lt;/li&gt;
+            {% endfor %}
+        &lt;/ul&gt;
+    {% endfor %}
+&lt;/div&gt;
+
+&lt;div id =&quot;posts-tags&quot; class=&quot;post-list&quot; style=&quot;margin: 50px;&quot;&gt;&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+    $(function() {
+        var minFont = 15.0,
+            maxFont = 40.0,
+            diffFont = maxFont - minFont,
+            size = 0;
+    {% assign max = 1.0 %}
+    {% for tag in site.tags %}
+        {% if tag[1].size &gt; max %}
+        {% assign max = tag[1].size %}
+        {% endif %}
+    {% endfor %}
+
+    {% for tag in site.tags %}
+        size = (Math.log({{ tag[1].size }}) / Math.log({{ max }})) * diffFont + minFont;
+        $(&quot;#{{ forloop.index }}&quot;).css(&quot;font-size&quot;, size + &quot;px&quot;);
+    {% endfor %}
+
+    $('.tag-cloud a[class^=&quot;__tag&quot;]').click(function() {
+    $('.post-list').empty();
+    $('#list_' + $(this).attr('id')).each(function() {
+        $('.post-list').append('&lt;ul&gt;' + $(this).html() + '&lt;/ul&gt;');
+    });
+    });
+    });
+&lt;/script&gt;
+</code></pre>
+
+<p>Only list the tags.</p>
+
+<hr />
+
+<h2 id="test11">Test11&nbsp;<a class="anchor" href="#test11"><i class="small linkify icon"></i></a> </h2>
+
+<p><a href="http://diydeveloper.io/tech/2014/03/09/create-a-tag-cloud-in-jekyll/">Create a tag cloud using Jekyll</a></p>
+
+<p>In /_includes/JB folder, create a new file called “tag_cloud”.</p>
+
+<p>Copy and paste this into the file:</p>
+
+<pre><code>{% comment %}
+Creates a tag cloud on your page.
+{% endcomment %}
+
+{% for tag in site.tags %}
+    &lt;span class=&quot;tag-cloud-{{ tag | last | size | times: 10 | divided_by: site.tags.size }}&quot;&gt;
+    &lt;a href=&quot;{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag | first | slugize] }}-ref&quot;&gt;{{ tag | first }}&lt;/a&gt; 
+    &lt;/span&gt;
+{% endfor %}
+</code></pre>
+
+<p>Add the code below to the end of clean-blog.css</p>
+
+<pre><code>/* tag cloud */
+.tag-cloud-0 { font-size: 1em; }
+.tag-cloud-1 { font-size: 1.5em; }
+.tag-cloud-2 { font-size: 1.5em; font-weight: bold; }
+.tag-cloud-3 { font-size: 2em; }
+.tag-cloud-4 { font-size: 2em; font-weight: bold; }
+.tag-cloud-5 { font-size: 2.5em; }
+.tag-cloud-6 { font-size: 2.5em; font-weight: bold; }
+.tag-cloud-7 { font-size: 2.75em; }
+.tag-cloud-8 { font-size: 2.75em; font-weight: bold; }
+.tag-cloud-9 { font-size: 2.75em; font-weight: bold; font-style: italic; }
+.tag-cloud-10 { font-size: 3em; }
+/* end tag cloud */
+</code></pre>
+
+<p>Add the code below to Tags.md</p>
+
+<pre><code>&lt;div&gt;
+&lt;h2 class='title'&gt;Tag Cloud&lt;/h2&gt;
+{百分号 印库路德 JB/tag_cloud 百分号}
+&lt;div class='clear'&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>Informed by Github that failed to build the page:</p>
+
+<blockquote>
+<p>A file was included in <code>tags.md</code> that is a symlink or does not exist in your <code>_includes</code> directory. For more information, see</p>
+
+<p><a href="https://help.github.com/articles/page-build-failed-file-is-a-symlink">https://help.github.com/articles/page-build-failed-file-is-a-symlink</a>.</p>
+
+<p>GitHub Pages was recently upgraded to Jekyll 3.0. It may help to confirm you&rsquo;re using the correct dependencies:</p>
+
+<p><a href="https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0">https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0</a></p>
+
+<p>Troubleshooting a symlinked file error</p>
+
+<p>We strongly recommend running Jekyll locally so you can easily debug and fix build errors before pushing to GitHub.</p>
+
+<ol>
+<li><p>Use your favorite text editor to open the file mentioned in the build failure email.</p></li>
+
+<li><p>Search for the include tag to see where you&rsquo;ve referenced other files. For example: {百分号 印库路德 cool_header.html 百分号}.</p></li>
+
+<li><p>Copy or move any symlinked files into the _includes directory of your GitHub Pages repository.</p></li>
+
+<li><p>Commit and push to your GitHub Pages repository on GitHub to trigger another build on the server.</p></li>
+</ol>
+</blockquote>
+
+<p>Try to add a &ldquo;/&rdquo; to fix it.</p>
+
+<pre><code>&lt;div&gt;
+&lt;h2 class='title'&gt;Tag Cloud&lt;/h2&gt;
+{百分号 印库路德 /JB/tag_cloud 百分号}
+&lt;div class='clear'&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>Not help.</p>
+
+<h3 id="test11-1">Test11++&nbsp;<a class="anchor" href="#test11-1"><i class="small linkify icon"></i></a> </h3>
+
+<p>Move tag_cloud to _includes folder.</p>
+
+<pre><code>&lt;div&gt;
+&lt;h2 class='title'&gt;Tag Cloud&lt;/h2&gt;
+{% include tag_cloud %}
+&lt;div class='clear'&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>It works! The tag &ldquo;个人主页&rdquo; was bigger than other tags.</p>
+
+<h3 id="test11-2">Test11+++&nbsp;<a class="anchor" href="#test11-2"><i class="small linkify icon"></i></a> </h3>
+
+<p>But when you click on a tag, it doesn&rsquo;t go to the tag list. So I check the code and url appears after clicking on the tag, then I modify the code in tag_cloud by deleting &ldquo;-ref&rdquo;.</p>
+
+<pre><code>{% comment %}
+Creates a tag cloud on your page.
+{% endcomment %}
+
+{% for tag in site.tags %}
+    &lt;span class=&quot;tag-cloud-{{ tag | last | size | times: 10 | divided_by: site.tags.size }}&quot;&gt;
+    &lt;a href=&quot;{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag | first | slugize] }}&quot;&gt;{{ tag | first }}&lt;/a&gt;
+    &lt;/span&gt;
+{% endfor %}
+</code></pre>
+
+<p>Yeah, it works.</p>
+
+<h3 id="test11-3">Test11++++&nbsp;<a class="anchor" href="#test11-3"><i class="small linkify icon"></i></a> </h3>
+
+<p>Want to show the number of the posts containing the tags. Learn from:</p>
+
+<pre><code>{% for tag in site.tags %}
+    &lt;a class=&quot;tag-anchor&quot; id=&quot;{{ tag[0] }}-ref&quot;&gt;&lt;/a&gt;
+    &lt;h3 class=&quot;tag_box&quot;&gt;{{ tag[0] }} &lt;a&gt;&lt;span&gt;{{ tag[0].size }}&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;
+    &lt;ul&gt;
+    {% assign pages_list = tag[1] %}
+    {百分号 印库路德 JB/tag_cloud 百分号}
+    &lt;/ul&gt;
+{% endfor %}
+</code></pre>
+
+<p>Just add <a><span>{{ tag[0].size }}</span></a></p>
+
+<pre><code>  &lt;li class=&quot;listing-seperator&quot; id=&quot;{{ tag[0] }}&quot;&gt;&lt;h4&gt;{{ tag[0] }} &lt;a&gt;&lt;span&gt;{{ tag[0].size }}&lt;/span&gt;&lt;/a&gt;&lt;/h4&gt;&lt;/li&gt;
+</code></pre>
+
+<p>Find that the tag.size stands for the number of posts containing this tag.</p>
+
+<p>But the style of the number is not well as it is same to tag, which may confuse readers. Need to custom the style of the number.</p>
+
+<hr />
+
+<h2 id="test12">Test12&nbsp;<a class="anchor" href="#test12"><i class="small linkify icon"></i></a> </h2>
+
+<p><a href="https://superdevresources.com/tag-cloud-jekyll/">Generating Tag cloud on Jekyll blog without plugin
+</a></p>
+
+<pre><code>{% assign tags = site.tags | sort %}
+{% for tag in tags %}
+    &lt;span class=&quot;site-tag&quot;&gt;
+    &lt;a href=&quot;/tag/{{ tag | first | slugify }}/&quot;
+    style=&quot;font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%&quot;&gt;{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})&lt;/a&gt;
+    &lt;/span&gt;
+{% endfor %}
+</code></pre>
+
+<p>It works. But the tags showing up in a list.</p>
+
+<p>Find Test10 works now as Test11, the tag &ldquo;个人主页&rdquo; is bigger.
+&gt; Find in 2016-02-18 11:09. The css added in Test11 helps</p>
+
+<blockquote>
+<p>Find in 2016-02-18 11:29. Not the css helps as the styles of the text in Test10 and Test11 are not the same.</p>
+</blockquote>
+
+<p>Besides this, I try to modify the number of the posts belong to a tag.</p>
+
+<pre><code>&lt;li class=&quot;listing-seperator&quot; id=&quot;{{ tag[0] }}&quot;&gt;&lt;h4&gt;{{ tag[0] }}&lt;/h4&gt; &lt;/h8&gt;&lt;a&gt;&lt;span&gt;{{ tag[0].size }}&lt;/span&gt;&lt;/a&gt;&lt;/h8&gt;&lt;/li&gt;
+</code></pre>
+
+<p>Find that the tag and the number showing up in two lines.</p>
+
+<h3 id="test12-1">Test12+&nbsp;<a class="anchor" href="#test12-1"><i class="small linkify icon"></i></a> </h3>
+
+<p>Change the link of the tags to #{{ tag[0] }} in Test10 and 12. But when I click on the tags in Test10, I find the previous link towards to show up the relating posts below the tags. It is a different showing up way, so I keep it. Only change in Test12. The previous links of the tags in Test12 towards <a href="http://qinpeng.space/tag/{{tag[]}}/">http://qinpeng.space/tag/{{tag[]}}/</a>.</p>
+
+<p>Find the links of the tags in Test10 not work anymore.</p>
+
+<h3 id="test12-2">Test12++&nbsp;<a class="anchor" href="#test12-2"><i class="small linkify icon"></i></a> </h3>
+
+<p>Add css to clean-blog.css following the blog:</p>
+
+<pre><code>.site-tag a {
+display: inline-block;
+margin-right: 12px;
+}
+</code></pre>
+
+<p>Seem to create the site unsuccessfully.</p>
+
+<p>Check in Test12+++ and find that not help.</p>
+
+<h3 id="test12-3">Test12+++&nbsp;<a class="anchor" href="#test12-3"><i class="small linkify icon"></i></a> </h3>
+
+<p>Comparing with other tests, I find that the first line code in Test12 is useless, so I delete:</p>
+
+<pre><code>{% assign tags = site.tags | sort %}
+</code></pre>
+
+<p>and change the code below as:</p>
+
+<pre><code>{% for tag in site.tags %}
+    &lt;span class=&quot;site-tag&quot;&gt;
+        &lt;a href=&quot;#{{ tag[0] }}&quot;style=&quot;font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%&quot;&gt;{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})&lt;/a&gt;
+    &lt;/span&gt;
+{% endfor %}
+</code></pre>
+
+<p>Seem to create the site unsuccessfully. After several minutes, it loaded. And I found that Test10 works with the new showing post list way again.</p>
+
+<hr />
+
+<h2 id="to-do-list">To-do list&nbsp;<a class="anchor" href="#to-do-list"><i class="small linkify icon"></i></a> </h2>
+
+<ul>
+<li><p>Need to search &ldquo;Tag&rdquo; in jekyll to get to know the related things.</p></li>
+
+<li><p>Learn html, Javascript systematically.</p></li>
+
+<li><p>Custom the style of the number of tag.</p></li>
+
+<li></li>
+</ul>
+
+<hr />
+
+				</article>				
+			</section>
+
+			
+			<section class="ui secondary attached segment dream-tags">
+				
+					
+
+
+
+
+	
+		<a class="ui label green " href="/tags/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5" title="个人主页">个人主页</a>
+	
+		<a class="ui label olive " href="/tags/plugin" title="Plugin">Plugin</a>
+	
+
+
+				
+			</section>
+
+			
+			
+				<section class="ui secondary  attached segment share row box">
+					
+
+
+
+
+
+
+
+
+<div class="author">
+	
+	<img class="avatar" src="https://ws1.sinaimg.cn/large/8c14476fly1g1ffir8espj20va0vadh1.jpg">
+	
+</div>
+<div class="info grow flexbox">
+	
+	<p class="name">Qin Peng</p>
+	
+	<p class="desc">Self-discipline gives me freedom.</p>
+</div>
+
+
+<section class="buttons row box">
+	<div class="facebook none flexbox" href="#" onclick="window.open(
+			'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+			'facebook-share-dialog',
+			'width=626,height=436'); return false;">
+		<button class="ui facebook button"><i class="facebook icon"></i>Share</button>
+	</div>
+	<div class="twitter none flexbox" onclick="window.open('https://twitter.com/intent/tweet?text=Read &quot;添加标签云组件  https:\/\/qinpengblog.github.com\/posts\/2016-02-16-realize-tagcloud\/','_self')">
+		<button class="ui twitter button"><i class="twitter icon"></i>Tweet</button>
+	</div>
+</section>
+
+				</section>
+			
+
+			
+			
+			
+
+			
+			
+				<div class="ui secondary bottom attached stacked segment disqus">
+					
+<div id="disqus_thread"></div>
+<script>
+	var disqus_config = function () {
+		this.page.url = 'https:\/\/qinpengblog.github.com\/posts\/2016-02-16-realize-tagcloud\/';
+		this.page.identifier = '9f9f1d399ec655832af3301e2f14750c';
+	};
+	(function() {
+   	var d = document, s = d.createElement('script');
+   	s.src = 'https://' + 'QinRoc' + '.disqus.com/embed.js';
+   	s.setAttribute('data-timestamp', +new Date());
+   	(d.head || d.body).appendChild(s);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+				</div>
+			
+		</div>
+	</div>
+
+				</div>
+				<div class="back">
+					
+<nav class="ui top secondary menu bar">
+	<div class="item">
+		<i class="inverted big link bullseye icon dream-flip-toggle" title="About Me"></i>
+	</div>
+	
+		
+	
+		
+	
+
+	
+	
+	
+	
+	
+	
+	
+		
+		
+			<div class="item">
+				<a href="https://github.com/QinPengBlog" target="	_blank">
+					<i id="ico" class="inverted big link github icon" title="GitHub"></i>
+				</a>
+			</div>
+		
+	
+		
+		
+			<div class="item">
+				<a href="mailto:qinp_2025@163.com" target="	_blank">
+					<i id="ico" class="inverted big link mail icon" title="Email"></i>
+				</a>
+			</div>
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+</nav>
+
+
+
+<div class="ui centered grid about">
+	<div class="sixteen wide mobile fifteen wide tablet fifteen wide computer column about">
+		<section class="ui stacked segments">
+			<div class="ui inverted segment">
+				<article class="twemoji">
+					<hr />
+
+<p>layout: page
+title: &ldquo;About&rdquo;
+description: &ldquo;没有记录就是没有活过&rdquo;</p>
+
+<h2 id="header-img-img-green-jpg">header-img: &ldquo;img/green.jpg&rdquo;</h2>
+
+<p><center>
+    <p><img src="img/may.jpg" align="center"></p>
+</center></p>
+
+<p>我是钦鹏。</p>
+
+<p>Our past defines us.</p>
+
+<p>所以我要记录下什么让我成为了现在的我。</p>
+
+<h3 id="坚信">坚信</h3>
+
+<ul>
+<li>没有记录就没有活过</li>
+</ul>
+
+<h3 id="关注">关注</h3>
+
+<h3 id="代表作">代表作</h3>
+
+<h3 id="我的朋友们">我的朋友们</h3>
+
+<h3 id="联系">联系</h3>
+
+<ul>
+<li><p><a href="www.qinpeng.space">博客：www.qinpeng.space</a></p></li>
+
+<li><p><a href="http://weibo.com/2350139247">微博@乾越Roc</a></p></li>
+
+<li><p><a href="https://www.zhihu.com/people/qin-peng-96">知乎@钦鹏</a></p></li>
+
+<li><p><a href="http://www.jianshu.com/users/e9187c0454eb/timeline">简书@月鸟</a></p></li>
+
+<li><p><a href="http://www.douban.com/people/63375004/">豆瓣@乾越</a></p></li>
+
+<li><p><a href="https://www.facebook.com/profile.php?id=100005339612933">Facebook@钦鹏</a></p></li>
+
+<li><p><a href="https://plus.google.com/u/0/113868208390035424947">Google+@钦鹏</a></p></li>
+
+<li><p><a href="https://twitter.com/QinRoc">Twitter@钦鹏</a></p></li>
+
+<li><p><a href="http://qinroc.tumblr.com/">Tumblr@QinRoc</a></p></li>
+</ul>
+
+<p>[- 知乎专栏] <em>先一起期待着吧</em></p>
+
+<p>[- 公 众 号] <em>先一起期待着吧</em></p>
+
+<p><center>
+    <p><img src="" align="center"></p>
+</center></p>
+
+				</article>
+			</div>
+		</section>
+	</div>
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+	
+	
+		<script id="dsq-count-scr" src="//QinRoc.disqus.com/count.js" async></script>
+	
+
+		
+
+<script src="/js/site.js"></script>
+
+
+
+	<script src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.6"></script>
+
+
+
+
+
+
+
+
+
+		
+
+
+		
+
+	<script>
+		(function () {
+		  console.log("Twemoji up and making stuff colourful!");
+		  for (var b = document.getElementsByClassName("twemoji"), a = 0; a < b.length; a++) {
+			twemoji.parse(b[a]);
+		  }
+		})();
+	</script>
+
+
+	</body>
+</html>

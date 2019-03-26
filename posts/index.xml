@@ -1,0 +1,259 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on 月巢</title>
+    <link>https://qinpengblog.github.com/posts/</link>
+    <description>Recent content in Posts on 月巢</description>
+    <meta name="generator" content="Hugo 0.55.0-DEV" />
+    <lastBuildDate>Mon, 25 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://qinpengblog.github.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用Hugo迁移Jekyll博客</title>
+      <link>https://qinpengblog.github.com/posts/blog-with-hugo/</link>
+      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/blog-with-hugo/</guid>
+      <description>记录使用Hugo迁Jekyll移博客的过程</description>
+    </item>
+    
+    <item>
+      <title>重启博客</title>
+      <link>https://qinpengblog.github.com/posts/reactive-blog/</link>
+      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/reactive-blog/</guid>
+      <description>为什么重启博客？</description>
+    </item>
+    
+    <item>
+      <title>在线拼图工具</title>
+      <link>https://qinpengblog.github.com/posts/2017-09-23-collage-online-tool/</link>
+      <pubDate>Sat, 23 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2017-09-23-collage-online-tool/</guid>
+      <description>推荐一款在线拼图工具</description>
+    </item>
+    
+    <item>
+      <title>优化Archive页面</title>
+      <link>https://qinpengblog.github.com/posts/2017-03-05-optimize-archive-page/</link>
+      <pubDate>Fri, 03 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2017-03-05-optimize-archive-page/</guid>
+      <description>年份分割设为标题样式&amp;lt;h3&amp;gt;{{ y }}&amp;lt;/h3&amp;gt;
+年份分隔去掉无序排列标记 &amp;lt;li class=&amp;quot;listing-seperator&amp;quot;&amp;gt;{{ y }}&amp;lt;/li&amp;gt; 改为 {{ y }}
+原来：
+--- layout: page title: &amp;quot;Archive&amp;quot; description: &amp;quot;你看到的，是我之为我的原因&amp;quot; header-img: &amp;quot;img/orange.jpg&amp;quot; --- &amp;lt;ul class=&amp;quot;listing&amp;quot;&amp;gt; {% for post in site.posts %} {% capture y %}{{post.date | date:&amp;quot;%Y&amp;quot;}}{% endcapture %} {% if year != y %} {% assign year = y %} &amp;lt;li class=&amp;quot;listing-seperator&amp;quot;&amp;gt;{{ y }}&amp;lt;/li&amp;gt; {% endif %} &amp;lt;li class=&amp;quot;listing-item&amp;quot;&amp;gt; &amp;lt;time datetime=&amp;quot;{{ post.date | date:&amp;quot;%Y-%m-%d&amp;quot; }}&amp;quot;&amp;gt;{{ post.date | date:&amp;quot;%Y-%m-%d&amp;quot; }}&amp;lt;/time&amp;gt; &amp;lt;a href=&amp;quot;{{ post.</description>
+    </item>
+    
+    <item>
+      <title>优化网页加载</title>
+      <link>https://qinpengblog.github.com/posts/2016-05-06-optimize-the-loading-of-pages/</link>
+      <pubDate>Fri, 06 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-05-06-optimize-the-loading-of-pages/</guid>
+      <description>去除网页动画效果，以加快访问速度。</description>
+    </item>
+    
+    <item>
+      <title>2016清明游记</title>
+      <link>https://qinpengblog.github.com/posts/2016-04-04-qingming-vocation/</link>
+      <pubDate>Mon, 04 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-04-04-qingming-vocation/</guid>
+      <description>和田老板的摩托观星。</description>
+    </item>
+    
+    <item>
+      <title>驾照</title>
+      <link>https://qinpengblog.github.com/posts/2016-04-24-driver-lisence/</link>
+      <pubDate>Mon, 04 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-04-24-driver-lisence/</guid>
+      <description>记录学习驾照的经历。</description>
+    </item>
+    
+    <item>
+      <title>出国申请中的玄学</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-24-the-superstition-during-application/</link>
+      <pubDate>Wed, 24 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-24-the-superstition-during-application/</guid>
+      <description>记录了申请等待期听到的各种玄学。</description>
+    </item>
+    
+    <item>
+      <title>简单添加插件的方法</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-19-simple-ways-to-add-plugins-to-your-website/</link>
+      <pubDate>Fri, 19 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-19-simple-ways-to-add-plugins-to-your-website/</guid>
+      <description>发现简单添加网页插件的过程和Eager，Powr等的使用方法。</description>
+    </item>
+    
+    <item>
+      <title>生命可以是一场游戏</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-18-life-can-be-a-game/</link>
+      <pubDate>Thu, 18 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-18-life-can-be-a-game/</guid>
+      <description>把生命当成一个RPG游戏。</description>
+    </item>
+    
+    <item>
+      <title>跪掉的交际能力</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-18-bad-social-skill/</link>
+      <pubDate>Thu, 18 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-18-bad-social-skill/</guid>
+      <description>记录了一次让我难忘的人际交往经历。</description>
+    </item>
+    
+    <item>
+      <title>我的Android使用术</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-17-my-way-to-use-anrdoid/</link>
+      <pubDate>Wed, 17 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-17-my-way-to-use-anrdoid/</guid>
+      <description>总结了我使用Android的方法及安装的APP。</description>
+    </item>
+    
+    <item>
+      <title>Resurrection Remix Rom based on Android AOSP 6.0</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-16-the-shining-points-of-resurrection-remix-rom/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-16-the-shining-points-of-resurrection-remix-rom/</guid>
+      <description>Show the characteristics of RR Rom that delight me.</description>
+    </item>
+    
+    <item>
+      <title>我的听音乐的情况</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-16-my-way-for-music/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-16-my-way-for-music/</guid>
+      <description>记录我听音乐相关的东西。</description>
+    </item>
+    
+    <item>
+      <title>我的电影相关</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-16-my-way-for-movies/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-16-my-way-for-movies/</guid>
+      <description>总结观影相关的东西。</description>
+    </item>
+    
+    <item>
+      <title>我阅读的途径</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-16-my-way-for-reading/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-16-my-way-for-reading/</guid>
+      <description>我阅读的载体、来源、记录方法等。</description>
+    </item>
+    
+    <item>
+      <title>添加标签云组件</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-16-realize-tagcloud/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-16-realize-tagcloud/</guid>
+      <description>记录尝试各种标签云插件的过程。</description>
+    </item>
+    
+    <item>
+      <title>解决Markdown标题的显示问题</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-16-debug-the-problem-of-markdown-display/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-16-debug-the-problem-of-markdown-display/</guid>
+      <description>记录了发现Markdown标题的显示问题及解决的过程。</description>
+    </item>
+    
+    <item>
+      <title>一加1刷机</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-15-flash-my-oneplusone/</link>
+      <pubDate>Mon, 15 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-15-flash-my-oneplusone/</guid>
+      <description>记录这次刷机的过程。</description>
+    </item>
+    
+    <item>
+      <title>修改网站的评论模块</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-14-modify-the-comment-module/</link>
+      <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-14-modify-the-comment-module/</guid>
+      <description>记录修改的过程。</description>
+    </item>
+    
+    <item>
+      <title>增加网站的推荐模块</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-14-add-the-recommendation-module/</link>
+      <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-14-add-the-recommendation-module/</guid>
+      <description>记录增加的过程。</description>
+    </item>
+    
+    <item>
+      <title>更换网站的分享模块</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-14-change-the-sharing-module/</link>
+      <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-14-change-the-sharing-module/</guid>
+      <description>记录增加的过程。</description>
+    </item>
+    
+    <item>
+      <title>我为什么写博客？</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-13-why-write-blog/</link>
+      <pubDate>Sat, 13 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-13-why-write-blog/</guid>
+      <description>作为以后忘记的时候提醒自己的初心。</description>
+    </item>
+    
+    <item>
+      <title>我建立个人主页的过程</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-13-recording-of-build-my-blog/</link>
+      <pubDate>Sat, 13 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-13-recording-of-build-my-blog/</guid>
+      <description>给自己花在这上面的时间备个份。</description>
+    </item>
+    
+    <item>
+      <title>网络小说推荐</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-15-my-collection-of-online-novels/</link>
+      <pubDate>Sat, 13 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-15-my-collection-of-online-novels/</guid>
+      <description>分享记录一些我觉得好的网络小说。</description>
+    </item>
+    
+    <item>
+      <title>增加网站的统计分析模块并使网站可被搜索引擎索引</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-14-add-analytic-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-14-add-analytic-module/</guid>
+      <description>记录增加的过程。</description>
+    </item>
+    
+    <item>
+      <title>网赚</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-20-earn-through-internet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-20-earn-through-internet/</guid>
+      <description>介绍网赚的一些途径。</description>
+    </item>
+    
+  </channel>
+</rss>

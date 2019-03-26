@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Application on 月巢</title>
+    <link>https://qinpengblog.github.com/tags/application/</link>
+    <description>Recent content in Application on 月巢</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 24 Feb 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://qinpengblog.github.com/tags/application/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>出国申请中的玄学</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-24-the-superstition-during-application/</link>
+      <pubDate>Wed, 24 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-24-the-superstition-during-application/</guid>
+      <description>今天晚上听到YM提到了下面两个玄学说法，萌生了记录总结这些好笑的申请中的玄学段子。
+ 去卧佛寺求Offer 不去“全聚德”  </description>
+    </item>
+    
+  </channel>
+</rss>

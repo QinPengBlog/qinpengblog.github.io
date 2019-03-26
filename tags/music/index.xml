@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Music on 月巢</title>
+    <link>https://qinpengblog.github.com/tags/music/</link>
+    <description>Recent content in Music on 月巢</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 16 Feb 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://qinpengblog.github.com/tags/music/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>我的听音乐的情况</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-16-my-way-for-music/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-16-my-way-for-music/</guid>
+      <description>听音乐的风格  电子音乐   听音乐的渠道 目前全面使用在线音乐。
+为了听到所有想听的歌，结合使用“网易云音乐”和“虾米音乐”。由于之前一直使用网易云音乐，个人数据都集中在这上面，所以主要使用网易云音乐。
+2016-02-02 一直使用网易云音乐，这天想听五月天的倔强，但是发现在网易云音乐里因为版权问题下架了。百度了一番后，决定结合使用网易云音乐和虾米音乐。
+想了解国内在线音乐阵营的划分（阿里系和腾讯系）和对各音乐公司的版权拥有情况可看如下文章：
+《听音乐 到底选QQ音乐还是虾米？-听歌,QQ音乐,阿里,虾米-驱动之家》 &amp;gt; P.S. 有详细的表格对比说明这两个阵营的音乐版权的所有情况。
+《谁才是国内最强音乐分享平台：虾米音乐 vs 网易云音乐 - 少数派》</description>
+    </item>
+    
+  </channel>
+</rss>

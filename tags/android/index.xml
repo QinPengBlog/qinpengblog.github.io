@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on 月巢</title>
+    <link>https://qinpengblog.github.com/tags/android/</link>
+    <description>Recent content in Android on 月巢</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 17 Feb 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://qinpengblog.github.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>我的Android使用术</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-17-my-way-to-use-anrdoid/</link>
+      <pubDate>Wed, 17 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-17-my-way-to-use-anrdoid/</guid>
+      <description>Pre System setting APP System  Xposed Greenify (破解版) No Wakelock （Google Play +捐赠版） Wakelock Detector （未捐赠版足矣） BetterBatteryStats 查看耗电 Amplify 限制唤醒 冰箱 阻止运行  Shopping &amp;amp; Finance Reading Social 微信Wechat - 找回微信云端备份:WechatCloudBackup
+新浪微博
+百度地图
+浏览器 Via浏览器 网易云音乐
+京东金融
+BusyBox Pro:Linux工具箱 内核调校:Kernel Adiutor My Android Tools 应用变量
+Google相机:Google Camera 分期乐 表情豆豆 Google拼音输入法 脚本精灵 爱字体 广告快走 SD Maid 随手记 大众点评 WizNote
+PerfectColorBar Luckymoney QQUnrecalled WechatOriginalPhoto 幸运破解器:LuckyPatcher 去你大爷的内置浏览器 BootManager开机启动管理 流氓终结者:Malware Buster LightningWall WechatUnrecalled 无线网络密码:WiFi Password 自定义快捷设置背景:XQS Background</description>
+    </item>
+    
+    <item>
+      <title>Resurrection Remix Rom based on Android AOSP 6.0</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-16-the-shining-points-of-resurrection-remix-rom/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-16-the-shining-points-of-resurrection-remix-rom/</guid>
+      <description>The review is based on RR 5.6.3
+ Use power button to turn on flashlight in the lockscreen section.
+ Coffein time (5 minutes) in the notification panel.
+ Use power button to open camera.
+ Change the background picture of the notification panel.
+ Pie control. P.S. Compare to Blisspop, it can&amp;rsquo;t custom the location, or sequence, of different button.
+ Change the function of buttons, such as switch to last app.</description>
+    </item>
+    
+    <item>
+      <title>一加1刷机</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-15-flash-my-oneplusone/</link>
+      <pubDate>Mon, 15 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-15-flash-my-oneplusone/</guid>
+      <description>本次折腾时间160214 22:15-160215 15:00
+这次刷机的缘起是手机提醒Resurrection Remix ROM更新到v5.6.3 0213了，我想到这周就要回实验室了，准备刷个新的后稳定用着。
+备份 用钛备份备份。由于Android Marshmallow 6.0系统限制对外置存储的访问，钛备份不能把备份目录设置在手机U盘了。这次直接把备份设置到本地存储里面。然而我的一加1是16G版的，安装好的程序+从Blisspop换过来的时候的备份+新的备份远远超过16G，中途失败了一次。把以前的备份转移到电脑里面，统计了一下，竟然有1.5G。接着继续备份完APP和系统数据。
+下载ROM 在备份的时候，同步在电脑上下载ROM。访问了Resurrection Remix官网,依次跳转到下载界面，结果竟然打不开，加到破解GFW的列表里还是打不开。
+登陆一加官方论坛在玩机板块的一加一ROM专区寻找该ROM。结果只找到了V5.6.3 0212的版本。同时我意识到可能这个版本出了问题，所以他们才在0213推出新的迭代版本。但是苦于找不到最新的版本，无奈只能下载它了。在浏览的过程中发现TWRP Recovery更新到3.0了，从论坛里下载了适用于一加1的版本，也搜索到了它的官方网站。
+在论坛里看到最新的CM13似乎基带又换成4.0了。我上次刷机的时候（160203）记得似乎是从4.0换成3.0了。本来计划用上次刷机用的CM13 Nightly作为底包，这次不得已又下栽了CM13 Nightly 0214作为底包。
+梳理刷机流程 在ROM官网虽然没有打开下载地址，但是在第一次跳转的下载地址上发现了一个官方的更新流程：
+UPDATE INSTRUCTIONS
+ Download the latest build of Resurrection Remix ROM Take a nandroid backup Flash ROM using ClockworkMod or TWRP recovery Flash Gapps Wipe cache Wipe dalvik cache Reboot Enjoy!  按照这个流程不需要清除Data分区，能保留装好的APP，所以打算按照这个来。
+下载Gapps Google一系列的框架和软件包应该有更新所以去找了一番。但是Blisspop时代我下载BanksGapps的地址也打不开了。该ROM官方推荐的BanksGapps的下载地址里的包没有更新。Google搜索到了另外一个似乎是BanksGapps官方的下载地址。这个地址的两个包虽然命名不同，但是大小一样，所以我就下载了BANKS_GAPPS_6.XX.zip（更新时间是0209，大小是306M，另一个名字里有Dynamic）。后来在官方的说明里发现这了个确实一样，之所以这样做是为了保持BANKS_GAPPS_6.XX.zip更新地址的一致。
+Flash Recovery里仍然能够挂在U盘，所以将ROM和CM13的ROM，Gapps和Xposed框架，TWRP 3.0放进U盘。 1. 重启进入Recovery 2. 清除cache,dalvik cache。 3. 挂载U盘。 4. 刷入TWRP 3.</description>
+    </item>
+    
+  </channel>
+</rss>

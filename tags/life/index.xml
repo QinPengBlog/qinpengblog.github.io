@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Life on 月巢</title>
+    <link>https://qinpengblog.github.com/tags/life/</link>
+    <description>Recent content in Life on 月巢</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 18 Feb 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://qinpengblog.github.com/tags/life/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>生命可以是一场游戏</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-18-life-can-be-a-game/</link>
+      <pubDate>Thu, 18 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-18-life-can-be-a-game/</guid>
+      <description>模仿游戏的任务、成就、升级系统规划生活。</description>
+    </item>
+    
+  </channel>
+</rss>

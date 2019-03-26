@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog on 月巢</title>
+    <link>https://qinpengblog.github.com/categories/blog/</link>
+    <description>Recent content in blog on 月巢</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 25 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://qinpengblog.github.com/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用Hugo迁移Jekyll博客</title>
+      <link>https://qinpengblog.github.com/posts/blog-with-hugo/</link>
+      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/blog-with-hugo/</guid>
+      <description>准备工具  Hugo 下载后配置系统环境变量，以便方便实用Hugo。 Git  初始化Hugo 初始化Site Hugo new site [targetDir]
+初始化Theme 通过Theme仓库找到自己喜欢的主题。 Clone到本地站点themes目录。 按照Theme说明完成配置。
+迁移Jekyll博客 迁移工具失败，将Formatter全部删除了。
+Theme支持原有Jekyll的Formatter，直接复制过去。
+图床 新浪图床Chrome扩展工具。
+Bug 具体时间识别失败，改为日期。</description>
+    </item>
+    
+    <item>
+      <title>重启博客</title>
+      <link>https://qinpengblog.github.com/posts/reactive-blog/</link>
+      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/reactive-blog/</guid>
+      <description>初春时节，万物生发~
+博客重启~</description>
+    </item>
+    
+    <item>
+      <title>在线拼图工具</title>
+      <link>https://qinpengblog.github.com/posts/2017-09-23-collage-online-tool/</link>
+      <pubDate>Sat, 23 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2017-09-23-collage-online-tool/</guid>
+      <description>由于要发送几张电脑上的截图给友人，而发送的图片聚合在一起看效果更好，所以找了一番拼图工具。
+网络上的推荐都是要安装程序的，比如美图秀秀等，这时发现了Fotor的在线拼接工具：
+https://www.fotor.com/app.html#/collage/new/classic
+这个工具支持中文，有很多拼接样式，免费账户的足够够用。
+可以添加文字，贴图和背景。
+下载图片的时候如果是普通品质的则无限制，高清品质的需要登录。</description>
+    </item>
+    
+    <item>
+      <title>优化Archive页面</title>
+      <link>https://qinpengblog.github.com/posts/2017-03-05-optimize-archive-page/</link>
+      <pubDate>Fri, 03 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2017-03-05-optimize-archive-page/</guid>
+      <description>年份分割设为标题样式&amp;lt;h3&amp;gt;{{ y }}&amp;lt;/h3&amp;gt;
+年份分隔去掉无序排列标记 &amp;lt;li class=&amp;quot;listing-seperator&amp;quot;&amp;gt;{{ y }}&amp;lt;/li&amp;gt; 改为 {{ y }}
+原来：
+--- layout: page title: &amp;quot;Archive&amp;quot; description: &amp;quot;你看到的，是我之为我的原因&amp;quot; header-img: &amp;quot;img/orange.jpg&amp;quot; --- &amp;lt;ul class=&amp;quot;listing&amp;quot;&amp;gt; {% for post in site.posts %} {% capture y %}{{post.date | date:&amp;quot;%Y&amp;quot;}}{% endcapture %} {% if year != y %} {% assign year = y %} &amp;lt;li class=&amp;quot;listing-seperator&amp;quot;&amp;gt;{{ y }}&amp;lt;/li&amp;gt; {% endif %} &amp;lt;li class=&amp;quot;listing-item&amp;quot;&amp;gt; &amp;lt;time datetime=&amp;quot;{{ post.date | date:&amp;quot;%Y-%m-%d&amp;quot; }}&amp;quot;&amp;gt;{{ post.date | date:&amp;quot;%Y-%m-%d&amp;quot; }}&amp;lt;/time&amp;gt; &amp;lt;a href=&amp;quot;{{ post.</description>
+    </item>
+    
+    <item>
+      <title>优化网页加载</title>
+      <link>https://qinpengblog.github.com/posts/2016-05-06-optimize-the-loading-of-pages/</link>
+      <pubDate>Fri, 06 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-05-06-optimize-the-loading-of-pages/</guid>
+      <description>eager上添加的网页效果加载太慢，在head.html中注释掉了：
+···  ···</description>
+    </item>
+    
+    <item>
+      <title>2016清明游记</title>
+      <link>https://qinpengblog.github.com/posts/2016-04-04-qingming-vocation/</link>
+      <pubDate>Mon, 04 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-04-04-qingming-vocation/</guid>
+      <description>机车男田老板&amp;ndash;自由追逐星空的男人 1. 这个就是让我在清明假期第一天差点过上清明节的机车男
+我终于出现了，光绘：太极 观星的田老板，构图来自田老板觊觎很久的一张机车论坛的图 让我们期待田老板的机车在异国的星空会划下怎样的轨迹
+也曾梦想机车闯天涯，看遍人间的繁华。
+没有什么能够阻挡，你对自由的向往，天马行空的，你的心了无牵挂</description>
+    </item>
+    
+    <item>
+      <title>驾照</title>
+      <link>https://qinpengblog.github.com/posts/2016-04-24-driver-lisence/</link>
+      <pubDate>Mon, 04 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-04-24-driver-lisence/</guid>
+      <description>2016-04-24 缴费，拿到教材。
+2016-04-25
+ 注册学车不。
+ 登陆122。注册“初次申领机动车驾驶证学员”时发现需要驾校方面先登记信息，否则系统查不到，无法注册。
+   发现驾校培训质量公布： http://bj.122.gov.cn/views/noticestatic.html?fzjg=%E4%BA%ACA&amp;amp;tjyf=201603&amp;amp;fwdmgl=3001 发现北京市海淀区远大汽车驾驶学校科目1、2通过率百分比分别占前6和前4。 科目1通过率（84.41%）略低于北京市海淀区汽车驾驶学校（89.03%），北京市远航汽车驾驶学校（89.46%），北京门交汽车驾驶培训有限公司（85.54%），北京北方汽车驾驶学校（85.21%），北京玉马摩托车驾驶员学校（90.19%）； 科目2通过率（64.47%）略低于北京市翔宇汽车驾驶学校（65.11%），北京市丰顺机动车驾驶员培训中心（67.64%），北京长城汽车驾驶学校（66.66%）。
+  阅读《远大考试场培训手册》。上面说需要到驾校参加完网上课程流程讲解，才能进行网络课程学习。但是报名的时候说次日17:00前，驾校录入信息之后就可以网络学习。
+ 阅读《机动车驾驶员教材解读》
+  做书后模拟题。</description>
+    </item>
+    
+    <item>
+      <title>出国申请中的玄学</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-24-the-superstition-during-application/</link>
+      <pubDate>Wed, 24 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-24-the-superstition-during-application/</guid>
+      <description>今天晚上听到YM提到了下面两个玄学说法，萌生了记录总结这些好笑的申请中的玄学段子。
+ 去卧佛寺求Offer 不去“全聚德”  </description>
+    </item>
+    
+    <item>
+      <title>简单添加插件的方法</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-19-simple-ways-to-add-plugins-to-your-website/</link>
+      <pubDate>Fri, 19 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-19-simple-ways-to-add-plugins-to-your-website/</guid>
+      <description> Eager http://github.hubspot.com/pace/docs/welcome/
+choose the install way rather than the develop way.
+Copy our embed code into the  of your page.
+&amp;lt;script src=&amp;quot;//fast.eager.io/GqlikMOv07.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;  Get to know Eager
+Install: Snow
+Add to the head part of head.html  
+以前认为
+Add to the header part of post.html 
+Powr &amp;lt;!--Hit counter from Powr--&amp;gt; &amp;lt;script src=&amp;quot;//www.powr.io/powr.js&amp;quot; external-type=&amp;quot;html&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;div class=&amp;quot;powr-hit-counter&amp;quot; id=&amp;quot;********&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;  jQuery Rain </description>
+    </item>
+    
+    <item>
+      <title>生命可以是一场游戏</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-18-life-can-be-a-game/</link>
+      <pubDate>Thu, 18 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-18-life-can-be-a-game/</guid>
+      <description>模仿游戏的任务、成就、升级系统规划生活。</description>
+    </item>
+    
+    <item>
+      <title>跪掉的交际能力</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-18-bad-social-skill/</link>
+      <pubDate>Thu, 18 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-18-bad-social-skill/</guid>
+      <description>今天中午在荷园吃饭的时候，看到有个空位，问旁边的人这里有人么。结果是XQ。
+你胖了
+ 被你发现了
+ XQ姐姐春节看了几部韩剧呀
+ 你要对我有信心呀
+就看了半部，爸妈不让我看
+那你干嘛了呀
+ 吃了睡睡了吃，还是学校自在
+那你几号回来的呀
+ 14号
+ 沉默
+转过头看了她两次，微笑
+ 笑点好低呀你
+ 沉默
+要努力呀QP，要不然找不到女朋友的。约到了也不知道聊什么。囧</description>
+    </item>
+    
+    <item>
+      <title>我的Android使用术</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-17-my-way-to-use-anrdoid/</link>
+      <pubDate>Wed, 17 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-17-my-way-to-use-anrdoid/</guid>
+      <description>Pre System setting APP System  Xposed Greenify (破解版) No Wakelock （Google Play +捐赠版） Wakelock Detector （未捐赠版足矣） BetterBatteryStats 查看耗电 Amplify 限制唤醒 冰箱 阻止运行  Shopping &amp;amp; Finance Reading Social 微信Wechat - 找回微信云端备份:WechatCloudBackup
+新浪微博
+百度地图
+浏览器 Via浏览器 网易云音乐
+京东金融
+BusyBox Pro:Linux工具箱 内核调校:Kernel Adiutor My Android Tools 应用变量
+Google相机:Google Camera 分期乐 表情豆豆 Google拼音输入法 脚本精灵 爱字体 广告快走 SD Maid 随手记 大众点评 WizNote
+PerfectColorBar Luckymoney QQUnrecalled WechatOriginalPhoto 幸运破解器:LuckyPatcher 去你大爷的内置浏览器 BootManager开机启动管理 流氓终结者:Malware Buster LightningWall WechatUnrecalled 无线网络密码:WiFi Password 自定义快捷设置背景:XQS Background</description>
+    </item>
+    
+    <item>
+      <title>Resurrection Remix Rom based on Android AOSP 6.0</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-16-the-shining-points-of-resurrection-remix-rom/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-16-the-shining-points-of-resurrection-remix-rom/</guid>
+      <description>The review is based on RR 5.6.3
+ Use power button to turn on flashlight in the lockscreen section.
+ Coffein time (5 minutes) in the notification panel.
+ Use power button to open camera.
+ Change the background picture of the notification panel.
+ Pie control. P.S. Compare to Blisspop, it can&amp;rsquo;t custom the location, or sequence, of different button.
+ Change the function of buttons, such as switch to last app.</description>
+    </item>
+    
+    <item>
+      <title>我的听音乐的情况</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-16-my-way-for-music/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-16-my-way-for-music/</guid>
+      <description>听音乐的风格  电子音乐   听音乐的渠道 目前全面使用在线音乐。
+为了听到所有想听的歌，结合使用“网易云音乐”和“虾米音乐”。由于之前一直使用网易云音乐，个人数据都集中在这上面，所以主要使用网易云音乐。
+2016-02-02 一直使用网易云音乐，这天想听五月天的倔强，但是发现在网易云音乐里因为版权问题下架了。百度了一番后，决定结合使用网易云音乐和虾米音乐。
+想了解国内在线音乐阵营的划分（阿里系和腾讯系）和对各音乐公司的版权拥有情况可看如下文章：
+《听音乐 到底选QQ音乐还是虾米？-听歌,QQ音乐,阿里,虾米-驱动之家》 &amp;gt; P.S. 有详细的表格对比说明这两个阵营的音乐版权的所有情况。
+《谁才是国内最强音乐分享平台：虾米音乐 vs 网易云音乐 - 少数派》</description>
+    </item>
+    
+    <item>
+      <title>我的电影相关</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-16-my-way-for-movies/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-16-my-way-for-movies/</guid>
+      <description>影视资讯 时光网
+观影清单 时光网
+观影渠道 影院  嘉华（学清路） 橙天嘉禾（万柳） 橙天嘉禾（上地） 科技馆 美嘉 海淀剧院  下载 PC，智能手机。 -IPV6
+在线 PC，iPad，智能电视。
+影评 时光网</description>
+    </item>
+    
+    <item>
+      <title>我阅读的途径</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-16-my-way-for-reading/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-16-my-way-for-reading/</guid>
+      <description> 阅读载体 Kindle Paperwhite Kindle正式入华的暑假买的。
+摘录  Kindle Mate 国人开发的离线Kindle笔记和生词本备份、管理工具。 Clipping.so 外国人开发的在线Kindle笔记备份、管理工具。  ####　阅读源 - Amazon Kindle ebooks - Send to Kindle - 狗耳朵
+Smart Phone Oneplus one (Android)
+APP  起点读书 追书神器 Kindle  PC  PDF&amp;ndash;福昕阅读器 &amp;gt; P.S. 打&amp;rdquo;盺&amp;rdquo;字的时候拼&amp;rdquo;xi&amp;rdquo;一直打不出来，使用搜狗手写，发现它念&amp;rdquo;xin&amp;rdquo;。囧
+ Kindle Clipping.so有Chrome付费插件，可以导入PC端Kindle。
+  iPad  Kindle  </description>
+    </item>
+    
+    <item>
+      <title>添加标签云组件</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-16-realize-tagcloud/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-16-realize-tagcloud/</guid>
+      <description>2017-03-15 优化Tag页面 1. 去除Test***字样 2. 删除Test 10，9,8 3. 保留Test 12,11。优化12的样式
+{% for tag in site.tags %} &amp;lt;a href=&amp;quot;#{{ tag[0] }}&amp;quot; style=&amp;quot;font-size: {{ tag | last | size | times: 4 | plus: 80 }}%&amp;quot;&amp;gt;{{ tag[0] | replace:&#39;-&#39;, &#39; &#39; }} ({{ tag | last | size }}) &amp;lt;/a&amp;gt; {% endfor %}  查看编译后的网页源代码，发现解析成&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;#个人主页&amp;quot; style=&amp;quot;font-size: 108%&amp;quot;&amp;gt;个人主页 (7)&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt; 前后增加&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt; 解析后不再增加&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt; 没必要添加&amp;amp;nbsp;，会自动添加一个的，再添加一个反而会弄乱格式。
+原来：
+{% for tag in site.tags %} &amp;lt;span class=&amp;quot;site-tag&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;#{{ tag[0] }}&amp;quot; style=&amp;quot;font-size: {{ tag | last | size | times: 4 | plus: 80 }}%&amp;quot;&amp;gt;{{ tag[0] | replace:&#39;-&#39;, &#39; &#39; }} ({{ tag | last | size }}) &amp;lt;/a&amp;gt; &amp;lt;/span&amp;gt; {% endfor %}   优化Tag内文章列表的样式 &amp;lt;h4&amp;gt;{{ tag[0] }}&amp;lt;a&amp;gt;&amp;lt;span&amp;gt;{{ tag[0].</description>
+    </item>
+    
+    <item>
+      <title>解决Markdown标题的显示问题</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-16-debug-the-problem-of-markdown-display/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-16-debug-the-problem-of-markdown-display/</guid>
+      <description>本来以为Post的文章是可以正常读取Mardkdown的，然而打开查看的时候，发现post的文章也没有编译##，反而出现了代码高亮。
+我要查看&amp;rdquo;_config.yml&amp;rdquo;的修改了。
+查看完&amp;rdquo;_config.yml&amp;rdquo;，没有对主要地方进行更改。
+重新查看了各个网页，发现只是部分格式不能读取Markdown，-可以正常显示为·，但是##不能编译为表示标题的格式。
+重新看了一遍语法，发现似乎是我没有在##后面加上空格···
+Done!
+但是现在的问题是每个#标记的标题前都有#，即使只有一个#标记。
+2016-02-17 14:39
+发现Tags.md等编译出来的页面里面没有#标记。问题应该出在&amp;rdquo;post.html&amp;rdquo;中。</description>
+    </item>
+    
+    <item>
+      <title>一加1刷机</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-15-flash-my-oneplusone/</link>
+      <pubDate>Mon, 15 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-15-flash-my-oneplusone/</guid>
+      <description>本次折腾时间160214 22:15-160215 15:00
+这次刷机的缘起是手机提醒Resurrection Remix ROM更新到v5.6.3 0213了，我想到这周就要回实验室了，准备刷个新的后稳定用着。
+备份 用钛备份备份。由于Android Marshmallow 6.0系统限制对外置存储的访问，钛备份不能把备份目录设置在手机U盘了。这次直接把备份设置到本地存储里面。然而我的一加1是16G版的，安装好的程序+从Blisspop换过来的时候的备份+新的备份远远超过16G，中途失败了一次。把以前的备份转移到电脑里面，统计了一下，竟然有1.5G。接着继续备份完APP和系统数据。
+下载ROM 在备份的时候，同步在电脑上下载ROM。访问了Resurrection Remix官网,依次跳转到下载界面，结果竟然打不开，加到破解GFW的列表里还是打不开。
+登陆一加官方论坛在玩机板块的一加一ROM专区寻找该ROM。结果只找到了V5.6.3 0212的版本。同时我意识到可能这个版本出了问题，所以他们才在0213推出新的迭代版本。但是苦于找不到最新的版本，无奈只能下载它了。在浏览的过程中发现TWRP Recovery更新到3.0了，从论坛里下载了适用于一加1的版本，也搜索到了它的官方网站。
+在论坛里看到最新的CM13似乎基带又换成4.0了。我上次刷机的时候（160203）记得似乎是从4.0换成3.0了。本来计划用上次刷机用的CM13 Nightly作为底包，这次不得已又下栽了CM13 Nightly 0214作为底包。
+梳理刷机流程 在ROM官网虽然没有打开下载地址，但是在第一次跳转的下载地址上发现了一个官方的更新流程：
+UPDATE INSTRUCTIONS
+ Download the latest build of Resurrection Remix ROM Take a nandroid backup Flash ROM using ClockworkMod or TWRP recovery Flash Gapps Wipe cache Wipe dalvik cache Reboot Enjoy!  按照这个流程不需要清除Data分区，能保留装好的APP，所以打算按照这个来。
+下载Gapps Google一系列的框架和软件包应该有更新所以去找了一番。但是Blisspop时代我下载BanksGapps的地址也打不开了。该ROM官方推荐的BanksGapps的下载地址里的包没有更新。Google搜索到了另外一个似乎是BanksGapps官方的下载地址。这个地址的两个包虽然命名不同，但是大小一样，所以我就下载了BANKS_GAPPS_6.XX.zip（更新时间是0209，大小是306M，另一个名字里有Dynamic）。后来在官方的说明里发现这了个确实一样，之所以这样做是为了保持BANKS_GAPPS_6.XX.zip更新地址的一致。
+Flash Recovery里仍然能够挂在U盘，所以将ROM和CM13的ROM，Gapps和Xposed框架，TWRP 3.0放进U盘。 1. 重启进入Recovery 2. 清除cache,dalvik cache。 3. 挂载U盘。 4. 刷入TWRP 3.</description>
+    </item>
+    
+    <item>
+      <title>修改网站的评论模块</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-14-modify-the-comment-module/</link>
+      <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-14-modify-the-comment-module/</guid>
+      <description>看了《使用Github Pages建独立博客》文章，它里面使用的是Disqus的评论模块，并且设置了点击“显示评论”才显示评论的功能。
+我想把我的网站的评论也设置成平时隐藏，点击才显示的模式。于是在多说网站找到了《动态加载多说评论框的方法》的方法。
+原来的&amp;rdquo;post.html&amp;rdquo;中的评论模块：
+ &amp;lt;div class=&amp;quot;comment&amp;quot;&amp;gt; &amp;lt;div class=&amp;quot;ds-thread&amp;quot; data-thread-key=&amp;quot;{{page.id}}&amp;quot; data-title=&amp;quot;{{page.title}}&amp;quot; data-url=&amp;quot;{{site.url}}{{page.url}}&amp;quot;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt;  &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt; var duoshuoQuery = {short_name:&amp;quot;cnfeat&amp;quot;}; (function() { var ds = document.createElement(&#39;script&#39;); ds.type = &#39;text/javascript&#39;;ds.async = true; ds.src = (document.location.protocol == &#39;https:&#39; ? &#39;https:&#39; : &#39;http:&#39;) + &#39;//static.duoshuo.com/embed.js&#39;; ds.charset = &#39;UTF-8&#39;; (document.getElementsByTagName(&#39;head&#39;)[0] || document.getElementsByTagName(&#39;body&#39;)[0]).appendChild(ds); })(); &amp;lt;/script&amp;gt;  现在的评论模块：
+&amp;lt;script&amp;gt;var duoshuoQuery = {short_name:&amp;quot;qinpengblog&amp;quot;};&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;quot;http://static.duoshuo.com/embed.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt; function toggleDuoshuoComments(container){ var el = document.createElement(&#39;div&#39;);//该div不需要设置class=&amp;quot;ds-thread&amp;quot; el.setAttribute(&#39;data-thread-key&#39;, &#39;{{page.id}}&#39;);//必选参数 el.setAttribute(&#39;data-url&#39;, &#39;{{site.</description>
+    </item>
+    
+    <item>
+      <title>增加网站的推荐模块</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-14-add-the-recommendation-module/</link>
+      <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-14-add-the-recommendation-module/</guid>
+      <description>多说的分享模块不够好，无意中发现JiaThis，感觉更好。在JiaThis的主页下面发现了友荐，感觉挺好的，想给我的网站加上这个功能。
+友荐为PC端提供4中推荐方式：侧栏式，嵌入式，双栏式和边栏式。
+ 侧栏式：侧栏式滑动切入在页面右（左）下角，不影响页面布局。 &amp;gt; 可以设置个数（1-10），位置（左侧，右侧），附赠返回顶部按钮。P.S. 感觉像小广告似的，不取。
+ 嵌入式：嵌入式使用范围最广，多出现在网页正文下方，直观凸显推荐内容，增加用户浏览粘性。 &amp;gt; 可以设置个数（1-18），显示方式（上图下文，左图右文，文字，智能），行数（1-5）等等。P.S. 太占地，广告色彩较多。
+ 双栏式：双栏式配合多文字类型页面使用，形式简介明了，符合用户的浏览行为。 &amp;gt; 可以设置个数（2,4,6,8,10），显示方式（双列图文or双列文字）。
+ 边栏式：边栏式多应用于专题活动或新闻资讯正文侧边栏板块，增强的曝光与推广。 &amp;gt; 可以设置个数（2,4,6,8,10,12,14）。P.S. 赤裸裸的小广告呀。
+  最后选择了双栏文字式，显示6条文字推荐，设置了鼠标滑过的模块和文本颜色，打开内容链接的方式为新窗口。
+代码如下：
+ &amp;lt;div class=&amp;quot;ujian-hook&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;var ujian_config = {num:6,showType:4,lkrc:4,target:1,bgColor:&#39;#&#39;,hoverTextColor:&#39;#116BF2&#39;};&amp;lt;/script&amp;gt; &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://v1.ujian.cc/code/ujian.js?uid=2083931&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;a href=&amp;quot;http://www.ujian.cc&amp;quot; style=&amp;quot;border:0;&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;http://img.ujian.cc/pixel.png&amp;quot; alt=&amp;quot;友荐云推荐&amp;quot; style=&amp;quot;border:0;padding:0;margin:0;&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt;  关于友荐的更多内容请移步友荐帮助中心</description>
+    </item>
+    
+    <item>
+      <title>更换网站的分享模块</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-14-change-the-sharing-module/</link>
+      <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-14-change-the-sharing-module/</guid>
+      <description>多说的分享模块不够好。
+无意中发现JiaThis，感觉不错。吸引我的几点是：自定义功能强大，具有智能排序功能，数据统计功能强大。
+《选择JiaThis的八大理由》
+《一般安装到网站哪里?》
+JiaThis JiaThis分享按钮的几种方式：侧栏式，工具式，图标式，边栏式，喜欢按钮，按钮式，关注按钮，图片分享，划词分享。
+ 侧栏式：隐藏在侧栏。 工具式：同多说的分享模块。 图标式：与工具式相比，少了图标的文字说明。 边栏式：悬浮在文章边。 按钮式：只有一个按钮。 图片分享：用户将鼠标移动到指定的图片上时，分享按钮就会出现。 划词分享：任意划取部分文字信息（＞5个字），即可显示JiaThis划词分享图标。 喜欢按钮：喜欢的同时进行分享。 关注按钮：转到对应社交账号主页。  选择图标式，图片分享和划词分享。
+图标式：  &amp;lt;div class=&amp;quot;jiathis_style&amp;quot;&amp;gt; &amp;lt;a class=&amp;quot;jiathis_button_weixin&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;a class=&amp;quot;jiathis_button_tsina&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;a class=&amp;quot;jiathis_button_pocket&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;a class=&amp;quot;jiathis_button_instapaper&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;a class=&amp;quot;jiathis_button_copy&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;a href=&amp;quot;http://www.jiathis.com/share?uid=2083931&amp;quot; class=&amp;quot;jiathis jiathis_txt jiathis_separator jtico jtico_jiathis&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;a class=&amp;quot;jiathis_counter_style&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;script type=&amp;quot;text/javascript&amp;quot; &amp;gt; var jiathis_config={ data_track_clickback:true, summary:&amp;quot;&amp;quot;, shortUrl:true, hideMore:false } &amp;lt;/script&amp;gt; &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://v3.jiathis.com/code_mini/jia.js?uid=2083931&amp;quot; charset=&amp;quot;utf-8&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;  图片分享 官方说明：如果您的网页中已经嵌入jia.js或jiathis_r.js，只需将以下绿色部分代码复制到JiaThis分享代码之前即可。
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt; var jiathis_config = { shareImg:{ &amp;quot;showType&amp;quot;:&amp;quot;ALL&amp;quot;, &amp;quot;bgColor&amp;quot;:&amp;quot;&amp;quot;, &amp;quot;txtColor&amp;quot;:&amp;quot;&amp;quot;, &amp;quot;text&amp;quot;:&amp;quot;&amp;quot;, &amp;quot;services&amp;quot;:&amp;quot;&amp;quot;, &amp;quot;position&amp;quot;:&amp;quot;&amp;quot;, &amp;quot;imgwidth&amp;quot;:&amp;quot;&amp;quot;, &amp;quot;imgheight&amp;quot;:&amp;quot;&amp;quot;, &amp;quot;divname&amp;quot;:&amp;quot;&amp;quot; } } &amp;lt;/script&amp;gt;  JiaThis分享代码是：</description>
+    </item>
+    
+    <item>
+      <title>我为什么写博客？</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-13-why-write-blog/</link>
+      <pubDate>Sat, 13 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-13-why-write-blog/</guid>
+      <description>我写博客的直接目的主要有三个：记录，输出，分享。这三者并不独立，互有交叉。中心的交点就是过去的我了。
+  Tricolor
+从春节这十多天的假期里，我再次体会到了什么叫：
+ 没有记录就没有活过。&amp;ndash;努尔·艾力
+ 现在回忆，已经很难想起这些天都是怎么过的了。荒废之感油然而生。
+当然，我写博客的根本目的是提高自己了。
+  Better me
+整理了一下，目前想到的在这里要做的事情有：
+ 记录我生活中的思考。
+ 总结我的方法论，避免遗忘，在以后遇到同样的事情的时候浪费时间。
+ 输出学到的知识，以掌握得更好。
+ 记录读得书籍，分享好书和文字。
+ 分享喜欢的音乐等等。
+  </description>
+    </item>
+    
+    <item>
+      <title>我建立个人主页的过程</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-13-recording-of-build-my-blog/</link>
+      <pubDate>Sat, 13 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-13-recording-of-build-my-blog/</guid>
+      <description>2016-02-14 09:10 更新
+发现一篇新文章，通过Github Education可以免费获得付费域名。
+《我的 Github 个人博客是怎样炼成的》
+历程有点坎坷。
+从2016-02-12下午开始有这个想法，知乎上搜索“个人主页”、“个人网站”，看了几个答案，感觉要花很多时间在建设上。犹豫于是选择简书之类的网站，还是要自己建一个。最后选择了不将就，不想被那些网站限制。
+晚上开始折腾，一直折腾到2016-02-13下午。
+主要参考三篇文章：
+ 《如何搭建一个独立博客——简明 Github Pages与 jekyll 教程》
+ 《Projet Compromis》
+ 《使用Github Pages建独立博客》
+  看中的域名 在Freenom，Goddy,万网和新网搜索了“qinpeng”。
+比较下这四个网站的搜索结果：
+ Freenom的搜索结果不直观，需要点击Select才能查看每个域名是否被买了； Goddy的搜索结果； 万网和新网的搜索结果类似，可以很直观的看到每个域名是否被买了，并且可以查询域名持有人的信息。  &amp;ldquo;qinpeng&amp;rdquo;的&amp;rdquo;.com&amp;rdquo;,&amp;ldquo;.net&amp;rdquo;,&amp;ldquo;.org&amp;rdquo;,&amp;ldquo;.me&amp;rdquo;等都被买了。&amp;rdquo;.life&amp;rdquo;，&amp;rdquo;.world&amp;rdquo;等又太贵。最后选中了&amp;rdquo;.space&amp;rdquo;和&amp;rdquo;.site&amp;rdquo;。
+之后又想到了可以搜搜&amp;rdquo;qinroc&amp;rdquo;，于是又搜索了&amp;rdquo;qinroc&amp;rdquo;（价格来源于新网，仅供参考）：
+ life ￥178 name ￥85 org ￥69 net ￥55 site ￥15 win ￥6 space ￥7 online ￥11 me ￥32 com ￥48  想到&amp;rdquo;.&amp;ldquo;可以音似成“的”，最终决定选择&amp;rdquo;.space&amp;rdquo;。</description>
+    </item>
+    
+    <item>
+      <title>网络小说推荐</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-15-my-collection-of-online-novels/</link>
+      <pubDate>Sat, 13 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-15-my-collection-of-online-novels/</guid>
+      <description> 现在在追的 （至2016-02-24）  银狐 妖孽学霸 懒神附体 一世之尊 巫神纪  完结 架空历史  赤色黎明 唐砖 by  奇幻  奥术神座  都市重生  重生之大文豪 导演万岁   都市玄幻  人道纪元
+ 高手寂寞
+  </description>
+    </item>
+    
+    <item>
+      <title>增加网站的统计分析模块并使网站可被搜索引擎索引</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-14-add-analytic-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-14-add-analytic-module/</guid>
+      <description>2016-07-10 18:16 Update
+增加CNZZ统计功能。 添加以下代码在&amp;rdquo;Footer.html&amp;rdquo;中。
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;var cnzz_protocol = ((&amp;quot;https:&amp;quot; == document.location.protocol) ? &amp;quot; https://&amp;quot; : &amp;quot; http://&amp;quot;);document.write(unescape(&amp;quot;%3Cspan id=&#39;cnzz_stat_icon_1259876212&#39;%3E%3C/span%3E%3Cscript src=&#39;&amp;quot; + cnzz_protocol + &amp;quot;s11.cnzz.com/z_stat.php%3Fid%3D1259876212%26show%3Dpic1&#39; type=&#39;text/javascript&#39;%3E%3C/script%3E&amp;quot;)); &amp;lt;/script&amp;gt;  之所以没有添加在以前的“head.html”中，是因为这个统计的方式是在页面上显示出元素，会影响页面效果。
+2016-02-17 11:25 更新
+我的网站已经被Google抓取了。
+ 
+Google Concole 通知
+在Google上的搜索结果：
+
+Google Search Result
+想要记录多少人访问了我的网站，所以一番搜索，找到了几个流量统计的站点。最后选择了Google和Baidu结合的方式。因为Google的统计分析内容丰富，但是据说会有延迟，而Baidu不会有延迟。
+参考:
+ 《Setting up this blog site: github, jekyll, and the hpstr theme》
+ 《利用github-pages建立个人博客》
+ Verify site ownership on Google Search Console
+ Verify your site ownership</description>
+    </item>
+    
+    <item>
+      <title>网赚</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-20-earn-through-internet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-20-earn-through-internet/</guid>
+      <description>更新：不做了。时薪太低。
+2016-02-21 接触Epicbux
+2016-02-23
+接触Donkeymail
+2016-02-24
+ 接触[任务多]()打码。 支付宝。最低￥1。
+ 接触微信263。 支付宝。最低￥1。
+ 接触[舆观]()
+ 接触[K任务]() 奖品区最低￥5。
+ 接触艾瑞调研社区。最低￥10。有PC端口和手机端。
+ 接触[猪八戒网]()。
+ 接触[沙沙网络]()。最低￥2。计价货币：金沙。数额大，但价值低。
+ 重新翻开中文调查网。2013-06-12注册的
+ http://www.surveys.com.cn/register.asp?referral=QinRoc
+ 重新翻开Toluna。
+  </description>
+    </item>
+    
+  </channel>
+</rss>

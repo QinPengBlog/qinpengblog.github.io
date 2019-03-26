@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Plugin on 月巢</title>
+    <link>https://qinpengblog.github.com/tags/plugin/</link>
+    <description>Recent content in Plugin on 月巢</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 19 Feb 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://qinpengblog.github.com/tags/plugin/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>简单添加插件的方法</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-19-simple-ways-to-add-plugins-to-your-website/</link>
+      <pubDate>Fri, 19 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-19-simple-ways-to-add-plugins-to-your-website/</guid>
+      <description> Eager http://github.hubspot.com/pace/docs/welcome/
+choose the install way rather than the develop way.
+Copy our embed code into the  of your page.
+&amp;lt;script src=&amp;quot;//fast.eager.io/GqlikMOv07.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;  Get to know Eager
+Install: Snow
+Add to the head part of head.html  
+以前认为
+Add to the header part of post.html 
+Powr &amp;lt;!--Hit counter from Powr--&amp;gt; &amp;lt;script src=&amp;quot;//www.powr.io/powr.js&amp;quot; external-type=&amp;quot;html&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;div class=&amp;quot;powr-hit-counter&amp;quot; id=&amp;quot;********&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;  jQuery Rain </description>
+    </item>
+    
+    <item>
+      <title>添加标签云组件</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-16-realize-tagcloud/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-16-realize-tagcloud/</guid>
+      <description>2017-03-15 优化Tag页面 1. 去除Test***字样 2. 删除Test 10，9,8 3. 保留Test 12,11。优化12的样式
+{% for tag in site.tags %} &amp;lt;a href=&amp;quot;#{{ tag[0] }}&amp;quot; style=&amp;quot;font-size: {{ tag | last | size | times: 4 | plus: 80 }}%&amp;quot;&amp;gt;{{ tag[0] | replace:&#39;-&#39;, &#39; &#39; }} ({{ tag | last | size }}) &amp;lt;/a&amp;gt; {% endfor %}  查看编译后的网页源代码，发现解析成&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;#个人主页&amp;quot; style=&amp;quot;font-size: 108%&amp;quot;&amp;gt;个人主页 (7)&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt; 前后增加&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt; 解析后不再增加&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt; 没必要添加&amp;amp;nbsp;，会自动添加一个的，再添加一个反而会弄乱格式。
+原来：
+{% for tag in site.tags %} &amp;lt;span class=&amp;quot;site-tag&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;#{{ tag[0] }}&amp;quot; style=&amp;quot;font-size: {{ tag | last | size | times: 4 | plus: 80 }}%&amp;quot;&amp;gt;{{ tag[0] | replace:&#39;-&#39;, &#39; &#39; }} ({{ tag | last | size }}) &amp;lt;/a&amp;gt; &amp;lt;/span&amp;gt; {% endfor %}   优化Tag内文章列表的样式 &amp;lt;h4&amp;gt;{{ tag[0] }}&amp;lt;a&amp;gt;&amp;lt;span&amp;gt;{{ tag[0].</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>初心 on 月巢</title>
+    <link>https://qinpengblog.github.com/tags/%E5%88%9D%E5%BF%83/</link>
+    <description>Recent content in 初心 on 月巢</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 13 Feb 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://qinpengblog.github.com/tags/%E5%88%9D%E5%BF%83/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>我为什么写博客？</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-13-why-write-blog/</link>
+      <pubDate>Sat, 13 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-13-why-write-blog/</guid>
+      <description>我写博客的直接目的主要有三个：记录，输出，分享。这三者并不独立，互有交叉。中心的交点就是过去的我了。
+  Tricolor
+从春节这十多天的假期里，我再次体会到了什么叫：
+ 没有记录就没有活过。&amp;ndash;努尔·艾力
+ 现在回忆，已经很难想起这些天都是怎么过的了。荒废之感油然而生。
+当然，我写博客的根本目的是提高自己了。
+  Better me
+整理了一下，目前想到的在这里要做的事情有：
+ 记录我生活中的思考。
+ 总结我的方法论，避免遗忘，在以后遇到同样的事情的时候浪费时间。
+ 输出学到的知识，以掌握得更好。
+ 记录读得书籍，分享好书和文字。
+ 分享喜欢的音乐等等。
+  </description>
+    </item>
+    
+  </channel>
+</rss>

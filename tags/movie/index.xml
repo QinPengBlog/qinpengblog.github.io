@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Movie on 月巢</title>
+    <link>https://qinpengblog.github.com/tags/movie/</link>
+    <description>Recent content in Movie on 月巢</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 16 Feb 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://qinpengblog.github.com/tags/movie/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>我的电影相关</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-16-my-way-for-movies/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-16-my-way-for-movies/</guid>
+      <description>影视资讯 时光网
+观影清单 时光网
+观影渠道 影院  嘉华（学清路） 橙天嘉禾（万柳） 橙天嘉禾（上地） 科技馆 美嘉 海淀剧院  下载 PC，智能手机。 -IPV6
+在线 PC，iPad，智能电视。
+影评 时光网</description>
+    </item>
+    
+  </channel>
+</rss>

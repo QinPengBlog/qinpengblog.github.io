@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>个人网站 on 月巢</title>
+    <link>https://qinpengblog.github.com/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</link>
+    <description>Recent content in 个人网站 on 月巢</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 19 Feb 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://qinpengblog.github.com/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>简单添加插件的方法</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-19-simple-ways-to-add-plugins-to-your-website/</link>
+      <pubDate>Fri, 19 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-19-simple-ways-to-add-plugins-to-your-website/</guid>
+      <description> Eager http://github.hubspot.com/pace/docs/welcome/
+choose the install way rather than the develop way.
+Copy our embed code into the  of your page.
+&amp;lt;script src=&amp;quot;//fast.eager.io/GqlikMOv07.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;  Get to know Eager
+Install: Snow
+Add to the head part of head.html  
+以前认为
+Add to the header part of post.html 
+Powr &amp;lt;!--Hit counter from Powr--&amp;gt; &amp;lt;script src=&amp;quot;//www.powr.io/powr.js&amp;quot; external-type=&amp;quot;html&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;div class=&amp;quot;powr-hit-counter&amp;quot; id=&amp;quot;********&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;  jQuery Rain </description>
+    </item>
+    
+    <item>
+      <title>解决Markdown标题的显示问题</title>
+      <link>https://qinpengblog.github.com/posts/2016-02-16-debug-the-problem-of-markdown-display/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://qinpengblog.github.com/posts/2016-02-16-debug-the-problem-of-markdown-display/</guid>
+      <description>本来以为Post的文章是可以正常读取Mardkdown的，然而打开查看的时候，发现post的文章也没有编译##，反而出现了代码高亮。
+我要查看&amp;rdquo;_config.yml&amp;rdquo;的修改了。
+查看完&amp;rdquo;_config.yml&amp;rdquo;，没有对主要地方进行更改。
+重新查看了各个网页，发现只是部分格式不能读取Markdown，-可以正常显示为·，但是##不能编译为表示标题的格式。
+重新看了一遍语法，发现似乎是我没有在##后面加上空格···
+Done!
+但是现在的问题是每个#标记的标题前都有#，即使只有一个#标记。
+2016-02-17 14:39
+发现Tags.md等编译出来的页面里面没有#标记。问题应该出在&amp;rdquo;post.html&amp;rdquo;中。</description>
+    </item>
+    
+  </channel>
+</rss>
