@@ -1,3 +1,4 @@
+sudo: required # 需要管理员权限
 install:
   - rm -rf public || exit 0
 branches:
